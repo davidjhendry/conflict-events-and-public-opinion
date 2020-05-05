@@ -1,0 +1,2 @@
+# conflict-events-and-public-opinion
+Repository for project merging survey data with conflict events.
