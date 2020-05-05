@@ -1,0 +1,26 @@
+"OBJECTID","ID_0","ISO","NAME_0","ID_1","NAME_1","ID_2","NAME_2","TYPE_2","ENGTYPE_2","NL_NAME_2","VARNAME_2"
+1,31,"BWA","Botswana",1,"Central",1,"Bobonong","Sub-district","Sub-district",NA,NA
+2,31,"BWA","Botswana",1,"Central",2,"Lethlakane","Town Council","Town Council",NA,"Orapa"
+3,31,"BWA","Botswana",1,"Central",3,"Machaneng","Unknown","Unknown",NA,NA
+4,31,"BWA","Botswana",1,"Central",4,"Mahalapye","Sub-district","Sub-district",NA,NA
+5,31,"BWA","Botswana",1,"Central",5,"Palapye","Sub-district","Sub-district",NA,NA
+6,31,"BWA","Botswana",1,"Central",6,"Serowe","Sub-district","Sub-district",NA,NA
+7,31,"BWA","Botswana",1,"Central",7,"Tuli","Unknown","Unknown",NA,NA
+8,31,"BWA","Botswana",1,"Central",8,"Tutume","Sub-district","Sub-district",NA,NA
+9,31,"BWA","Botswana",2,"Ghanzi",9,"Ghanzi","Sub-district","Sub-district",NA,NA
+10,31,"BWA","Botswana",3,"Kgalagadi",10,"Gemsbok","Unknown","Unknown",NA,NA
+11,31,"BWA","Botswana",3,"Kgalagadi",11,"Hukunsti","Sub-district","Sub-district",NA,"Kgalagadi North"
+12,31,"BWA","Botswana",3,"Kgalagadi",12,"Tshabong","Sub-district","Sub-district",NA,"Kgalagadi South"
+13,31,"BWA","Botswana",4,"Kgatleng",13,"Kgatleng","Sub-district","Sub-district",NA,NA
+14,31,"BWA","Botswana",5,"Kweneng",14,"Kweneng North","Sub-district","Sub-district",NA,"Kweneng East"
+15,31,"BWA","Botswana",5,"Kweneng",15,"Kweneng South","Sub-district","Sub-district",NA,"Kweneng West"
+16,31,"BWA","Botswana",6,"North-East",16,"Masungu","Sub-district","Sub-district",NA,"North East and Francistown"
+17,31,"BWA","Botswana",7,"North-West",17,"Chobe","Sub-district","Sub-district",NA,NA
+18,31,"BWA","Botswana",7,"North-West",18,"Ngamiland East","Sub-district","Sub-district",NA,"Ngamiland North"
+19,31,"BWA","Botswana",7,"North-West",19,"Ngamiland West","Unknown","Unknown",NA,NA
+20,31,"BWA","Botswana",8,"South-East",20,"Gaborone","Town Council","Town Council",NA,NA
+21,31,"BWA","Botswana",8,"South-East",21,"South East","Sub-district","Sub-district",NA,NA
+22,31,"BWA","Botswana",9,"Southern",22,"Barolong","Sub-district","Sub-district",NA,NA
+23,31,"BWA","Botswana",9,"Southern",23,"Ngwaketse Central","Unknown","Unknown",NA,NA
+24,31,"BWA","Botswana",9,"Southern",24,"Ngwaketse North","Unknown","Unknown",NA,NA
+25,31,"BWA","Botswana",9,"Southern",25,"Ngwaketse South","Unknown","Unknown",NA,NA

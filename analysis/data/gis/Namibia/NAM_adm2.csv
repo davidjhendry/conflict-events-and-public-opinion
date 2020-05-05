@@ -1,0 +1,108 @@
+"OBJECTID","ID_0","ISO","NAME_0","ID_1","NAME_1","ID_2","NAME_2","TYPE_2","ENGTYPE_2","NL_NAME_2","VARNAME_2"
+1,155,"NAM","Namibia",1,"!Karas",1,"Berseba","Constituency","Constituency",NA,NA
+2,155,"NAM","Namibia",1,"!Karas",2,"Karas","Constituency","Constituency",NA,"Karasburg"
+3,155,"NAM","Namibia",1,"!Karas",3,"Keetmanshoop Rural","Constituency","Constituency",NA,NA
+4,155,"NAM","Namibia",1,"!Karas",4,"Keetmanshoop Urban","Constituency","Constituency",NA,NA
+5,155,"NAM","Namibia",1,"!Karas",5,"Luderitz","Constituency","Constituency",NA,NA
+6,155,"NAM","Namibia",1,"!Karas",6,"Oranjemund","Constituency","Constituency",NA,NA
+7,155,"NAM","Namibia",2,"Erongo",7,"Arandis","Constituency","Constituency",NA,NA
+8,155,"NAM","Namibia",2,"Erongo",8,"Daures","Constituency","Constituency",NA,NA
+9,155,"NAM","Namibia",2,"Erongo",9,"Karibib","Constituency","Constituency",NA,NA
+10,155,"NAM","Namibia",2,"Erongo",10,"Omaruru","Constituency","Constituency",NA,NA
+11,155,"NAM","Namibia",2,"Erongo",11,"Swakopmund","Constituency","Constituency",NA,NA
+12,155,"NAM","Namibia",2,"Erongo",12,"Walvisbay Rural","Constituency","Constituency",NA,"Walvis Bay Rural"
+13,155,"NAM","Namibia",2,"Erongo",13,"Walvisbay Urban","Constituency","Constituency",NA,"Walvis Bay Urban"
+14,155,"NAM","Namibia",3,"Hardap",14,"Gibeon","Constituency","Constituency",NA,NA
+15,155,"NAM","Namibia",3,"Hardap",15,"Mariental Rural","Constituency","Constituency",NA,NA
+16,155,"NAM","Namibia",3,"Hardap",16,"Mariental Urban","Constituency","Constituency",NA,NA
+17,155,"NAM","Namibia",3,"Hardap",17,"Rehoboth East","Constituency","Constituency",NA,"Rehoboth Urban East"
+18,155,"NAM","Namibia",3,"Hardap",18,"Rehoboth Rural","Constituency","Constituency",NA,NA
+19,155,"NAM","Namibia",3,"Hardap",19,"Rehoboth West","Constituency","Constituency",NA,"Rehoboth Urban West"
+20,155,"NAM","Namibia",4,"Kavango",20,"Kahenge","Constituency","Constituency",NA,NA
+21,155,"NAM","Namibia",4,"Kavango",21,"Kapako","Constituency","Constituency",NA,NA
+22,155,"NAM","Namibia",4,"Kavango",22,"Mashare","Constituency","Constituency",NA,NA
+23,155,"NAM","Namibia",4,"Kavango",23,"Mpungu","Constituency","Constituency",NA,NA
+24,155,"NAM","Namibia",4,"Kavango",24,"Mukwe","Constituency","Constituency",NA,NA
+25,155,"NAM","Namibia",4,"Kavango",25,"Ndiyona","Constituency","Constituency",NA,NA
+26,155,"NAM","Namibia",4,"Kavango",26,"Rundu Rural East","Constituency","Constituency",NA,NA
+27,155,"NAM","Namibia",4,"Kavango",27,"Rundu Rural West","Constituency","Constituency",NA,NA
+28,155,"NAM","Namibia",4,"Kavango",28,"Rundu Urban","Constituency","Constituency",NA,NA
+29,155,"NAM","Namibia",5,"Khomas",29,"Katutura Central","Constituency","Constituency",NA,NA
+30,155,"NAM","Namibia",5,"Khomas",30,"Katutura East","Constituency","Constituency",NA,NA
+31,155,"NAM","Namibia",5,"Khomas",31,"Khomasdal North","Constituency","Constituency",NA,NA
+32,155,"NAM","Namibia",5,"Khomas",32,"Moses Garoeb","Constituency","Constituency",NA,NA
+33,155,"NAM","Namibia",5,"Khomas",33,"Soweto","Constituency","Constituency",NA,NA
+34,155,"NAM","Namibia",5,"Khomas",34,"Tobias Hainyeko","Constituency","Constituency",NA,NA
+35,155,"NAM","Namibia",5,"Khomas",35,"Wanaheda","Constituency","Constituency",NA,NA
+36,155,"NAM","Namibia",5,"Khomas",36,"Windhoek East","Constituency","Constituency",NA,NA
+37,155,"NAM","Namibia",5,"Khomas",37,"Windhoek Rural","Constituency","Constituency",NA,NA
+38,155,"NAM","Namibia",5,"Khomas",38,"Windhoek West","Constituency","Constituency",NA,NA
+39,155,"NAM","Namibia",6,"Kunene",39,"Epupa","Constituency","Constituency",NA,NA
+40,155,"NAM","Namibia",6,"Kunene",40,"Kamanjab","Constituency","Constituency",NA,NA
+41,155,"NAM","Namibia",6,"Kunene",41,"Khorixas","Constituency","Constituency",NA,NA
+42,155,"NAM","Namibia",6,"Kunene",42,"Opuwo","Constituency","Constituency",NA,NA
+43,155,"NAM","Namibia",6,"Kunene",43,"Outjo","Constituency","Constituency",NA,NA
+44,155,"NAM","Namibia",6,"Kunene",44,"Sesfontein","Constituency","Constituency",NA,NA
+45,155,"NAM","Namibia",7,"Ohangwena",45,"Eenhana","Constituency","Constituency",NA,NA
+46,155,"NAM","Namibia",7,"Ohangwena",46,"Endola","Constituency","Constituency",NA,NA
+47,155,"NAM","Namibia",7,"Ohangwena",47,"Engela","Constituency","Constituency",NA,NA
+48,155,"NAM","Namibia",7,"Ohangwena",48,"Epembe","Constituency","Constituency",NA,NA
+49,155,"NAM","Namibia",7,"Ohangwena",49,"Ohangwena","Constituency","Constituency",NA,NA
+50,155,"NAM","Namibia",7,"Ohangwena",50,"Okongo","Constituency","Constituency",NA,NA
+51,155,"NAM","Namibia",7,"Ohangwena",51,"Omulonga","Constituency","Constituency",NA,NA
+52,155,"NAM","Namibia",7,"Ohangwena",52,"Omundaungilo","Constituency","Constituency",NA,NA
+53,155,"NAM","Namibia",7,"Ohangwena",53,"Ondobe","Constituency","Constituency",NA,NA
+54,155,"NAM","Namibia",7,"Ohangwena",54,"Ongenga","Constituency","Constituency",NA,NA
+55,155,"NAM","Namibia",7,"Ohangwena",55,"Oshikango","Constituency","Constituency",NA,NA
+56,155,"NAM","Namibia",8,"Omaheke",56,"Aminius","Constituency","Constituency",NA,"Aminuis"
+57,155,"NAM","Namibia",8,"Omaheke",57,"Epukiro","Constituency","Constituency",NA,NA
+58,155,"NAM","Namibia",8,"Omaheke",58,"Gobabis","Constituency","Constituency",NA,NA
+59,155,"NAM","Namibia",8,"Omaheke",59,"Kalahari","Constituency","Constituency",NA,NA
+60,155,"NAM","Namibia",8,"Omaheke",60,"Otjinene","Constituency","Constituency",NA,NA
+61,155,"NAM","Namibia",8,"Omaheke",61,"Otjombinde","Constituency","Constituency",NA,NA
+62,155,"NAM","Namibia",8,"Omaheke",62,"Steinhausen","Constituency","Constituency",NA,NA
+63,155,"NAM","Namibia",9,"Omusati",63,"Anamulenge","Constituency","Constituency",NA,NA
+64,155,"NAM","Namibia",9,"Omusati",64,"Elim","Constituency","Constituency",NA,NA
+65,155,"NAM","Namibia",9,"Omusati",65,"Etayi","Constituency","Constituency",NA,NA
+66,155,"NAM","Namibia",9,"Omusati",66,"Ogongo","Constituency","Constituency",NA,NA
+67,155,"NAM","Namibia",9,"Omusati",67,"Okahao","Constituency","Constituency",NA,NA
+68,155,"NAM","Namibia",9,"Omusati",68,"Okalongo","Constituency","Constituency",NA,NA
+69,155,"NAM","Namibia",9,"Omusati",69,"Onesi","Constituency","Constituency",NA,NA
+70,155,"NAM","Namibia",9,"Omusati",70,"Oshikuku","Constituency","Constituency",NA,NA
+71,155,"NAM","Namibia",9,"Omusati",71,"Otamanzi","Constituency","Constituency",NA,NA
+72,155,"NAM","Namibia",9,"Omusati",72,"Outapi","Constituency","Constituency",NA,NA
+73,155,"NAM","Namibia",9,"Omusati",73,"Ruacana","Constituency","Constituency",NA,"Raucana"
+74,155,"NAM","Namibia",9,"Omusati",74,"Tsandi","Constituency","Constituency",NA,NA
+75,155,"NAM","Namibia",10,"Oshana",75,"Okaku","Constituency","Constituency",NA,NA
+76,155,"NAM","Namibia",10,"Oshana",76,"Okatana","Constituency","Constituency",NA,NA
+77,155,"NAM","Namibia",10,"Oshana",77,"Okatyali","Constituency","Constituency",NA,"Okatjali"
+78,155,"NAM","Namibia",10,"Oshana",78,"Ompundja","Constituency","Constituency",NA,NA
+79,155,"NAM","Namibia",10,"Oshana",79,"Ondangwa","Constituency","Constituency",NA,NA
+80,155,"NAM","Namibia",10,"Oshana",80,"Ongwediva","Constituency","Constituency",NA,NA
+81,155,"NAM","Namibia",10,"Oshana",81,"Oshakati East","Constituency","Constituency",NA,NA
+82,155,"NAM","Namibia",10,"Oshana",82,"Oshakati West","Constituency","Constituency",NA,NA
+83,155,"NAM","Namibia",10,"Oshana",83,"Uukwiyu","Constituency","Constituency",NA,NA
+84,155,"NAM","Namibia",10,"Oshana",84,"Uuvudhiya","Constituency","Constituency",NA,NA
+85,155,"NAM","Namibia",11,"Oshikoto",85,"Engodi","Constituency","Constituency",NA,"Eengodi"
+86,155,"NAM","Namibia",11,"Oshikoto",86,"Guinas","Constituency","Constituency",NA,NA
+87,155,"NAM","Namibia",11,"Oshikoto",87,"Okankolo","Constituency","Constituency",NA,NA
+88,155,"NAM","Namibia",11,"Oshikoto",88,"Olukonda","Constituency","Constituency",NA,NA
+89,155,"NAM","Namibia",11,"Oshikoto",89,"Omuntele","Constituency","Constituency",NA,NA
+90,155,"NAM","Namibia",11,"Oshikoto",90,"Omuthiyagwipundi","Constituency","Constituency",NA,"Omuthiyagwiipundi"
+91,155,"NAM","Namibia",11,"Oshikoto",91,"Onayena","Constituency","Constituency",NA,NA
+92,155,"NAM","Namibia",11,"Oshikoto",92,"Oniipa","Constituency","Constituency",NA,NA
+93,155,"NAM","Namibia",11,"Oshikoto",93,"Onyaanya","Constituency","Constituency",NA,NA
+94,155,"NAM","Namibia",11,"Oshikoto",94,"Tsumeb","Constituency","Constituency",NA,NA
+95,155,"NAM","Namibia",12,"Otjozondjupa",95,"Grootfontein","Constituency","Constituency",NA,NA
+96,155,"NAM","Namibia",12,"Otjozondjupa",96,"Okahandja","Constituency","Constituency",NA,NA
+97,155,"NAM","Namibia",12,"Otjozondjupa",97,"Okakarara","Constituency","Constituency",NA,NA
+98,155,"NAM","Namibia",12,"Otjozondjupa",98,"Omatako","Constituency","Constituency",NA,NA
+99,155,"NAM","Namibia",12,"Otjozondjupa",99,"Otavi","Constituency","Constituency",NA,NA
+100,155,"NAM","Namibia",12,"Otjozondjupa",100,"Otjiwarongo","Constituency","Constituency",NA,NA
+101,155,"NAM","Namibia",12,"Otjozondjupa",101,"Tsumkwe","Constituency","Constituency",NA,NA
+102,155,"NAM","Namibia",13,"Zambezi",102,"Kabe","Constituency","Constituency",NA,NA
+103,155,"NAM","Namibia",13,"Zambezi",103,"Katima Muliro Rural","Constituency","Constituency",NA,"Katima Mulilo Rural"
+104,155,"NAM","Namibia",13,"Zambezi",104,"Katima Muliro Urban","Constituency","Constituency",NA,"Katima Mulilo Urban"
+105,155,"NAM","Namibia",13,"Zambezi",105,"Kongola","Constituency","Constituency",NA,NA
+106,155,"NAM","Namibia",13,"Zambezi",106,"Linyandi","Constituency","Constituency",NA,"Linyanti"
+107,155,"NAM","Namibia",13,"Zambezi",107,"Sibinda","Constituency","Constituency",NA,NA

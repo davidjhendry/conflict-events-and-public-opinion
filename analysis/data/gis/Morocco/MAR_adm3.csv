@@ -1,0 +1,400 @@
+"OBJECTID","ID_0","ISO","NAME_0","ID_1","NAME_1","ID_2","NAME_2","ID_3","NAME_3","TYPE_3","ENGTYPE_3","NL_NAME_3","VARNAME_3"
+1,152,"MAR","Morocco",1,"Chaouia - Ouardigha",1,"Ben Slimane",1,"Ben Slimane","Cercle","District",NA,NA
+2,152,"MAR","Morocco",1,"Chaouia - Ouardigha",1,"Ben Slimane",2,"Bouznika","Cercle","District",NA,NA
+3,152,"MAR","Morocco",1,"Chaouia - Ouardigha",1,"Ben Slimane",3,"NA (Ben Slimane)","Unknown","Unknown",NA,NA
+4,152,"MAR","Morocco",1,"Chaouia - Ouardigha",1,"Ben Slimane",4,"NA (Bouznika)","Unknown","Unknown",NA,NA
+5,152,"MAR","Morocco",1,"Chaouia - Ouardigha",2,"Khouribga",5,"Bejaad","Cercle","District",NA,NA
+6,152,"MAR","Morocco",1,"Chaouia - Ouardigha",2,"Khouribga",6,"Khouribga","Cercle","District",NA,NA
+7,152,"MAR","Morocco",1,"Chaouia - Ouardigha",2,"Khouribga",7,"NA (Bejaad)","Unknown","Unknown",NA,NA
+8,152,"MAR","Morocco",1,"Chaouia - Ouardigha",2,"Khouribga",8,"NA (Boujniba)","Unknown","Unknown",NA,NA
+9,152,"MAR","Morocco",1,"Chaouia - Ouardigha",2,"Khouribga",9,"NA (Hattane)","Unknown","Unknown",NA,NA
+10,152,"MAR","Morocco",1,"Chaouia - Ouardigha",2,"Khouribga",10,"NA (Khouribga)","Unknown","Unknown",NA,NA
+11,152,"MAR","Morocco",1,"Chaouia - Ouardigha",2,"Khouribga",11,"NA (Ouad Zem)","Unknown","Unknown",NA,NA
+12,152,"MAR","Morocco",1,"Chaouia - Ouardigha",2,"Khouribga",12,"Ouad Zem","Cercle","District",NA,NA
+13,152,"MAR","Morocco",1,"Chaouia - Ouardigha",3,"Settat",13,"Ben Ahmed","Cercle","District",NA,NA
+14,152,"MAR","Morocco",1,"Chaouia - Ouardigha",3,"Settat",14,"Berrechid","Cercle","District",NA,NA
+15,152,"MAR","Morocco",1,"Chaouia - Ouardigha",3,"Settat",15,"El Borouj","Cercle","District",NA,NA
+16,152,"MAR","Morocco",1,"Chaouia - Ouardigha",3,"Settat",16,"El Gara","Cercle","District",NA,NA
+17,152,"MAR","Morocco",1,"Chaouia - Ouardigha",3,"Settat",17,"NA (Ben Ahmed)","Unknown","Unknown",NA,NA
+18,152,"MAR","Morocco",1,"Chaouia - Ouardigha",3,"Settat",18,"NA (Berrechid)","Unknown","Unknown",NA,NA
+19,152,"MAR","Morocco",1,"Chaouia - Ouardigha",3,"Settat",19,"NA (El Borouj)","Unknown","Unknown",NA,NA
+20,152,"MAR","Morocco",1,"Chaouia - Ouardigha",3,"Settat",20,"NA (El Gara)","Unknown","Unknown",NA,NA
+21,152,"MAR","Morocco",1,"Chaouia - Ouardigha",3,"Settat",21,"NA (Loulad)","Unknown","Unknown",NA,NA
+22,152,"MAR","Morocco",1,"Chaouia - Ouardigha",3,"Settat",22,"NA (Oulad Abbou)","Unknown","Unknown",NA,NA
+23,152,"MAR","Morocco",1,"Chaouia - Ouardigha",3,"Settat",23,"NA (Oulad M'Rah)","Unknown","Unknown",NA,NA
+24,152,"MAR","Morocco",1,"Chaouia - Ouardigha",3,"Settat",24,"NA (Settat)","Unknown","Unknown",NA,NA
+25,152,"MAR","Morocco",1,"Chaouia - Ouardigha",3,"Settat",25,"Settat","Cercle","District",NA,NA
+26,152,"MAR","Morocco",2,"Doukkala - Abda",4,"El Jadida",26,"Azemmour","Cercle","District",NA,NA
+27,152,"MAR","Morocco",2,"Doukkala - Abda",4,"El Jadida",27,"El Jadida","Cercle","District",NA,NA
+28,152,"MAR","Morocco",2,"Doukkala - Abda",4,"El Jadida",28,"NA (Azemmour)","Unknown","Unknown",NA,NA
+29,152,"MAR","Morocco",2,"Doukkala - Abda",4,"El Jadida",29,"NA (El Jadida)","Unknown","Unknown",NA,NA
+30,152,"MAR","Morocco",2,"Doukkala - Abda",4,"El Jadida",30,"NA (Lbir Jdid)","Unknown","Unknown",NA,NA
+31,152,"MAR","Morocco",2,"Doukkala - Abda",4,"El Jadida",31,"NA (Sidi Bennour)","Unknown","Unknown",NA,NA
+32,152,"MAR","Morocco",2,"Doukkala - Abda",4,"El Jadida",32,"NA (Zemamra)","Unknown","Unknown",NA,NA
+33,152,"MAR","Morocco",2,"Doukkala - Abda",4,"El Jadida",33,"Sidi Bennou","Cercle","District",NA,NA
+34,152,"MAR","Morocco",2,"Doukkala - Abda",4,"El Jadida",34,"Sidi Smail","Cercle","District",NA,NA
+35,152,"MAR","Morocco",2,"Doukkala - Abda",4,"El Jadida",35,"Zemamra","Cercle","District",NA,NA
+36,152,"MAR","Morocco",2,"Doukkala - Abda",5,"Safi",36,"Abda","Cercle","District",NA,NA
+37,152,"MAR","Morocco",2,"Doukkala - Abda",5,"Safi",37,"Ahmar","Cercle","District",NA,NA
+38,152,"MAR","Morocco",2,"Doukkala - Abda",5,"Safi",38,"Gzoula","Cercle","District",NA,NA
+39,152,"MAR","Morocco",2,"Doukkala - Abda",5,"Safi",39,"Hrara","Cercle","District",NA,NA
+40,152,"MAR","Morocco",2,"Doukkala - Abda",5,"Safi",40,"NA (Asfi Biyada)","Unknown","Unknown",NA,NA
+41,152,"MAR","Morocco",2,"Doukkala - Abda",5,"Safi",41,"NA (Asfi Boudheb)","Unknown","Unknown",NA,NA
+42,152,"MAR","Morocco",2,"Doukkala - Abda",5,"Safi",42,"NA (Asfi Zaouia)","Unknown","Unknown",NA,NA
+43,152,"MAR","Morocco",2,"Doukkala - Abda",5,"Safi",43,"NA (Echemmaia)","Unknown","Unknown",NA,NA
+44,152,"MAR","Morocco",2,"Doukkala - Abda",5,"Safi",44,"NA (Jamaat Shaim)","Unknown","Unknown",NA,NA
+45,152,"MAR","Morocco",2,"Doukkala - Abda",5,"Safi",45,"NA (Sebt Gzoula)","Unknown","Unknown",NA,NA
+46,152,"MAR","Morocco",2,"Doukkala - Abda",5,"Safi",46,"NA (Youssoufia)","Unknown","Unknown",NA,NA
+47,152,"MAR","Morocco",3,"Fès - Boulemane",6,"Boulemane",47,"Boulemane","Cercle","District",NA,NA
+48,152,"MAR","Morocco",3,"Fès - Boulemane",6,"Boulemane",48,"Missour","Cercle","District",NA,NA
+49,152,"MAR","Morocco",3,"Fès - Boulemane",6,"Boulemane",49,"NA (Boulemane)","Unknown","Unknown",NA,NA
+50,152,"MAR","Morocco",3,"Fès - Boulemane",6,"Boulemane",50,"NA (Imouzzer Marmoucha)","Unknown","Unknown",NA,NA
+51,152,"MAR","Morocco",3,"Fès - Boulemane",6,"Boulemane",51,"NA (Missour)","Unknown","Unknown",NA,NA
+52,152,"MAR","Morocco",3,"Fès - Boulemane",6,"Boulemane",52,"NA (Outat El Haj)","Unknown","Unknown",NA,NA
+53,152,"MAR","Morocco",3,"Fès - Boulemane",6,"Boulemane",53,"Outat El Ha","Cercle","District",NA,NA
+54,152,"MAR","Morocco",3,"Fès - Boulemane",7,"Fès",54,"NA (Agdal)","Unknown","Unknown",NA,NA
+55,152,"MAR","Morocco",3,"Fès - Boulemane",7,"Fès",55,"NA (Fes Medina)","Unknown","Unknown",NA,NA
+56,152,"MAR","Morocco",3,"Fès - Boulemane",7,"Fès",56,"NA (Machouar Fes El Jadid)","Unknown","Unknown",NA,NA
+57,152,"MAR","Morocco",3,"Fès - Boulemane",7,"Fès",57,"NA (Saiss)","Unknown","Unknown",NA,NA
+58,152,"MAR","Morocco",3,"Fès - Boulemane",7,"Fès",58,"Oulad Tayeb","Cercle","District",NA,NA
+59,152,"MAR","Morocco",3,"Fès - Boulemane",7,"Fès",59,"Sans nom","Cercle","District",NA,NA
+60,152,"MAR","Morocco",3,"Fès - Boulemane",8,"Sefrou",60,"El Menzel","Cercle","District",NA,NA
+61,152,"MAR","Morocco",3,"Fès - Boulemane",8,"Sefrou",61,"Imouzzer Ka","Cercle","District",NA,NA
+62,152,"MAR","Morocco",3,"Fès - Boulemane",8,"Sefrou",62,"NA (Bhalil)","Unknown","Unknown",NA,NA
+63,152,"MAR","Morocco",3,"Fès - Boulemane",8,"Sefrou",63,"NA (El Menzel)","Unknown","Unknown",NA,NA
+64,152,"MAR","Morocco",3,"Fès - Boulemane",8,"Sefrou",64,"NA (Imouzzer Kandar)","Unknown","Unknown",NA,NA
+65,152,"MAR","Morocco",3,"Fès - Boulemane",8,"Sefrou",65,"NA (Ribate El Kheir)","Unknown","Unknown",NA,NA
+66,152,"MAR","Morocco",3,"Fès - Boulemane",8,"Sefrou",66,"NA (Sefrou)","Unknown","Unknown",NA,NA
+67,152,"MAR","Morocco",3,"Fès - Boulemane",8,"Sefrou",67,"Sefrou","Cercle","District",NA,NA
+68,152,"MAR","Morocco",3,"Fès - Boulemane",9,"Zouagha-Moulay Yacoub",68,"Moulay Yaco","Cercle","District",NA,NA
+69,152,"MAR","Morocco",3,"Fès - Boulemane",9,"Zouagha-Moulay Yacoub",69,"NA (Moulay Yacoub)","Unknown","Unknown",NA,NA
+70,152,"MAR","Morocco",3,"Fès - Boulemane",9,"Zouagha-Moulay Yacoub",70,"NA (Zouagha)","Unknown","Unknown",NA,NA
+71,152,"MAR","Morocco",3,"Fès - Boulemane",9,"Zouagha-Moulay Yacoub",71,"Oulad Jemaa","Cercle","District",NA,NA
+72,152,"MAR","Morocco",4,"Gharb - Chrarda - Béni Hssen",10,"Kénitra",72,"Kenitra Ban","Cercle","District",NA,NA
+73,152,"MAR","Morocco",4,"Gharb - Chrarda - Béni Hssen",10,"Kénitra",73,"NA (Kenitra Maamoura)","Unknown","Unknown",NA,NA
+74,152,"MAR","Morocco",4,"Gharb - Chrarda - Béni Hssen",10,"Kénitra",74,"NA (Kenitra Saknia)","Unknown","Unknown",NA,NA
+75,152,"MAR","Morocco",4,"Gharb - Chrarda - Béni Hssen",10,"Kénitra",75,"NA (Mehdia)","Unknown","Unknown",NA,NA
+76,152,"MAR","Morocco",4,"Gharb - Chrarda - Béni Hssen",10,"Kénitra",76,"NA (Sidi Slimane)","Unknown","Unknown",NA,NA
+77,152,"MAR","Morocco",4,"Gharb - Chrarda - Béni Hssen",10,"Kénitra",77,"NA (Sidi Yahya El Gharb)","Unknown","Unknown",NA,NA
+78,152,"MAR","Morocco",4,"Gharb - Chrarda - Béni Hssen",10,"Kénitra",78,"NA (Souk Arbaa)","Unknown","Unknown",NA,NA
+79,152,"MAR","Morocco",4,"Gharb - Chrarda - Béni Hssen",10,"Kénitra",79,"Sidi Sliman","Cercle","District",NA,NA
+80,152,"MAR","Morocco",4,"Gharb - Chrarda - Béni Hssen",10,"Kénitra",80,"Souk Arbaa","Cercle","District",NA,NA
+81,152,"MAR","Morocco",4,"Gharb - Chrarda - Béni Hssen",10,"Kénitra",81,"Souk Tlat E","Cercle","District",NA,NA
+82,152,"MAR","Morocco",4,"Gharb - Chrarda - Béni Hssen",11,"Sidi Kacem",82,"Had Kourt","Cercle","District",NA,NA
+83,152,"MAR","Morocco",4,"Gharb - Chrarda - Béni Hssen",11,"Sidi Kacem",83,"Mechra Belk","Cercle","District",NA,NA
+84,152,"MAR","Morocco",4,"Gharb - Chrarda - Béni Hssen",11,"Sidi Kacem",84,"NA (Dar Gueddari)","Unknown","Unknown",NA,NA
+85,152,"MAR","Morocco",4,"Gharb - Chrarda - Béni Hssen",11,"Sidi Kacem",85,"NA (Had Kourt)","Unknown","Unknown",NA,NA
+86,152,"MAR","Morocco",4,"Gharb - Chrarda - Béni Hssen",11,"Sidi Kacem",86,"NA (Jorf El Melha)","Unknown","Unknown",NA,NA
+87,152,"MAR","Morocco",4,"Gharb - Chrarda - Béni Hssen",11,"Sidi Kacem",87,"NA (Mechraa Bel Ksiri)","Unknown","Unknown",NA,NA
+88,152,"MAR","Morocco",4,"Gharb - Chrarda - Béni Hssen",11,"Sidi Kacem",88,"NA (Ouezzane)","Unknown","Unknown",NA,NA
+89,152,"MAR","Morocco",4,"Gharb - Chrarda - Béni Hssen",11,"Sidi Kacem",89,"NA (Sidi Kacem)","Unknown","Unknown",NA,NA
+90,152,"MAR","Morocco",4,"Gharb - Chrarda - Béni Hssen",11,"Sidi Kacem",90,"Ouezzane","Cercle","District",NA,NA
+91,152,"MAR","Morocco",4,"Gharb - Chrarda - Béni Hssen",11,"Sidi Kacem",91,"Sidi Kacem","Cercle","District",NA,NA
+92,152,"MAR","Morocco",5,"Grand Casablanca",12,"Casablanca",92,"Bouskoura","Cercle","District",NA,NA
+93,152,"MAR","Morocco",5,"Grand Casablanca",12,"Casablanca",93,"Mediouna","Cercle","District",NA,NA
+94,152,"MAR","Morocco",5,"Grand Casablanca",12,"Casablanca",94,"NA (Ahl Laghlam)","Unknown","Unknown",NA,NA
+95,152,"MAR","Morocco",5,"Grand Casablanca",12,"Casablanca",95,"NA (Ain Chock)","Unknown","Unknown",NA,NA
+96,152,"MAR","Morocco",5,"Grand Casablanca",12,"Casablanca",96,"NA (Ain Harrouda)","Unknown","Unknown",NA,NA
+97,152,"MAR","Morocco",5,"Grand Casablanca",12,"Casablanca",97,"NA (Ain Sebaa)","Unknown","Unknown",NA,NA
+98,152,"MAR","Morocco",5,"Grand Casablanca",12,"Casablanca",98,"NA (Al Fida)","Unknown","Unknown",NA,NA
+99,152,"MAR","Morocco",5,"Grand Casablanca",12,"Casablanca",99,"NA (Al Idrissia)","Unknown","Unknown",NA,NA
+100,152,"MAR","Morocco",5,"Grand Casablanca",12,"Casablanca",100,"NA (Anfa)","Unknown","Unknown",NA,NA
+101,152,"MAR","Morocco",5,"Grand Casablanca",12,"Casablanca",101,"NA (Assoukhour Assawda)","Unknown","Unknown",NA,NA
+102,152,"MAR","Morocco",5,"Grand Casablanca",12,"Casablanca",102,"NA (Ben Msick)","Unknown","Unknown",NA,NA
+103,152,"MAR","Morocco",5,"Grand Casablanca",12,"Casablanca",103,"NA (Bou Chentouf)","Unknown","Unknown",NA,NA
+104,152,"MAR","Morocco",5,"Grand Casablanca",12,"Casablanca",104,"NA (El Maarif)","Unknown","Unknown",NA,NA
+105,152,"MAR","Morocco",5,"Grand Casablanca",12,"Casablanca",105,"NA (Hay Hassani)","Unknown","Unknown",NA,NA
+106,152,"MAR","Morocco",5,"Grand Casablanca",12,"Casablanca",106,"NA (Hay Mohammadi)","Unknown","Unknown",NA,NA
+107,152,"MAR","Morocco",5,"Grand Casablanca",12,"Casablanca",107,"NA (Lissasfa)","Unknown","Unknown",NA,NA
+108,152,"MAR","Morocco",5,"Grand Casablanca",12,"Casablanca",108,"NA (Machouar Casablanca)","Unknown","Unknown",NA,NA
+109,152,"MAR","Morocco",5,"Grand Casablanca",12,"Casablanca",109,"NA (Mediouna)","Unknown","Unknown",NA,NA
+110,152,"MAR","Morocco",5,"Grand Casablanca",12,"Casablanca",110,"NA (Mers Sultan)","Unknown","Unknown",NA,NA
+111,152,"MAR","Morocco",5,"Grand Casablanca",12,"Casablanca",111,"NA (Moulay Rachid)","Unknown","Unknown",NA,NA
+112,152,"MAR","Morocco",5,"Grand Casablanca",12,"Casablanca",112,"NA (Moulay Youssef)","Unknown","Unknown",NA,NA
+113,152,"MAR","Morocco",5,"Grand Casablanca",12,"Casablanca",113,"NA (Nouaceur)","Unknown","Unknown",NA,NA
+114,152,"MAR","Morocco",5,"Grand Casablanca",12,"Casablanca",114,"NA (Salmia)","Unknown","Unknown",NA,NA
+115,152,"MAR","Morocco",5,"Grand Casablanca",12,"Casablanca",115,"NA (Sbata)","Unknown","Unknown",NA,NA
+116,152,"MAR","Morocco",5,"Grand Casablanca",12,"Casablanca",116,"NA (Sidi Belyout)","Unknown","Unknown",NA,NA
+117,152,"MAR","Morocco",5,"Grand Casablanca",12,"Casablanca",117,"NA (Sidi Bernoussi)","Unknown","Unknown",NA,NA
+118,152,"MAR","Morocco",5,"Grand Casablanca",12,"Casablanca",118,"NA (Sidi Maarouf)","Unknown","Unknown",NA,NA
+119,152,"MAR","Morocco",5,"Grand Casablanca",12,"Casablanca",119,"NA (Sidi Moumen)","Unknown","Unknown",NA,NA
+120,152,"MAR","Morocco",5,"Grand Casablanca",12,"Casablanca",120,"NA (Sidi Othmane)","Unknown","Unknown",NA,NA
+121,152,"MAR","Morocco",5,"Grand Casablanca",12,"Casablanca",121,"NA (Tit Mellil)","Unknown","Unknown",NA,NA
+122,152,"MAR","Morocco",5,"Grand Casablanca",12,"Casablanca",122,"Tit Mellil","Cercle","District",NA,NA
+123,152,"MAR","Morocco",5,"Grand Casablanca",13,"Mohammedia",123,"NA (Mohammedia)","Unknown","Unknown",NA,NA
+124,152,"MAR","Morocco",6,"Guelmim - Es-Semara",14,"Assa-Zag",124,"Assa","Cercle","District",NA,NA
+125,152,"MAR","Morocco",6,"Guelmim - Es-Semara",14,"Assa-Zag",125,"NA (Assa)","Unknown","Unknown",NA,NA
+126,152,"MAR","Morocco",6,"Guelmim - Es-Semara",14,"Assa-Zag",126,"NA (Zag)","Unknown","Unknown",NA,NA
+127,152,"MAR","Morocco",6,"Guelmim - Es-Semara",14,"Assa-Zag",127,"Zag","Cercle","District",NA,NA
+128,152,"MAR","Morocco",6,"Guelmim - Es-Semara",15,"Guelmim",128,"Bouizakarne","Cercle","District",NA,NA
+129,152,"MAR","Morocco",6,"Guelmim - Es-Semara",15,"Guelmim",129,"Guelmim","Cercle","District",NA,NA
+130,152,"MAR","Morocco",6,"Guelmim - Es-Semara",15,"Guelmim",130,"NA (Bouizakarne)","Unknown","Unknown",NA,NA
+131,152,"MAR","Morocco",6,"Guelmim - Es-Semara",15,"Guelmim",131,"NA (Guelmim)","Unknown","Unknown",NA,NA
+132,152,"MAR","Morocco",6,"Guelmim - Es-Semara",16,"Tan-Tan",132,"Msied","Cercle","District",NA,NA
+133,152,"MAR","Morocco",6,"Guelmim - Es-Semara",16,"Tan-Tan",133,"NA (El Ouatia)","Unknown","Unknown",NA,NA
+134,152,"MAR","Morocco",6,"Guelmim - Es-Semara",16,"Tan-Tan",134,"NA (Tan-Tan)","Unknown","Unknown",NA,NA
+135,152,"MAR","Morocco",6,"Guelmim - Es-Semara",16,"Tan-Tan",135,"Tan-Tan","Cercle","District",NA,NA
+136,152,"MAR","Morocco",6,"Guelmim - Es-Semara",17,"Tata",136,"Akka","Cercle","District",NA,NA
+137,152,"MAR","Morocco",6,"Guelmim - Es-Semara",17,"Tata",137,"Foum Zguid","Cercle","District",NA,NA
+138,152,"MAR","Morocco",6,"Guelmim - Es-Semara",17,"Tata",138,"NA (Akka)","Unknown","Unknown",NA,NA
+139,152,"MAR","Morocco",6,"Guelmim - Es-Semara",17,"Tata",139,"NA (Fam El Hisn)","Unknown","Unknown",NA,NA
+140,152,"MAR","Morocco",6,"Guelmim - Es-Semara",17,"Tata",140,"NA (Foum Zguid)","Unknown","Unknown",NA,NA
+141,152,"MAR","Morocco",6,"Guelmim - Es-Semara",17,"Tata",141,"NA (Tata)","Unknown","Unknown",NA,NA
+142,152,"MAR","Morocco",6,"Guelmim - Es-Semara",17,"Tata",142,"Tata","Cercle","District",NA,NA
+143,152,"MAR","Morocco",7,"Laâyoune - Boujdour - Sakia El Hamra",18,"Laâyoune",143,"Tarfaya","Cercle","District",NA,NA
+144,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",19,"Al Haouz",144,"Ait Ourir","Cercle","District",NA,NA
+145,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",19,"Al Haouz",145,"Amizmiz","Cercle","District",NA,NA
+146,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",19,"Al Haouz",146,"Asni","Cercle","District",NA,NA
+147,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",19,"Al Haouz",147,"NA (Ait Ourir)","Unknown","Unknown",NA,NA
+148,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",19,"Al Haouz",148,"Tahannaout","Cercle","District",NA,NA
+149,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",20,"Chichaoua",149,"Chichaoua","Cercle","District",NA,NA
+150,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",20,"Chichaoua",150,"Imintanoute","Cercle","District",NA,NA
+151,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",20,"Chichaoua",151,"Majjat","Cercle","District",NA,NA
+152,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",20,"Chichaoua",152,"Mtouga","Cercle","District",NA,NA
+153,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",20,"Chichaoua",153,"NA (Chichaoua)","Unknown","Unknown",NA,NA
+154,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",20,"Chichaoua",154,"NA (Imintanoute)","Unknown","Unknown",NA,NA
+155,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",21,"El Kelaâ des Sraghna",155,"El Kelaa Sr","Cercle","District",NA,NA
+156,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",21,"El Kelaâ des Sraghna",156,"Laattaouia","Cercle","District",NA,NA
+157,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",21,"El Kelaâ des Sraghna",157,"NA (Ben Guerir)","Unknown","Unknown",NA,NA
+158,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",21,"El Kelaâ des Sraghna",158,"NA (Kelaat Sraghna)","Unknown","Unknown",NA,NA
+159,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",21,"El Kelaâ des Sraghna",159,"NA (Laataouia)","Unknown","Unknown",NA,NA
+160,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",21,"El Kelaâ des Sraghna",160,"NA (Sidi Rahhal)","Unknown","Unknown",NA,NA
+161,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",21,"El Kelaâ des Sraghna",161,"NA (Tamallalt)","Unknown","Unknown",NA,NA
+162,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",21,"El Kelaâ des Sraghna",162,"Rehamna","Cercle","District",NA,NA
+163,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",21,"El Kelaâ des Sraghna",163,"Sidi Bou Ot","Cercle","District",NA,NA
+164,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",22,"Essaouira",164,"Essaouira","Cercle","District",NA,NA
+165,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",22,"Essaouira",165,"NA (Ait Daoud)","Unknown","Unknown",NA,NA
+166,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",22,"Essaouira",166,"NA (El Hanchane)","Unknown","Unknown",NA,NA
+167,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",22,"Essaouira",167,"NA (Essaouira)","Unknown","Unknown",NA,NA
+168,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",22,"Essaouira",168,"NA (Talmest)","Unknown","Unknown",NA,NA
+169,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",22,"Essaouira",169,"NA (Tamanar)","Unknown","Unknown",NA,NA
+170,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",22,"Essaouira",170,"Tamanar","Cercle","District",NA,NA
+171,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",23,"Marrakech",171,"Bour","Cercle","District",NA,NA
+172,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",23,"Marrakech",172,"Loudaya","Cercle","District",NA,NA
+173,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",23,"Marrakech",173,"NA (Annakhil)","Unknown","Unknown",NA,NA
+174,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",23,"Marrakech",174,"NA (Machouar Kasba)","Unknown","Unknown",NA,NA
+175,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",23,"Marrakech",175,"NA (Marrakech Medina)","Unknown","Unknown",NA,NA
+176,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",23,"Marrakech",176,"NA (Menara Gueliz)","Unknown","Unknown",NA,NA
+177,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",23,"Marrakech",177,"NA (Sidi Youssef Ben Ali)","Unknown","Unknown",NA,NA
+178,152,"MAR","Morocco",9,"Meknès - Tafilalet",24,"El Hajeb",178,"Agourai","Cercle","District",NA,NA
+179,152,"MAR","Morocco",9,"Meknès - Tafilalet",24,"El Hajeb",179,"Ain Taoujda","Cercle","District",NA,NA
+180,152,"MAR","Morocco",9,"Meknès - Tafilalet",24,"El Hajeb",180,"El Hajeb","Cercle","District",NA,NA
+181,152,"MAR","Morocco",9,"Meknès - Tafilalet",24,"El Hajeb",181,"NA (Agourai)","Unknown","Unknown",NA,NA
+182,152,"MAR","Morocco",9,"Meknès - Tafilalet",24,"El Hajeb",182,"NA (Ain Taoujdate)","Unknown","Unknown",NA,NA
+183,152,"MAR","Morocco",9,"Meknès - Tafilalet",24,"El Hajeb",183,"NA (El Hajeb)","Unknown","Unknown",NA,NA
+184,152,"MAR","Morocco",9,"Meknès - Tafilalet",24,"El Hajeb",184,"NA (Sbaa Aiyoun)","Unknown","Unknown",NA,NA
+185,152,"MAR","Morocco",9,"Meknès - Tafilalet",25,"Errachidia",185,"Arfoud","Cercle","District",NA,NA
+186,152,"MAR","Morocco",9,"Meknès - Tafilalet",25,"Errachidia",186,"Assoul","Cercle","District",NA,NA
+187,152,"MAR","Morocco",9,"Meknès - Tafilalet",25,"Errachidia",187,"Errachidia","Cercle","District",NA,NA
+188,152,"MAR","Morocco",9,"Meknès - Tafilalet",25,"Errachidia",188,"Errich","Cercle","District",NA,NA
+189,152,"MAR","Morocco",9,"Meknès - Tafilalet",25,"Errachidia",189,"Errissani","Cercle","District",NA,NA
+190,152,"MAR","Morocco",9,"Meknès - Tafilalet",25,"Errachidia",190,"Goulmima","Cercle","District",NA,NA
+191,152,"MAR","Morocco",9,"Meknès - Tafilalet",25,"Errachidia",191,"Imilchil","Cercle","District",NA,NA
+192,152,"MAR","Morocco",9,"Meknès - Tafilalet",25,"Errachidia",192,"NA (Arfoud)","Unknown","Unknown",NA,NA
+193,152,"MAR","Morocco",9,"Meknès - Tafilalet",25,"Errachidia",193,"NA (Boudnib)","Unknown","Unknown",NA,NA
+194,152,"MAR","Morocco",9,"Meknès - Tafilalet",25,"Errachidia",194,"NA (Errachidia)","Unknown","Unknown",NA,NA
+195,152,"MAR","Morocco",9,"Meknès - Tafilalet",25,"Errachidia",195,"NA (Errich)","Unknown","Unknown",NA,NA
+196,152,"MAR","Morocco",9,"Meknès - Tafilalet",25,"Errachidia",196,"NA (Goulmima)","Unknown","Unknown",NA,NA
+197,152,"MAR","Morocco",9,"Meknès - Tafilalet",25,"Errachidia",197,"NA (Jorf)","Unknown","Unknown",NA,NA
+198,152,"MAR","Morocco",9,"Meknès - Tafilalet",25,"Errachidia",198,"NA (Moulay Ali Cherif)","Unknown","Unknown",NA,NA
+199,152,"MAR","Morocco",9,"Meknès - Tafilalet",25,"Errachidia",199,"NA (Tinejdad)","Unknown","Unknown",NA,NA
+200,152,"MAR","Morocco",9,"Meknès - Tafilalet",26,"Ifrane",200,"Azrou","Cercle","District",NA,NA
+201,152,"MAR","Morocco",9,"Meknès - Tafilalet",26,"Ifrane",201,"NA (Azrou)","Unknown","Unknown",NA,NA
+202,152,"MAR","Morocco",9,"Meknès - Tafilalet",26,"Ifrane",202,"NA (Ifrane)","Unknown","Unknown",NA,NA
+203,152,"MAR","Morocco",9,"Meknès - Tafilalet",27,"Khénifra",203,"El Kbab","Cercle","District",NA,NA
+204,152,"MAR","Morocco",9,"Meknès - Tafilalet",27,"Khénifra",204,"Khenifra","Cercle","District",NA,NA
+205,152,"MAR","Morocco",9,"Meknès - Tafilalet",27,"Khénifra",205,"Midelt","Cercle","District",NA,NA
+206,152,"MAR","Morocco",9,"Meknès - Tafilalet",27,"Khénifra",206,"NA (Khenifra)","Unknown","Unknown",NA,NA
+207,152,"MAR","Morocco",9,"Meknès - Tafilalet",27,"Khénifra",207,"NA (M'Rirt)","Unknown","Unknown",NA,NA
+208,152,"MAR","Morocco",9,"Meknès - Tafilalet",27,"Khénifra",208,"NA (Midelt)","Unknown","Unknown",NA,NA
+209,152,"MAR","Morocco",9,"Meknès - Tafilalet",28,"Meknès",209,"Ain Orma","Cercle","District",NA,NA
+210,152,"MAR","Morocco",9,"Meknès - Tafilalet",28,"Meknès",210,"Meknes Banl","Cercle","District",NA,NA
+211,152,"MAR","Morocco",9,"Meknès - Tafilalet",28,"Meknès",211,"NA (Al Ismailia)","Unknown","Unknown",NA,NA
+212,152,"MAR","Morocco",9,"Meknès - Tafilalet",28,"Meknès",212,"NA (Al Machouar Stina)","Unknown","Unknown",NA,NA
+213,152,"MAR","Morocco",9,"Meknès - Tafilalet",28,"Meknès",213,"NA (Boufakrane)","Unknown","Unknown",NA,NA
+214,152,"MAR","Morocco",9,"Meknès - Tafilalet",28,"Meknès",214,"NA (Hamrya)","Unknown","Unknown",NA,NA
+215,152,"MAR","Morocco",9,"Meknès - Tafilalet",28,"Meknès",215,"NA (Maknassat Azzaytoun)","Unknown","Unknown",NA,NA
+216,152,"MAR","Morocco",9,"Meknès - Tafilalet",28,"Meknès",216,"NA (Moulay Idriss Zerhoun)","Unknown","Unknown",NA,NA
+217,152,"MAR","Morocco",9,"Meknès - Tafilalet",28,"Meknès",217,"NA (Ouislane)","Unknown","Unknown",NA,NA
+218,152,"MAR","Morocco",9,"Meknès - Tafilalet",28,"Meknès",218,"NA (Toulal)","Unknown","Unknown",NA,NA
+219,152,"MAR","Morocco",9,"Meknès - Tafilalet",28,"Meknès",219,"Zerhoun","Cercle","District",NA,NA
+220,152,"MAR","Morocco",10,"Oriental",29,"Berkane Taourirt",220,"Ahfir","Cercle","District",NA,NA
+221,152,"MAR","Morocco",10,"Oriental",29,"Berkane Taourirt",221,"Aklim","Cercle","District",NA,NA
+222,152,"MAR","Morocco",10,"Oriental",29,"Berkane Taourirt",222,"El Aioun","Cercle","District",NA,NA
+223,152,"MAR","Morocco",10,"Oriental",29,"Berkane Taourirt",223,"NA (Ahfir)","Unknown","Unknown",NA,NA
+224,152,"MAR","Morocco",10,"Oriental",29,"Berkane Taourirt",224,"NA (Ain Erreggada)","Unknown","Unknown",NA,NA
+225,152,"MAR","Morocco",10,"Oriental",29,"Berkane Taourirt",225,"NA (Aklim)","Unknown","Unknown",NA,NA
+226,152,"MAR","Morocco",10,"Oriental",29,"Berkane Taourirt",226,"NA (Berkane)","Unknown","Unknown",NA,NA
+227,152,"MAR","Morocco",10,"Oriental",29,"Berkane Taourirt",227,"NA (El Aioun Sidi Mellouk)","Unknown","Unknown",NA,NA
+228,152,"MAR","Morocco",10,"Oriental",29,"Berkane Taourirt",228,"NA (Saidia)","Unknown","Unknown",NA,NA
+229,152,"MAR","Morocco",10,"Oriental",29,"Berkane Taourirt",229,"NA (Sidi Slimane Echcherraa)","Unknown","Unknown",NA,NA
+230,152,"MAR","Morocco",10,"Oriental",29,"Berkane Taourirt",230,"NA (Taourirt)","Unknown","Unknown",NA,NA
+231,152,"MAR","Morocco",10,"Oriental",29,"Berkane Taourirt",231,"Taourirt","Cercle","District",NA,NA
+232,152,"MAR","Morocco",10,"Oriental",30,"Figuig",232,"Bni Tadjite","Cercle","District",NA,NA
+233,152,"MAR","Morocco",10,"Oriental",30,"Figuig",233,"Figuig","Cercle","District",NA,NA
+234,152,"MAR","Morocco",10,"Oriental",30,"Figuig",234,"NA (Bouarfa)","Unknown","Unknown",NA,NA
+235,152,"MAR","Morocco",10,"Oriental",30,"Figuig",235,"NA (Figuig)","Unknown","Unknown",NA,NA
+236,152,"MAR","Morocco",10,"Oriental",31,"Jerada",236,"Ain Bni Mat","Cercle","District",NA,NA
+237,152,"MAR","Morocco",10,"Oriental",31,"Jerada",237,"Debdou","Cercle","District",NA,NA
+238,152,"MAR","Morocco",10,"Oriental",31,"Jerada",238,"Jerada Banl","Cercle","District",NA,NA
+239,152,"MAR","Morocco",10,"Oriental",31,"Jerada",239,"NA (Ain Bni Mathar)","Unknown","Unknown",NA,NA
+240,152,"MAR","Morocco",10,"Oriental",31,"Jerada",240,"NA (Debdou)","Unknown","Unknown",NA,NA
+241,152,"MAR","Morocco",10,"Oriental",31,"Jerada",241,"NA (Jrada)","Unknown","Unknown",NA,NA
+242,152,"MAR","Morocco",10,"Oriental",31,"Jerada",242,"NA (Touissit)","Unknown","Unknown",NA,NA
+243,152,"MAR","Morocco",10,"Oriental",32,"Nador",243,"Driouch","Cercle","District",NA,NA
+244,152,"MAR","Morocco",10,"Oriental",32,"Nador",244,"Guelaia","Cercle","District",NA,NA
+245,152,"MAR","Morocco",10,"Oriental",32,"Nador",245,"Louta","Cercle","District",NA,NA
+246,152,"MAR","Morocco",10,"Oriental",32,"Nador",246,"NA (Al Aaroui)","Unknown","Unknown",NA,NA
+247,152,"MAR","Morocco",10,"Oriental",32,"Nador",247,"NA (Bni Ansar)","Unknown","Unknown",NA,NA
+248,152,"MAR","Morocco",10,"Oriental",32,"Nador",248,"NA (Nador)","Unknown","Unknown",NA,NA
+249,152,"MAR","Morocco",10,"Oriental",32,"Nador",249,"NA (Zaio)","Unknown","Unknown",NA,NA
+250,152,"MAR","Morocco",10,"Oriental",32,"Nador",250,"NA (Zeghanghane)","Unknown","Unknown",NA,NA
+251,152,"MAR","Morocco",10,"Oriental",32,"Nador",251,"Rif","Cercle","District",NA,NA
+252,152,"MAR","Morocco",10,"Oriental",33,"Oujda Angad",252,"NA (Bni Drar)","Unknown","Unknown",NA,NA
+253,152,"MAR","Morocco",10,"Oriental",33,"Oujda Angad",253,"NA (Neima)","Unknown","Unknown",NA,NA
+254,152,"MAR","Morocco",10,"Oriental",33,"Oujda Angad",254,"NA (Ouad Ennachef Sidi Maafa)","Unknown","Unknown",NA,NA
+255,152,"MAR","Morocco",10,"Oriental",33,"Oujda Angad",255,"NA (Oujda Sidi Ziane)","Unknown","Unknown",NA,NA
+256,152,"MAR","Morocco",10,"Oriental",33,"Oujda Angad",256,"NA (Sidi Driss El Qadi)","Unknown","Unknown",NA,NA
+257,152,"MAR","Morocco",10,"Oriental",33,"Oujda Angad",257,"NA (Sidi Yahya)","Unknown","Unknown",NA,NA
+258,152,"MAR","Morocco",10,"Oriental",33,"Oujda Angad",258,"Oujda Banli","Cercle","District",NA,NA
+259,152,"MAR","Morocco",11,"Rabat - Salé - Zemmour - Zaer",34,"Khémisset",259,"Khemisset","Cercle","District",NA,NA
+260,152,"MAR","Morocco",11,"Rabat - Salé - Zemmour - Zaer",34,"Khémisset",260,"NA (Khemisset)","Unknown","Unknown",NA,NA
+261,152,"MAR","Morocco",11,"Rabat - Salé - Zemmour - Zaer",34,"Khémisset",261,"NA (Rommani)","Unknown","Unknown",NA,NA
+262,152,"MAR","Morocco",11,"Rabat - Salé - Zemmour - Zaer",34,"Khémisset",262,"NA (Tiflet)","Unknown","Unknown",NA,NA
+263,152,"MAR","Morocco",11,"Rabat - Salé - Zemmour - Zaer",34,"Khémisset",263,"Oulmes","Cercle","District",NA,NA
+264,152,"MAR","Morocco",11,"Rabat - Salé - Zemmour - Zaer",34,"Khémisset",264,"Rommani","Cercle","District",NA,NA
+265,152,"MAR","Morocco",11,"Rabat - Salé - Zemmour - Zaer",34,"Khémisset",265,"Tiflet","Cercle","District",NA,NA
+266,152,"MAR","Morocco",11,"Rabat - Salé - Zemmour - Zaer",35,"Rabat",266,"NA (Agdal Riyad)","Unknown","Unknown",NA,NA
+267,152,"MAR","Morocco",11,"Rabat - Salé - Zemmour - Zaer",35,"Rabat",267,"NA (El Youssoufia)","Unknown","Unknown",NA,NA
+268,152,"MAR","Morocco",11,"Rabat - Salé - Zemmour - Zaer",35,"Rabat",268,"NA (Rabat Hassan)","Unknown","Unknown",NA,NA
+269,152,"MAR","Morocco",11,"Rabat - Salé - Zemmour - Zaer",35,"Rabat",269,"NA (Touarga)","Unknown","Unknown",NA,NA
+270,152,"MAR","Morocco",11,"Rabat - Salé - Zemmour - Zaer",35,"Rabat",270,"NA (Yacoub El Mansour)","Unknown","Unknown",NA,NA
+271,152,"MAR","Morocco",11,"Rabat - Salé - Zemmour - Zaer",36,"Salé",271,"NA (Hssaine)","Unknown","Unknown",NA,NA
+272,152,"MAR","Morocco",11,"Rabat - Salé - Zemmour - Zaer",36,"Salé",272,"NA (Sale Bab Lamrissa)","Unknown","Unknown",NA,NA
+273,152,"MAR","Morocco",11,"Rabat - Salé - Zemmour - Zaer",36,"Salé",273,"NA (Sale Bettana)","Unknown","Unknown",NA,NA
+274,152,"MAR","Morocco",11,"Rabat - Salé - Zemmour - Zaer",36,"Salé",274,"NA (Sale Laayayda)","Unknown","Unknown",NA,NA
+275,152,"MAR","Morocco",11,"Rabat - Salé - Zemmour - Zaer",36,"Salé",275,"NA (Sale Tabriquet)","Unknown","Unknown",NA,NA
+276,152,"MAR","Morocco",11,"Rabat - Salé - Zemmour - Zaer",36,"Salé",276,"Sale Banlie","Cercle","District",NA,NA
+277,152,"MAR","Morocco",11,"Rabat - Salé - Zemmour - Zaer",37,"Skhirate-Témara",277,"Ain El Aoud","Cercle","District",NA,NA
+278,152,"MAR","Morocco",11,"Rabat - Salé - Zemmour - Zaer",37,"Skhirate-Témara",278,"NA (Ain El Aouda)","Unknown","Unknown",NA,NA
+279,152,"MAR","Morocco",11,"Rabat - Salé - Zemmour - Zaer",37,"Skhirate-Témara",279,"NA (Harhoura)","Unknown","Unknown",NA,NA
+280,152,"MAR","Morocco",11,"Rabat - Salé - Zemmour - Zaer",37,"Skhirate-Témara",280,"NA (Skhirate)","Unknown","Unknown",NA,NA
+281,152,"MAR","Morocco",11,"Rabat - Salé - Zemmour - Zaer",37,"Skhirate-Témara",281,"NA (Temara)","Unknown","Unknown",NA,NA
+282,152,"MAR","Morocco",11,"Rabat - Salé - Zemmour - Zaer",37,"Skhirate-Témara",282,"Temara","Cercle","District",NA,NA
+283,152,"MAR","Morocco",12,"Souss - Massa - Draâ",38,"Agadir-Ida ou Tanane",283,"Agadir Banl","Cercle","District",NA,NA
+284,152,"MAR","Morocco",12,"Souss - Massa - Draâ",38,"Agadir-Ida ou Tanane",284,"NA (Agadir)","Unknown","Unknown",NA,NA
+285,152,"MAR","Morocco",12,"Souss - Massa - Draâ",38,"Agadir-Ida ou Tanane",285,"NA (Anza)","Unknown","Unknown",NA,NA
+286,152,"MAR","Morocco",12,"Souss - Massa - Draâ",38,"Agadir-Ida ou Tanane",286,"NA (Bensergao)","Unknown","Unknown",NA,NA
+287,152,"MAR","Morocco",12,"Souss - Massa - Draâ",38,"Agadir-Ida ou Tanane",287,"NA (Tikouine)","Unknown","Unknown",NA,NA
+288,152,"MAR","Morocco",12,"Souss - Massa - Draâ",39,"Chtouka-Aït Baha",288,"Ait Baha","Cercle","District",NA,NA
+289,152,"MAR","Morocco",12,"Souss - Massa - Draâ",39,"Chtouka-Aït Baha",289,"Belfaa Mass","Cercle","District",NA,NA
+290,152,"MAR","Morocco",12,"Souss - Massa - Draâ",39,"Chtouka-Aït Baha",290,"Biougra","Cercle","District",NA,NA
+291,152,"MAR","Morocco",12,"Souss - Massa - Draâ",39,"Chtouka-Aït Baha",291,"NA (Ait Baha)","Unknown","Unknown",NA,NA
+292,152,"MAR","Morocco",12,"Souss - Massa - Draâ",39,"Chtouka-Aït Baha",292,"NA (Biougra)","Unknown","Unknown",NA,NA
+293,152,"MAR","Morocco",12,"Souss - Massa - Draâ",40,"Inezgane-Aït Melloul",293,"Ait Melloul","Cercle","District",NA,NA
+294,152,"MAR","Morocco",12,"Souss - Massa - Draâ",40,"Inezgane-Aït Melloul",294,"NA (Ait Melloul)","Unknown","Unknown",NA,NA
+295,152,"MAR","Morocco",12,"Souss - Massa - Draâ",40,"Inezgane-Aït Melloul",295,"NA (Dcheira El Jihadia)","Unknown","Unknown",NA,NA
+296,152,"MAR","Morocco",12,"Souss - Massa - Draâ",40,"Inezgane-Aït Melloul",296,"NA (Inezgane)","Unknown","Unknown",NA,NA
+297,152,"MAR","Morocco",12,"Souss - Massa - Draâ",41,"Ouarzazate",297,"Amerzgane","Cercle","District",NA,NA
+298,152,"MAR","Morocco",12,"Souss - Massa - Draâ",41,"Ouarzazate",298,"Boumalne Da","Cercle","District",NA,NA
+299,152,"MAR","Morocco",12,"Souss - Massa - Draâ",41,"Ouarzazate",299,"NA (Boumalne Dades)","Unknown","Unknown",NA,NA
+300,152,"MAR","Morocco",12,"Souss - Massa - Draâ",41,"Ouarzazate",300,"NA (Kalaat M'Gouna)","Unknown","Unknown",NA,NA
+301,152,"MAR","Morocco",12,"Souss - Massa - Draâ",41,"Ouarzazate",301,"NA (Ouarzazate)","Unknown","Unknown",NA,NA
+302,152,"MAR","Morocco",12,"Souss - Massa - Draâ",41,"Ouarzazate",302,"NA (Taznakht)","Unknown","Unknown",NA,NA
+303,152,"MAR","Morocco",12,"Souss - Massa - Draâ",41,"Ouarzazate",303,"NA (Tinghir)","Unknown","Unknown",NA,NA
+304,152,"MAR","Morocco",12,"Souss - Massa - Draâ",41,"Ouarzazate",304,"Ouarzazate","Cercle","District",NA,NA
+305,152,"MAR","Morocco",12,"Souss - Massa - Draâ",41,"Ouarzazate",305,"Zagora","Cercle","District",NA,NA
+306,152,"MAR","Morocco",12,"Souss - Massa - Draâ",42,"Taroudannt",306,"Igherm","Cercle","District",NA,NA
+307,152,"MAR","Morocco",12,"Souss - Massa - Draâ",42,"Taroudannt",307,"NA (Ait Iaaza)","Unknown","Unknown",NA,NA
+308,152,"MAR","Morocco",12,"Souss - Massa - Draâ",42,"Taroudannt",308,"NA (El Guerdane)","Unknown","Unknown",NA,NA
+309,152,"MAR","Morocco",12,"Souss - Massa - Draâ",42,"Taroudannt",309,"NA (Igherm)","Unknown","Unknown",NA,NA
+310,152,"MAR","Morocco",12,"Souss - Massa - Draâ",42,"Taroudannt",310,"NA (Oulad Berhil)","Unknown","Unknown",NA,NA
+311,152,"MAR","Morocco",12,"Souss - Massa - Draâ",42,"Taroudannt",311,"NA (Oulad Teima)","Unknown","Unknown",NA,NA
+312,152,"MAR","Morocco",12,"Souss - Massa - Draâ",42,"Taroudannt",312,"NA (Taliouine)","Unknown","Unknown",NA,NA
+313,152,"MAR","Morocco",12,"Souss - Massa - Draâ",42,"Taroudannt",313,"NA (Taroudannt)","Unknown","Unknown",NA,NA
+314,152,"MAR","Morocco",12,"Souss - Massa - Draâ",42,"Taroudannt",314,"Oulad Berhi","Cercle","District",NA,NA
+315,152,"MAR","Morocco",12,"Souss - Massa - Draâ",42,"Taroudannt",315,"Oulad Teima","Cercle","District",NA,NA
+316,152,"MAR","Morocco",12,"Souss - Massa - Draâ",42,"Taroudannt",316,"Taliouine","Cercle","District",NA,NA
+317,152,"MAR","Morocco",12,"Souss - Massa - Draâ",42,"Taroudannt",317,"Taroudannt","Cercle","District",NA,NA
+318,152,"MAR","Morocco",12,"Souss - Massa - Draâ",43,"Tiznit",318,"Anezi","Cercle","District",NA,NA
+319,152,"MAR","Morocco",12,"Souss - Massa - Draâ",43,"Tiznit",319,"Ifni","Cercle","District",NA,NA
+320,152,"MAR","Morocco",12,"Souss - Massa - Draâ",43,"Tiznit",320,"Lakhsas","Cercle","District",NA,NA
+321,152,"MAR","Morocco",12,"Souss - Massa - Draâ",43,"Tiznit",321,"NA (Lakhsas)","Unknown","Unknown",NA,NA
+322,152,"MAR","Morocco",12,"Souss - Massa - Draâ",43,"Tiznit",322,"NA (Sidi Ifni)","Unknown","Unknown",NA,NA
+323,152,"MAR","Morocco",12,"Souss - Massa - Draâ",43,"Tiznit",323,"NA (Tafraout)","Unknown","Unknown",NA,NA
+324,152,"MAR","Morocco",12,"Souss - Massa - Draâ",43,"Tiznit",324,"NA (Tiznit)","Unknown","Unknown",NA,NA
+325,152,"MAR","Morocco",12,"Souss - Massa - Draâ",43,"Tiznit",325,"Tafraout","Cercle","District",NA,NA
+326,152,"MAR","Morocco",12,"Souss - Massa - Draâ",43,"Tiznit",326,"Tiznit","Cercle","District",NA,NA
+327,152,"MAR","Morocco",12,"Souss - Massa - Draâ",44,"Zagora",327,"NA (Agdz)","Unknown","Unknown",NA,NA
+328,152,"MAR","Morocco",12,"Souss - Massa - Draâ",44,"Zagora",328,"NA (Zagora)","Unknown","Unknown",NA,NA
+329,152,"MAR","Morocco",12,"Souss - Massa - Draâ",44,"Zagora",329,"Zagora","Cercle","District",NA,NA
+330,152,"MAR","Morocco",13,"Tadla - Azilal",45,"Azilal",330,"Azilal","Cercle","District",NA,NA
+331,152,"MAR","Morocco",13,"Tadla - Azilal",45,"Azilal",331,"Bzou","Cercle","District",NA,NA
+332,152,"MAR","Morocco",13,"Tadla - Azilal",45,"Azilal",332,"Demnate","Cercle","District",NA,NA
+333,152,"MAR","Morocco",13,"Tadla - Azilal",45,"Azilal",333,"NA (Azilal)","Unknown","Unknown",NA,NA
+334,152,"MAR","Morocco",13,"Tadla - Azilal",45,"Azilal",334,"NA (Demnate)","Unknown","Unknown",NA,NA
+335,152,"MAR","Morocco",13,"Tadla - Azilal",45,"Azilal",335,"Ouaouizaght","Cercle","District",NA,NA
+336,152,"MAR","Morocco",13,"Tadla - Azilal",46,"Béni Mellal",336,"Beni Mellal","Cercle","District",NA,NA
+337,152,"MAR","Morocco",13,"Tadla - Azilal",46,"Béni Mellal",337,"Bni Moussa","Cercle","District",NA,NA
+338,152,"MAR","Morocco",13,"Tadla - Azilal",46,"Béni Mellal",338,"El Ksiba","Cercle","District",NA,NA
+339,152,"MAR","Morocco",13,"Tadla - Azilal",46,"Béni Mellal",339,"Fquih Ben S","Cercle","District",NA,NA
+340,152,"MAR","Morocco",13,"Tadla - Azilal",46,"Béni Mellal",340,"Kasba Tadla","Cercle","District",NA,NA
+341,152,"MAR","Morocco",13,"Tadla - Azilal",46,"Béni Mellal",341,"NA (Beni Mellal)","Unknown","Unknown",NA,NA
+342,152,"MAR","Morocco",13,"Tadla - Azilal",46,"Béni Mellal",342,"NA (El Ksiba)","Unknown","Unknown",NA,NA
+343,152,"MAR","Morocco",13,"Tadla - Azilal",46,"Béni Mellal",343,"NA (Fquih Ben Salah)","Unknown","Unknown",NA,NA
+344,152,"MAR","Morocco",13,"Tadla - Azilal",46,"Béni Mellal",344,"NA (Kasba Tadla)","Unknown","Unknown",NA,NA
+345,152,"MAR","Morocco",13,"Tadla - Azilal",46,"Béni Mellal",345,"NA (Oulad Ayad)","Unknown","Unknown",NA,NA
+346,152,"MAR","Morocco",13,"Tadla - Azilal",46,"Béni Mellal",346,"NA (Souk Sebt Oulad Nemma)","Unknown","Unknown",NA,NA
+347,152,"MAR","Morocco",13,"Tadla - Azilal",46,"Béni Mellal",347,"NA (Zaouiat Cheikh)","Unknown","Unknown",NA,NA
+348,152,"MAR","Morocco",14,"Tanger - Tétouan",47,"Chefchaouen",348,"Bab Berred","Cercle","District",NA,NA
+349,152,"MAR","Morocco",14,"Tanger - Tétouan",47,"Chefchaouen",349,"Bab Taza","Cercle","District",NA,NA
+350,152,"MAR","Morocco",14,"Tanger - Tétouan",47,"Chefchaouen",350,"Bou Ahmed","Cercle","District",NA,NA
+351,152,"MAR","Morocco",14,"Tanger - Tétouan",47,"Chefchaouen",351,"Moqrissat","Cercle","District",NA,NA
+352,152,"MAR","Morocco",14,"Tanger - Tétouan",47,"Chefchaouen",352,"NA (Chefchaouene)","Unknown","Unknown",NA,NA
+353,152,"MAR","Morocco",14,"Tanger - Tétouan",48,"Fahs Anjra",353,"Fahs","Cercle","District",NA,NA
+354,152,"MAR","Morocco",14,"Tanger - Tétouan",48,"Fahs Anjra",354,"NA (Bni Makada)","Unknown","Unknown",NA,NA
+355,152,"MAR","Morocco",14,"Tanger - Tétouan",49,"Larache",355,"Ksar El Keb","Cercle","District",NA,NA
+356,152,"MAR","Morocco",14,"Tanger - Tétouan",49,"Larache",356,"Larache","Cercle","District",NA,NA
+357,152,"MAR","Morocco",14,"Tanger - Tétouan",49,"Larache",357,"NA (Ksar El Kebir)","Unknown","Unknown",NA,NA
+358,152,"MAR","Morocco",14,"Tanger - Tétouan",49,"Larache",358,"NA (Larache)","Unknown","Unknown",NA,NA
+359,152,"MAR","Morocco",14,"Tanger - Tétouan",50,"Tétouan",359,"Jebala","Cercle","District",NA,NA
+360,152,"MAR","Morocco",14,"Tanger - Tétouan",50,"Tétouan",360,"NA (Fnidq)","Unknown","Unknown",NA,NA
+361,152,"MAR","Morocco",14,"Tanger - Tétouan",50,"Tétouan",361,"NA (M'Diq)","Unknown","Unknown",NA,NA
+362,152,"MAR","Morocco",14,"Tanger - Tétouan",50,"Tétouan",362,"NA (Martil)","Unknown","Unknown",NA,NA
+363,152,"MAR","Morocco",14,"Tanger - Tétouan",50,"Tétouan",363,"NA (Ouad Laou)","Unknown","Unknown",NA,NA
+364,152,"MAR","Morocco",14,"Tanger - Tétouan",50,"Tétouan",364,"NA (Tetouan Al Azhar)","Unknown","Unknown",NA,NA
+365,152,"MAR","Morocco",14,"Tanger - Tétouan",50,"Tétouan",365,"NA (Tetouan Sidi Al Mandri)","Unknown","Unknown",NA,NA
+366,152,"MAR","Morocco",14,"Tanger - Tétouan",50,"Tétouan",366,"Tetouan","Cercle","District",NA,NA
+367,152,"MAR","Morocco",14,"Tanger - Tétouan",51,"Tanger-Assilah",367,"Assilah","Cercle","District",NA,NA
+368,152,"MAR","Morocco",14,"Tanger - Tétouan",51,"Tanger-Assilah",368,"Boukhalef","Cercle","District",NA,NA
+369,152,"MAR","Morocco",14,"Tanger - Tétouan",51,"Tanger-Assilah",369,"NA (Assilah)","Unknown","Unknown",NA,NA
+370,152,"MAR","Morocco",14,"Tanger - Tétouan",51,"Tanger-Assilah",370,"NA (Charf)","Unknown","Unknown",NA,NA
+371,152,"MAR","Morocco",14,"Tanger - Tétouan",51,"Tanger-Assilah",371,"NA (Tanger)","Unknown","Unknown",NA,NA
+372,152,"MAR","Morocco",15,"Taza - Al Hoceima - Taounate",52,"Al Hoceïma",372,"Bni Boufrah","Cercle","District",NA,NA
+373,152,"MAR","Morocco",15,"Taza - Al Hoceima - Taounate",52,"Al Hoceïma",373,"Bni Ouriagh","Cercle","District",NA,NA
+374,152,"MAR","Morocco",15,"Taza - Al Hoceima - Taounate",52,"Al Hoceïma",374,"NA (Al Hoceima)","Unknown","Unknown",NA,NA
+375,152,"MAR","Morocco",15,"Taza - Al Hoceima - Taounate",52,"Al Hoceïma",375,"NA (Bni Bouayach)","Unknown","Unknown",NA,NA
+376,152,"MAR","Morocco",15,"Taza - Al Hoceima - Taounate",52,"Al Hoceïma",376,"NA (Imzouren)","Unknown","Unknown",NA,NA
+377,152,"MAR","Morocco",15,"Taza - Al Hoceima - Taounate",52,"Al Hoceïma",377,"NA (Targuist)","Unknown","Unknown",NA,NA
+378,152,"MAR","Morocco",15,"Taza - Al Hoceima - Taounate",52,"Al Hoceïma",378,"Targuist","Cercle","District",NA,NA
+379,152,"MAR","Morocco",15,"Taza - Al Hoceima - Taounate",53,"Taounate",379,"Ghafsai","Cercle","District",NA,NA
+380,152,"MAR","Morocco",15,"Taza - Al Hoceima - Taounate",53,"Taounate",380,"Kariat Ba M","Cercle","District",NA,NA
+381,152,"MAR","Morocco",15,"Taza - Al Hoceima - Taounate",53,"Taounate",381,"NA (Ghafsai)","Unknown","Unknown",NA,NA
+382,152,"MAR","Morocco",15,"Taza - Al Hoceima - Taounate",53,"Taounate",382,"NA (Kariat Ba Mohamed)","Unknown","Unknown",NA,NA
+383,152,"MAR","Morocco",15,"Taza - Al Hoceima - Taounate",53,"Taounate",383,"NA (Taouante)","Unknown","Unknown",NA,NA
+384,152,"MAR","Morocco",15,"Taza - Al Hoceima - Taounate",53,"Taounate",384,"NA (Thar Essouk)","Unknown","Unknown",NA,NA
+385,152,"MAR","Morocco",15,"Taza - Al Hoceima - Taounate",53,"Taounate",385,"NA (Tissa)","Unknown","Unknown",NA,NA
+386,152,"MAR","Morocco",15,"Taza - Al Hoceima - Taounate",53,"Taounate",386,"Taounate","Cercle","District",NA,NA
+387,152,"MAR","Morocco",15,"Taza - Al Hoceima - Taounate",53,"Taounate",387,"Tissa","Cercle","District",NA,NA
+388,152,"MAR","Morocco",15,"Taza - Al Hoceima - Taounate",54,"Taza",388,"Aknoul","Cercle","District",NA,NA
+389,152,"MAR","Morocco",15,"Taza - Al Hoceima - Taounate",54,"Taza",389,"Guercif","Cercle","District",NA,NA
+390,152,"MAR","Morocco",15,"Taza - Al Hoceima - Taounate",54,"Taza",390,"NA (Aknoul)","Unknown","Unknown",NA,NA
+391,152,"MAR","Morocco",15,"Taza - Al Hoceima - Taounate",54,"Taza",391,"NA (Guercif)","Unknown","Unknown",NA,NA
+392,152,"MAR","Morocco",15,"Taza - Al Hoceima - Taounate",54,"Taza",392,"NA (Ouad Amlil)","Unknown","Unknown",NA,NA
+393,152,"MAR","Morocco",15,"Taza - Al Hoceima - Taounate",54,"Taza",393,"NA (Tahla)","Unknown","Unknown",NA,NA
+394,152,"MAR","Morocco",15,"Taza - Al Hoceima - Taounate",54,"Taza",394,"NA (Taza Al Oulia)","Unknown","Unknown",NA,NA
+395,152,"MAR","Morocco",15,"Taza - Al Hoceima - Taounate",54,"Taza",395,"NA (Taza El Jadida)","Unknown","Unknown",NA,NA
+396,152,"MAR","Morocco",15,"Taza - Al Hoceima - Taounate",54,"Taza",396,"Ouad Amlil","Cercle","District",NA,NA
+397,152,"MAR","Morocco",15,"Taza - Al Hoceima - Taounate",54,"Taza",397,"Tahla","Cercle","District",NA,NA
+398,152,"MAR","Morocco",15,"Taza - Al Hoceima - Taounate",54,"Taza",398,"Tainaste","Cercle","District",NA,NA
+399,152,"MAR","Morocco",15,"Taza - Al Hoceima - Taounate",54,"Taza",399,"Taza","Cercle","District",NA,NA

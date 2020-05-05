@@ -1,0 +1,36 @@
+Algeria: http://www.maplibrary.org/library/stacks/Africa/Algeria/index.htm
+Benin: http://www.maplibrary.org/library/stacks/Africa/Benin/index.htm
+Botswana: http://www.maplibrary.org/library/stacks/Africa/Botswana/index.htm
+Burkina Faso: http://www.maplibrary.org/library/stacks/Africa/Burkina%20Faso/index.htm
+Burundi: http://www.maplibrary.org/library/stacks/Africa/Burundi/index.htm
+Cameroon: http://www.maplibrary.org/library/stacks/Africa/Cameroon/index.htm
+Cape Verde: http://www.maplibrary.org/library/stacks/Africa/Cape%20Verde/index.htm
+Cote d'Ivoire: http://www.maplibrary.org/library/stacks/Africa/Cote%20d%60Ivoire/index.htm
+Egypt: http://www.maplibrary.org/library/stacks/Africa/Egypt/index.htm
+Gabon: http://www.maplibrary.org/library/stacks/Africa/Gabon/index.htm
+Ghana: http://www.maplibrary.org/library/stacks/Africa/Ghana/index.htm
+Guinea: http://www.maplibrary.org/library/stacks/Africa/Guinea/index.htm
+Kenya: http://www.maplibrary.org/library/stacks/Africa/Kenya/index.htm
+Lesotho: http://www.maplibrary.org/library/stacks/Africa/Lesotho/index.htm
+Liberia: http://www.maplibrary.org/library/stacks/Africa/Liberia/index.htm
+Madagascar: http://www.maplibrary.org/library/stacks/Africa/Madagascar/index.htm
+Malawi: http://www.maplibrary.org/library/stacks/Africa/Malawi/index.htm
+Mali: http://www.maplibrary.org/library/stacks/Africa/Mali/index.htm
+Mauritius: http://www.maplibrary.org/library/stacks/Africa/Mauritania/index.htm
+Morocco: http://www.maplibrary.org/library/stacks/Africa/Morocco/index.htm
+Mozambique: http://www.maplibrary.org/library/stacks/Africa/Mozambique/index.htm
+Namibia: http://www.maplibrary.org/library/stacks/Africa/Namibia/index.htm
+Niger: http://www.maplibrary.org/library/stacks/Africa/Niger/index.htm
+Nigeria: http://www.maplibrary.org/library/stacks/Africa/Nigeria/index.htm
+Sao Tome and Principe: http://www.maplibrary.org/library/stacks/Africa/Sao%20Tome%20and%20Principe/index.htm
+Senegal: http://www.maplibrary.org/library/stacks/Africa/Senegal/index.htm
+Sierra Leone: http://www.maplibrary.org/library/stacks/Africa/Sierra%20Leone/index.htm
+South Africa: http://www.maplibrary.org/library/stacks/Africa/South%20Africa/index.htm
+Sudan: http://www.maplibrary.org/library/stacks/Africa/Sudan/index.htm
+Swaziland: http://www.maplibrary.org/library/stacks/Africa/Swaziland/index.htm
+Tanzania: http://www.maplibrary.org/library/stacks/Africa/Tanzania/index.htm
+Togo: http://www.maplibrary.org/library/stacks/Africa/Togo/index.htm
+Tunisia: http://www.maplibrary.org/library/stacks/Africa/Tunisia/index.htm
+Uganda: http://www.maplibrary.org/library/stacks/Africa/Uganda/index.htm
+Zambia: http://www.maplibrary.org/library/stacks/Africa/Zambia/index.htm
+Zimbabwe: http://www.maplibrary.org/library/stacks/Africa/Zimbabwe/index.htm

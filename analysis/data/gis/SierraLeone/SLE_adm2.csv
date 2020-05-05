@@ -1,0 +1,15 @@
+"OBJECTID","ID_0","ISO","NAME_0","ID_1","NAME_1","ID_2","NAME_2","TYPE_2","ENGTYPE_2","NL_NAME_2","VARNAME_2"
+1,204,"SLE","Sierra Leone",1,"Eastern",1,"Kailahun","District","District",NA,NA
+2,204,"SLE","Sierra Leone",1,"Eastern",2,"Kenema","District","District",NA,NA
+3,204,"SLE","Sierra Leone",1,"Eastern",3,"Kono","District","District",NA,NA
+4,204,"SLE","Sierra Leone",2,"Northern",4,"Bombali","District","District",NA,NA
+5,204,"SLE","Sierra Leone",2,"Northern",5,"Kambia","District","District",NA,NA
+6,204,"SLE","Sierra Leone",2,"Northern",6,"Koinadugu","District","District",NA,NA
+7,204,"SLE","Sierra Leone",2,"Northern",7,"Port Loko","District","District",NA,NA
+8,204,"SLE","Sierra Leone",2,"Northern",8,"Tonkolili","District","District",NA,NA
+9,204,"SLE","Sierra Leone",3,"Southern",9,"Bo","District","District",NA,NA
+10,204,"SLE","Sierra Leone",3,"Southern",10,"Bonthe","District","District",NA,NA
+11,204,"SLE","Sierra Leone",3,"Southern",11,"Moyamba","District","District",NA,NA
+12,204,"SLE","Sierra Leone",3,"Southern",12,"Pujehun","District","District",NA,NA
+13,204,"SLE","Sierra Leone",4,"Western",13,"Western Rural","Area","Area",NA,NA
+14,204,"SLE","Sierra Leone",4,"Western",14,"Western Urban","Area","Area",NA,"Freetown"

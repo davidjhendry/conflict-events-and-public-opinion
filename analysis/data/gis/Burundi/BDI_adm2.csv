@@ -1,0 +1,134 @@
+"OBJECTID","ID_0","ISO","NAME_0","ID_1","NAME_1","ID_2","NAME_2","TYPE_2","ENGTYPE_2","NL_NAME_2","VARNAME_2"
+1,39,"BDI","Burundi",1,"Bubanza",1,"Bubanza","Commune","Commune",NA,NA
+2,39,"BDI","Burundi",1,"Bubanza",2,"Gihanga","Commune","Commune",NA,NA
+3,39,"BDI","Burundi",1,"Bubanza",3,"Mpanda","Commune","Commune",NA,NA
+4,39,"BDI","Burundi",1,"Bubanza",4,"Musigati","Commune","Commune",NA,NA
+5,39,"BDI","Burundi",1,"Bubanza",5,"Rugazi","Commune","Commune",NA,NA
+6,39,"BDI","Burundi",2,"Bujumbura Mairie",6,"Buterere","Commune","Commune",NA,NA
+7,39,"BDI","Burundi",2,"Bujumbura Mairie",7,"Buyenze","Commune","Commune",NA,NA
+8,39,"BDI","Burundi",2,"Bujumbura Mairie",8,"Bwiza","Commune","Commune",NA,NA
+9,39,"BDI","Burundi",2,"Bujumbura Mairie",9,"Cibitoke","Commune","Commune",NA,NA
+10,39,"BDI","Burundi",2,"Bujumbura Mairie",10,"Gihosha","Commune","Commune",NA,NA
+11,39,"BDI","Burundi",2,"Bujumbura Mairie",11,"Kamenge","Commune","Commune",NA,NA
+12,39,"BDI","Burundi",2,"Bujumbura Mairie",12,"Kanyosha2","Commune","Commune",NA,NA
+13,39,"BDI","Burundi",2,"Bujumbura Mairie",13,"Kinama","Commune","Commune",NA,NA
+14,39,"BDI","Burundi",2,"Bujumbura Mairie",14,"Kinindo","Commune","Commune",NA,NA
+15,39,"BDI","Burundi",2,"Bujumbura Mairie",15,"Lake Tanganyika","Water body","Water body",NA,NA
+16,39,"BDI","Burundi",2,"Bujumbura Mairie",16,"Musaga","Commune","Commune",NA,NA
+17,39,"BDI","Burundi",2,"Bujumbura Mairie",17,"Ngagara","Commune","Commune",NA,NA
+18,39,"BDI","Burundi",2,"Bujumbura Mairie",18,"Nyakabiga","Commune","Commune",NA,NA
+19,39,"BDI","Burundi",2,"Bujumbura Mairie",19,"Roherero","Commune","Commune",NA,NA
+20,39,"BDI","Burundi",3,"Bujumbura Rural",20,"Bugarama","Commune","Commune",NA,NA
+21,39,"BDI","Burundi",3,"Bujumbura Rural",21,"Isale","Commune","Commune",NA,"Isale-Mugaruro"
+22,39,"BDI","Burundi",3,"Bujumbura Rural",22,"Kabezi","Commune","Commune",NA,NA
+23,39,"BDI","Burundi",3,"Bujumbura Rural",23,"Kanyosha1","Commune","Commune",NA,NA
+24,39,"BDI","Burundi",3,"Bujumbura Rural",24,"Lake Tanganyika","Water body","Water body",NA,NA
+25,39,"BDI","Burundi",3,"Bujumbura Rural",25,"Mubimbi","Commune","Commune",NA,NA
+26,39,"BDI","Burundi",3,"Bujumbura Rural",26,"Mugongomanga","Commune","Commune",NA,NA
+27,39,"BDI","Burundi",3,"Bujumbura Rural",27,"Muhuta","Commune","Commune",NA,NA
+28,39,"BDI","Burundi",3,"Bujumbura Rural",28,"Mukike","Commune","Commune",NA,"Bugarama"
+29,39,"BDI","Burundi",3,"Bujumbura Rural",29,"Mutambu","Commune","Commune",NA,NA
+30,39,"BDI","Burundi",3,"Bujumbura Rural",30,"Mutimbuzi","Commune","Commune",NA,NA
+31,39,"BDI","Burundi",3,"Bujumbura Rural",31,"Nyabiraba","Commune","Commune",NA,NA
+32,39,"BDI","Burundi",4,"Bururi",32,"Burambi","Commune","Commune",NA,NA
+33,39,"BDI","Burundi",4,"Bururi",33,"Bururi","Commune","Commune",NA,NA
+34,39,"BDI","Burundi",4,"Bururi",34,"Buyengero","Commune","Commune",NA,NA
+35,39,"BDI","Burundi",4,"Bururi",35,"Lake Tanganyika","Water body","Water body",NA,NA
+36,39,"BDI","Burundi",4,"Bururi",36,"Matana","Commune","Commune",NA,NA
+37,39,"BDI","Burundi",4,"Bururi",37,"Mugamba","Commune","Commune",NA,NA
+38,39,"BDI","Burundi",4,"Bururi",38,"Rumonge","Commune","Commune",NA,NA
+39,39,"BDI","Burundi",4,"Bururi",39,"Rutovu","Commune","Commune",NA,NA
+40,39,"BDI","Burundi",4,"Bururi",40,"Songa","Commune","Commune",NA,NA
+41,39,"BDI","Burundi",4,"Bururi",41,"Vyanda","Commune","Commune",NA,NA
+42,39,"BDI","Burundi",5,"Cankuzo",42,"Cankuzo","Commune","Commune",NA,NA
+43,39,"BDI","Burundi",5,"Cankuzo",43,"Cendajuru","Commune","Commune",NA,NA
+44,39,"BDI","Burundi",5,"Cankuzo",44,"Gisagara","Commune","Commune",NA,NA
+45,39,"BDI","Burundi",5,"Cankuzo",45,"Kigamba","Commune","Commune",NA,NA
+46,39,"BDI","Burundi",5,"Cankuzo",46,"Mishiha","Commune","Commune",NA,"Mushiha"
+47,39,"BDI","Burundi",6,"Cibitoke",47,"Buganda","Commune","Commune",NA,NA
+48,39,"BDI","Burundi",6,"Cibitoke",48,"Bukinanyana","Commune","Commune",NA,"Bukinanvana"
+49,39,"BDI","Burundi",6,"Cibitoke",49,"Mabayi","Commune","Commune",NA,"Mabay"
+50,39,"BDI","Burundi",6,"Cibitoke",50,"Mugina","Commune","Commune",NA,NA
+51,39,"BDI","Burundi",6,"Cibitoke",51,"Murwi","Commune","Commune",NA,NA
+52,39,"BDI","Burundi",6,"Cibitoke",52,"Rugombo","Commune","Commune",NA,NA
+53,39,"BDI","Burundi",7,"Gitega",53,"Bugendana","Commune","Commune",NA,NA
+54,39,"BDI","Burundi",7,"Gitega",54,"Bukirasazi","Commune","Commune",NA,NA
+55,39,"BDI","Burundi",7,"Gitega",55,"Buraza","Commune","Commune",NA,NA
+56,39,"BDI","Burundi",7,"Gitega",56,"Giheta","Commune","Commune",NA,NA
+57,39,"BDI","Burundi",7,"Gitega",57,"Gishubi","Commune","Commune",NA,NA
+58,39,"BDI","Burundi",7,"Gitega",58,"Gitega","Commune","Commune",NA,NA
+59,39,"BDI","Burundi",7,"Gitega",59,"Itaba","Commune","Commune",NA,NA
+60,39,"BDI","Burundi",7,"Gitega",60,"Makebuko","Commune","Commune",NA,NA
+61,39,"BDI","Burundi",7,"Gitega",61,"Mutaho","Commune","Commune",NA,NA
+62,39,"BDI","Burundi",7,"Gitega",62,"Nyanrusange","Commune","Commune",NA,NA
+63,39,"BDI","Burundi",7,"Gitega",63,"Ryansoro","Commune","Commune",NA,NA
+64,39,"BDI","Burundi",8,"Karuzi",64,"Bugenyuzi","Commune","Commune",NA,NA
+65,39,"BDI","Burundi",8,"Karuzi",65,"Buhiga","Commune","Commune",NA,NA
+66,39,"BDI","Burundi",8,"Karuzi",66,"Gihogazi","Commune","Commune",NA,NA
+67,39,"BDI","Burundi",8,"Karuzi",67,"Gitaramuka","Commune","Commune",NA,NA
+68,39,"BDI","Burundi",8,"Karuzi",68,"Mutumba","Commune","Commune",NA,NA
+69,39,"BDI","Burundi",8,"Karuzi",69,"Nyabikere","Commune","Commune",NA,NA
+70,39,"BDI","Burundi",8,"Karuzi",70,"Shombo","Commune","Commune",NA,NA
+71,39,"BDI","Burundi",9,"Kayanza",71,"Butaganzwa1","Commune","Commune",NA,NA
+72,39,"BDI","Burundi",9,"Kayanza",72,"Gahombo","Commune","Commune",NA,NA
+73,39,"BDI","Burundi",9,"Kayanza",73,"Gatara","Commune","Commune",NA,NA
+74,39,"BDI","Burundi",9,"Kayanza",74,"Kabarore","Commune","Commune",NA,NA
+75,39,"BDI","Burundi",9,"Kayanza",75,"Kayanza","Commune","Commune",NA,NA
+76,39,"BDI","Burundi",9,"Kayanza",76,"Matongo","Commune","Commune",NA,NA
+77,39,"BDI","Burundi",9,"Kayanza",77,"Muhanga","Commune","Commune",NA,NA
+78,39,"BDI","Burundi",9,"Kayanza",78,"Muruta","Commune","Commune",NA,NA
+79,39,"BDI","Burundi",9,"Kayanza",79,"Rango","Commune","Commune",NA,NA
+80,39,"BDI","Burundi",10,"Kirundo",80,"Bugabira","Commune","Commune",NA,NA
+81,39,"BDI","Burundi",10,"Kirundo",81,"Busoni","Commune","Commune",NA,NA
+82,39,"BDI","Burundi",10,"Kirundo",82,"Bwambarangwe","Commune","Commune",NA,NA
+83,39,"BDI","Burundi",10,"Kirundo",83,"Gitobe","Commune","Commune",NA,NA
+84,39,"BDI","Burundi",10,"Kirundo",84,"Kirundo","Commune","Commune",NA,NA
+85,39,"BDI","Burundi",10,"Kirundo",85,"Ntega","Commune","Commune",NA,NA
+86,39,"BDI","Burundi",10,"Kirundo",86,"Vumbi","Commune","Commune",NA,"Vumbi-Bukuba"
+87,39,"BDI","Burundi",11,"Makamba",87,"Kayogoro","Commune","Commune",NA,NA
+88,39,"BDI","Burundi",11,"Makamba",88,"Kibago","Commune","Commune",NA,NA
+89,39,"BDI","Burundi",11,"Makamba",89,"Lake Tanganyika","Water body","Water body",NA,NA
+90,39,"BDI","Burundi",11,"Makamba",90,"Mabanda","Commune","Commune",NA,NA
+91,39,"BDI","Burundi",11,"Makamba",91,"Makamba","Commune","Commune",NA,NA
+92,39,"BDI","Burundi",11,"Makamba",92,"Nyanza-Lac","Commune","Commune",NA,"Nyanza Lac"
+93,39,"BDI","Burundi",11,"Makamba",93,"Vugizo","Commune","Commune",NA,NA
+94,39,"BDI","Burundi",12,"Muramvya",94,"Bukeye","Commune","Commune",NA,NA
+95,39,"BDI","Burundi",12,"Muramvya",95,"Kiganda","Commune","Commune",NA,NA
+96,39,"BDI","Burundi",12,"Muramvya",96,"Mbuye","Commune","Commune",NA,NA
+97,39,"BDI","Burundi",12,"Muramvya",97,"Muramvya","Commune","Commune",NA,"Muramviya"
+98,39,"BDI","Burundi",12,"Muramvya",98,"Rutegama","Commune","Commune",NA,NA
+99,39,"BDI","Burundi",13,"Muyinga",99,"Buhinyuza","Commune","Commune",NA,"Buhinvuza"
+100,39,"BDI","Burundi",13,"Muyinga",100,"Butihinda","Commune","Commune",NA,NA
+101,39,"BDI","Burundi",13,"Muyinga",101,"Gashoho","Commune","Commune",NA,NA
+102,39,"BDI","Burundi",13,"Muyinga",102,"Gasorwe","Commune","Commune",NA,NA
+103,39,"BDI","Burundi",13,"Muyinga",103,"Giteranyi","Commune","Commune",NA,NA
+104,39,"BDI","Burundi",13,"Muyinga",104,"Muyinga","Commune","Commune",NA,NA
+105,39,"BDI","Burundi",13,"Muyinga",105,"Mwakiro","Commune","Commune",NA,NA
+106,39,"BDI","Burundi",14,"Mwaro",106,"Bisoro","Commune","Commune",NA,NA
+107,39,"BDI","Burundi",14,"Mwaro",107,"Gisozi","Commune","Commune",NA,NA
+108,39,"BDI","Burundi",14,"Mwaro",108,"Kayokwe","Commune","Commune",NA,NA
+109,39,"BDI","Burundi",14,"Mwaro",109,"Ndava","Commune","Commune",NA,NA
+110,39,"BDI","Burundi",14,"Mwaro",110,"Nyabihanga","Commune","Commune",NA,NA
+111,39,"BDI","Burundi",14,"Mwaro",111,"Rusaka","Commune","Commune",NA,NA
+112,39,"BDI","Burundi",15,"Ngozi",112,"Busiga","Commune","Commune",NA,NA
+113,39,"BDI","Burundi",15,"Ngozi",113,"Gashikanwa","Commune","Commune",NA,NA
+114,39,"BDI","Burundi",15,"Ngozi",114,"Kiremba","Commune","Commune",NA,NA
+115,39,"BDI","Burundi",15,"Ngozi",115,"Marangara","Commune","Commune",NA,NA
+116,39,"BDI","Burundi",15,"Ngozi",116,"Mwumba","Commune","Commune",NA,NA
+117,39,"BDI","Burundi",15,"Ngozi",117,"Ngozi","Commune","Commune",NA,NA
+118,39,"BDI","Burundi",15,"Ngozi",118,"Nyamurenza","Commune","Commune",NA,NA
+119,39,"BDI","Burundi",15,"Ngozi",119,"Ruhororo","Commune","Commune",NA,NA
+120,39,"BDI","Burundi",15,"Ngozi",120,"Tangara","Commune","Commune",NA,NA
+121,39,"BDI","Burundi",16,"Rutana",121,"Bukemba","Commune","Commune",NA,NA
+122,39,"BDI","Burundi",16,"Rutana",122,"Giharo","Commune","Commune",NA,NA
+123,39,"BDI","Burundi",16,"Rutana",123,"Gitanga","Commune","Commune",NA,NA
+124,39,"BDI","Burundi",16,"Rutana",124,"Mpinga-Kayove","Commune","Commune",NA,NA
+125,39,"BDI","Burundi",16,"Rutana",125,"Musongati","Commune","Commune",NA,NA
+126,39,"BDI","Burundi",16,"Rutana",126,"Rutana","Commune","Commune",NA,NA
+127,39,"BDI","Burundi",17,"Ruyigi",127,"Butaganzwa2","Commune","Commune",NA,NA
+128,39,"BDI","Burundi",17,"Ruyigi",128,"Butezi","Commune","Commune",NA,NA
+129,39,"BDI","Burundi",17,"Ruyigi",129,"Bweru","Commune","Commune",NA,NA
+130,39,"BDI","Burundi",17,"Ruyigi",130,"Gisuru","Commune","Commune",NA,NA
+131,39,"BDI","Burundi",17,"Ruyigi",131,"Kinyinya","Commune","Commune",NA,NA
+132,39,"BDI","Burundi",17,"Ruyigi",132,"Nyabitsinda","Commune","Commune",NA,NA
+133,39,"BDI","Burundi",17,"Ruyigi",133,"Ruyigi","Commune","Commune",NA,NA

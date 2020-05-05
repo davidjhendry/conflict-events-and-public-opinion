@@ -1,0 +1,55 @@
+"OBJECTID","ID_0","ISO","NAME_0","ID_1","NAME_1","ID_2","NAME_2","TYPE_2","ENGTYPE_2","NL_NAME_2","VARNAME_2"
+1,152,"MAR","Morocco",1,"Chaouia - Ouardigha",1,"Ben Slimane","Province","Province",NA,NA
+2,152,"MAR","Morocco",1,"Chaouia - Ouardigha",2,"Khouribga","Province","Province",NA,NA
+3,152,"MAR","Morocco",1,"Chaouia - Ouardigha",3,"Settat","Province","Province",NA,NA
+4,152,"MAR","Morocco",2,"Doukkala - Abda",4,"El Jadida","Province","Province",NA,NA
+5,152,"MAR","Morocco",2,"Doukkala - Abda",5,"Safi","Province","Province",NA,NA
+6,152,"MAR","Morocco",3,"Fès - Boulemane",6,"Boulemane","Province","Province",NA,NA
+7,152,"MAR","Morocco",3,"Fès - Boulemane",7,"Fès","Province","Province",NA,"Fès-Dar-Dbibegh"
+8,152,"MAR","Morocco",3,"Fès - Boulemane",8,"Sefrou","Prefecture","Prefecture",NA,NA
+9,152,"MAR","Morocco",3,"Fès - Boulemane",9,"Zouagha-Moulay Yacoub","Prefecture","Prefecture",NA,NA
+10,152,"MAR","Morocco",4,"Gharb - Chrarda - Béni Hssen",10,"Kénitra","Province","Province",NA,"Kenitra"
+11,152,"MAR","Morocco",4,"Gharb - Chrarda - Béni Hssen",11,"Sidi Kacem","Province","Province",NA,NA
+12,152,"MAR","Morocco",5,"Grand Casablanca",12,"Casablanca","Prefecture","Prefecture",NA,NA
+13,152,"MAR","Morocco",5,"Grand Casablanca",13,"Mohammedia","Prefecture","Prefecture",NA,NA
+14,152,"MAR","Morocco",6,"Guelmim - Es-Semara",14,"Assa-Zag","Province","Province",NA,NA
+15,152,"MAR","Morocco",6,"Guelmim - Es-Semara",15,"Guelmim","Province","Province",NA,NA
+16,152,"MAR","Morocco",6,"Guelmim - Es-Semara",16,"Tan-Tan","Province","Province",NA,NA
+17,152,"MAR","Morocco",6,"Guelmim - Es-Semara",17,"Tata","Province","Province",NA,NA
+18,152,"MAR","Morocco",7,"Laâyoune - Boujdour - Sakia El Hamra",18,"Laâyoune","Province","Province",NA,"Laayoune"
+19,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",19,"Al Haouz","Province","Province",NA,NA
+20,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",20,"Chichaoua","Province","Province",NA,NA
+21,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",21,"El Kelaâ des Sraghna","Province","Province",NA,"El Kelaa Sraghna"
+22,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",22,"Essaouira","Province","Province",NA,NA
+23,152,"MAR","Morocco",8,"Marrakech - Tensift - Al Haouz",23,"Marrakech","Prefecture","Prefecture",NA,NA
+24,152,"MAR","Morocco",9,"Meknès - Tafilalet",24,"El Hajeb","Province","Province",NA,NA
+25,152,"MAR","Morocco",9,"Meknès - Tafilalet",25,"Errachidia","Province","Province",NA,NA
+26,152,"MAR","Morocco",9,"Meknès - Tafilalet",26,"Ifrane","Province","Province",NA,NA
+27,152,"MAR","Morocco",9,"Meknès - Tafilalet",27,"Khénifra","Province","Province",NA,"Khenifra"
+28,152,"MAR","Morocco",9,"Meknès - Tafilalet",28,"Meknès","Prefecture","Prefecture",NA,NA
+29,152,"MAR","Morocco",10,"Oriental",29,"Berkane Taourirt","Province","Province",NA,NA
+30,152,"MAR","Morocco",10,"Oriental",30,"Figuig","Province","Province",NA,NA
+31,152,"MAR","Morocco",10,"Oriental",31,"Jerada","Province","Province",NA,"Jrada"
+32,152,"MAR","Morocco",10,"Oriental",32,"Nador","Province","Province",NA,NA
+33,152,"MAR","Morocco",10,"Oriental",33,"Oujda Angad","Province","Province",NA,NA
+34,152,"MAR","Morocco",11,"Rabat - Salé - Zemmour - Zaer",34,"Khémisset","Province","Province",NA,"Khemisset"
+35,152,"MAR","Morocco",11,"Rabat - Salé - Zemmour - Zaer",35,"Rabat","Prefecture","Prefecture",NA,NA
+36,152,"MAR","Morocco",11,"Rabat - Salé - Zemmour - Zaer",36,"Salé","Prefecture","Prefecture","Sale",NA
+37,152,"MAR","Morocco",11,"Rabat - Salé - Zemmour - Zaer",37,"Skhirate-Témara","Prefecture","Prefecture",NA,"Skhirate-Temara"
+38,152,"MAR","Morocco",12,"Souss - Massa - Draâ",38,"Agadir-Ida ou Tanane","Prefecture","Prefecture",NA,"Agadir Ida Ou Tanane"
+39,152,"MAR","Morocco",12,"Souss - Massa - Draâ",39,"Chtouka-Aït Baha","Province","Province",NA,"Chtouka Ait Baha"
+40,152,"MAR","Morocco",12,"Souss - Massa - Draâ",40,"Inezgane-Aït Melloul","Prefecture","Prefecture",NA,"Inezgane Ait Melloul"
+41,152,"MAR","Morocco",12,"Souss - Massa - Draâ",41,"Ouarzazate","Province","Province",NA,NA
+42,152,"MAR","Morocco",12,"Souss - Massa - Draâ",42,"Taroudannt","Province","Province",NA,NA
+43,152,"MAR","Morocco",12,"Souss - Massa - Draâ",43,"Tiznit","Province","Province",NA,NA
+44,152,"MAR","Morocco",12,"Souss - Massa - Draâ",44,"Zagora","Province","Province",NA,NA
+45,152,"MAR","Morocco",13,"Tadla - Azilal",45,"Azilal","Province","Province",NA,NA
+46,152,"MAR","Morocco",13,"Tadla - Azilal",46,"Béni Mellal","Province","Province",NA,"Beni Mellal"
+47,152,"MAR","Morocco",14,"Tanger - Tétouan",47,"Chefchaouen","Province","Province",NA,NA
+48,152,"MAR","Morocco",14,"Tanger - Tétouan",48,"Fahs Anjra","Prefecture","Prefecture",NA,"Fahs-Béni Makada"
+49,152,"MAR","Morocco",14,"Tanger - Tétouan",49,"Larache","Province","Province",NA,NA
+50,152,"MAR","Morocco",14,"Tanger - Tétouan",50,"Tétouan","Prefecture","Prefecture",NA,"Tetouan"
+51,152,"MAR","Morocco",14,"Tanger - Tétouan",51,"Tanger-Assilah","Prefecture","Prefecture",NA,NA
+52,152,"MAR","Morocco",15,"Taza - Al Hoceima - Taounate",52,"Al Hoceïma","Province","Province",NA,"Al Hoceima"
+53,152,"MAR","Morocco",15,"Taza - Al Hoceima - Taounate",53,"Taounate","Province","Province",NA,NA
+54,152,"MAR","Morocco",15,"Taza - Al Hoceima - Taounate",54,"Taza","Province","Province",NA,NA
