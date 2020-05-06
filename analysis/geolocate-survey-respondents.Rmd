@@ -4242,6 +4242,8 @@ ab06 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1, ID_2) %>%
   summarize() %>% print(n = Inf)
 
 
+#### Malawi
+## iso
 
 
 
@@ -4261,8 +4263,36 @@ ab06 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1, ID_2) %>%
 
 
 
+iso_malawi <- bind_cols(
+  cname_eng = rep('Malawi', 3),
+  ISO1num = rep(454, 3),
+  ISO2str = c('MW-C', 'MW-N', 'MW-S'),
+  ISO2numstr = rep('', 3),
+  ISO2num = rep(NA, 3),
+  areaname_conv_iso = c('Central Region', 'Northern Region', 'Southern Region'),
+  areaname_eng_iso = c('Central Region', 'Northern Region', 'Southern Region')
+)
 
-
+iso_malawi2 <- bind_cols(
+  cname_eng = rep('Malawi', 28),
+  ISO1num = rep(454, 28),
+  ISO2str2 = c('MW-BA', 'MW-BL', 'MW-CK', 'MW-CR', 'MW-CT', 'MW-DE', 'MW-DO',
+    'MW-KR', 'MW-KS', 'MW-LK', 'MW-LI', 'MW-MH', 'MW-MG', 'MW-MC', 'MW-MU',
+    'MW-MW', 'MW-MZ', 'MW-NE', 'MW-NB', 'MW-NK', 'MW-NS', 'MW-NU', 'MW-NI',
+    'MW-PH', 'MW-RU', 'MW-SA', 'MW-TH', 'MW-ZO'),
+  ISO2numstr = rep('', 28),
+  ISO2num = rep(NA, 28),
+  areaname_conv_iso2 = c('Balaka', 'Blantyre', 'Chikwawa', 'Chiradzulu',
+    'Chitipa', 'Dedza', 'Dowa', 'Karonga', 'Kasungu', 'Likoma', 'Lilongwe',
+    'Machinga', 'Mangochi', 'Mchinji', 'Mulanje', 'Mwanza', 'Mzimba', 'Neno',
+    'Nkhata Bay', 'Nkhotakota', 'Nsanje', 'Ntcheu', 'Ntchisi', 'Phalombe',
+    'Rumphi', 'Salima', 'Thyolo', 'Zomba'),
+  areaname_eng_iso2 = c('Balaka', 'Blantyre', 'Chikwawa', 'Chiradzulu',
+    'Chitipa', 'Dedza', 'Dowa', 'Karonga', 'Kasungu', 'Likoma', 'Lilongwe',
+    'Machinga', 'Mangochi', 'Mchinji', 'Mulanje', 'Mwanza', 'Mzimba', 'Neno',
+    'Nkhata Bay', 'Nkhotakota', 'Nsanje', 'Ntcheu', 'Ntchisi', 'Phalombe',
+    'Rumphi', 'Salima', 'Thyolo', 'Zomba')
+)
 
 ################################################################################
 
@@ -4289,21 +4319,6 @@ ab06 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1, ID_2) %>%
 
 
 
-
-
-'Madagascar' %in% ab01$cname_eng
-'Madagascar' %in% ab02$cname_eng
-'Madagascar' %in% ab03$cname_eng
-'Madagascar' %in% ab04$cname_eng
-'Madagascar' %in% ab05$cname_eng
-'Madagascar' %in% ab06$cname_eng
-
-ab03 %>% filter(cname_eng == 'Madagascar') %>% {sort(unique(.$areaname_eng_ab))}
-ab04 %>% filter(cname_eng == 'Madagascar') %>% {sort(unique(.$areaname_eng_ab))}
-ab05 %>% filter(cname_eng == 'Madagascar') %>% {sort(unique(.$areaname_eng_ab))}
-ab06 %>% filter(cname_eng == 'Madagascar') %>% {sort(unique(.$areaname_eng_ab))}
-
-geo_madagascar %>% group_by(NAME_1, ID_1, NAME_2, ID_2, NAME_3, ID_3) %>% summarize() %>% print(n = Inf)
 
 
 'Malawi' %in% ab01$cname_eng
