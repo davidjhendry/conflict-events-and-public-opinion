@@ -4049,7 +4049,7 @@ RaggedSideBySide(
     {sort(unique(.$NAME_1))}
 )
 
-unique(geo_liberia$NAME_0)
+unique(geo_madagascar$NAME_0)
 geo_madagascar %>% group_by(NAME_1, ID_1) %>%
   summarize() %>% print(n = Inf)
 
@@ -4092,7 +4092,7 @@ RaggedSideBySide(
     {sort(unique(.$NAME_1))}
 )
 
-unique(geo_liberia$NAME_0)
+unique(geo_madagascar$NAME_0)
 geo_madagascar %>% group_by(NAME_1, ID_1) %>%
   summarize() %>% print(n = Inf)
 
@@ -4142,7 +4142,7 @@ RaggedSideBySide(
     {sort(unique(.$NAME_2))}
 )
 
-unique(geo_liberia$NAME_0)
+unique(geo_madagascar$NAME_0)
 geo_madagascar %>% group_by(NAME_1, NAME_2, ID_1, ID_2) %>%
   summarize() %>% print(n = Inf)
 
@@ -4206,7 +4206,7 @@ RaggedSideBySide(
     {sort(unique(.$NAME_2))}
 )
 
-unique(geo_liberia$NAME_0)
+unique(geo_madagascar$NAME_0)
 geo_madagascar %>% group_by(NAME_1, NAME_2, ID_1, ID_2) %>%
   summarize() %>% print(n = Inf)
 
@@ -4329,8 +4329,8 @@ RaggedSideBySide(
     {sort(unique(.$NAME_1))}
 )
 
-unique(geo_liberia$NAME_0)
-geo_madagascar %>% group_by(NAME_1, ID_1) %>%
+unique(geo_malawi$NAME_0)
+geo_malawi %>% group_by(NAME_1, ID_1) %>%
   summarize() %>% print(n = Inf)
 
 ab01 <- ab01 %>% mutate(
@@ -4366,8 +4366,22 @@ ab02 <- ab02 %>% mutate(
 ab02 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
   summarize() %>% print(n = Inf)
 
+RaggedSideBySide(
+  ab02 %>% filter(cname_eng == 'Malawi') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_malawi %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_malawi$NAME_0)
+geo_malawi %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
 # unable to geocode Malawi at subnational level - Afrobarometer Round 2 area
 # names do not match global administrative data
+
+ab02 <- ab02 %>% mutate(
+  NAME_0 = if_else(cname_eng == 'Malawi', 'Malawi', NAME_0)
+)
 
 RaggedSideBySide(
   ab03 %>% filter(cname_eng == 'Malawi') %>%
@@ -4386,8 +4400,22 @@ ab03 <- ab03 %>% mutate(
 ab03 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
   summarize() %>% print(n = Inf)
 
+RaggedSideBySide(
+  ab03 %>% filter(cname_eng == 'Malawi') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_malawi %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_malawi$NAME_0)
+geo_malawi %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
 # unable to geocode Malawi at subnational level - Afrobarometer Round 3 area
 # names do not match global administrative data
+
+ab03 <- ab03 %>% mutate(
+  NAME_0 = if_else(cname_eng == 'Malawi', 'Malawi', NAME_0)
+)
 
 RaggedSideBySide(
   ab04 %>% filter(cname_eng == 'Malawi') %>%
@@ -4406,8 +4434,22 @@ ab04 <- ab04 %>% mutate(
 ab04 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
   summarize() %>% print(n = Inf)
 
+RaggedSideBySide(
+  ab04 %>% filter(cname_eng == 'Malawi') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_malawi %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_malawi$NAME_0)
+geo_malawi %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
 # unable to geocode Malawi at subnational level - Afrobarometer Round 4 area
 # names do not match global administrative data
+
+ab04 <- ab04 %>% mutate(
+  NAME_0 = if_else(cname_eng == 'Malawi', 'Malawi', NAME_0)
+)
 
 RaggedSideBySide(
   ab05 %>% filter(cname_eng == 'Malawi') %>%
@@ -4426,8 +4468,22 @@ ab05 <- ab05 %>% mutate(
 ab05 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
   summarize() %>% print(n = Inf)
 
+RaggedSideBySide(
+  ab05 %>% filter(cname_eng == 'Malawi') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_malawi %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_malawi$NAME_0)
+geo_malawi %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
 # unable to geocode Malawi at subnational level - Afrobarometer Round 5 area
 # names do not match global administrative data
+
+ab05 <- ab05 %>% mutate(
+  NAME_0 = if_else(cname_eng == 'Malawi', 'Malawi', NAME_0)
+)
 
 RaggedSideBySide(
   ab06 %>% filter(cname_eng == 'Malawi') %>%
@@ -4446,10 +4502,333 @@ ab06 <- ab06 %>% mutate(
 ab06 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
   summarize() %>% print(n = Inf)
 
+RaggedSideBySide(
+  ab06 %>% filter(cname_eng == 'Malawi') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_malawi %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_malawi$NAME_0)
+geo_malawi %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
 # unable to geocode Malawi at subnational level - Afrobarometer Round 6 area
 # names do not match global administrative data
 
+ab06 <- ab06 %>% mutate(
+  NAME_0 = if_else(cname_eng == 'Malawi', 'Malawi', NAME_0)
+)
+
+
+#### Mali
+## iso
+# é -> e
+iso_mali <- bind_cols(
+  cname_eng = rep('Mali', 11),
+  ISO1num = rep(466, 11),
+  ISO2str = c('ML-BKO', 'ML-7', 'ML-1', 'ML-8', 'ML-2', 'ML-9', 'ML-5', 'ML-4',
+    'ML-3', 'ML-10', 'ML-6'),
+  ISO2numstr = rep('', 11),
+  ISO2num = rep(NA, 11),
+  areaname_conv_iso = c('Bamako', 'Gao', 'Kayes', 'Kidal', 'Koulikoro',
+    'Ménaka', 'Mopti', 'Ségou', 'Sikasso', 'Taoudénit', 'Tombouctou'),
+  areaname_eng_iso = c('Bamako', 'Gao', 'Kayes', 'Kidal', 'Koulikoro', 'Menaka',
+    'Mopti', 'Segou', 'Sikasso', 'Taoudenit', 'Tombouctou')
+)
+
+## gis
+geo_mali <-
+  read.csv('Data/GIS/Mali/MLI_adm1.csv', stringsAsFactors = FALSE) %>%
+  as_tibble()
+
+'Mali' %in% ab01$cname_eng
+'Mali' %in% ab02$cname_eng
+'Mali' %in% ab03$cname_eng
+'Mali' %in% ab04$cname_eng
+'Mali' %in% ab05$cname_eng
+'Mali' %in% ab06$cname_eng
+
+RaggedSideBySide(
+  ab01 %>% filter(cname_eng == 'Mali') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_mali %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab01 <- ab01 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Mali',
+      recode(areaname_eng_ab, 'Bamako' = 'Bamako', 'Gao' = 'Gao',
+        'Kayes' = 'Kayes', 'Kidal' = 'Kidal', 'Kkro' = 'Koulikoro',
+        'Mopti' = 'Mopti', 'Segou' = 'Segou', 'Sikasso' = 'Sikasso',
+        'Tbtou' = 'Tombouctou'),
+      areaname_eng_iso)
+)
+
+ab01 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab01 %>% filter(cname_eng == 'Mali') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_mali %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_mali$NAME_0)
+geo_mali %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab01 <- ab01 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'Mali', 'Mali', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'Mali',
+      recode(areaname_eng_ab, 'Bamako' = 1, 'Gao' = 2, 'Kayes' = 3, 'Kidal' = 4,
+        'Kkro' = 5, 'Mopti' = 6, 'Segou' = 7, 'Sikasso' = 8, 'Tbtou' = 9,
+        .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab01 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab02 %>% filter(cname_eng == 'Mali') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_mali %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab02 <- ab02 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Mali',
+      recode(areaname_eng_ab, 'Bamako' = 'Bamako', 'Gao' = 'Gao',
+        'Kayes' = 'Kayes', 'Kidal' = 'Kidal', 'Koulikoro' = 'Koulikoro',
+        'Mopti' = 'Mopti', 'Segou' = 'Segou', 'Sikasso' = 'Sikasso',
+        'Tombouctou' = 'Tombouctou'),
+      areaname_eng_iso)
+)
+
+ab02 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab02 %>% filter(cname_eng == 'Mali') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_mali %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_mali$NAME_0)
+geo_mali %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab02 <- ab02 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'Mali', 'Mali', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'Mali',
+      recode(areaname_eng_ab, 'Bamako' = 1, 'Gao' = 2, 'Kayes' = 3, 'Kidal' = 4,
+        'Koulikoro' = 5, 'Mopti' = 6, 'Segou' = 7, 'Sikasso' = 8,
+        'Tombouctou' = 9, .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab02 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab03 %>% filter(cname_eng == 'Mali') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_mali %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab03 <- ab03 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Mali',
+      recode(areaname_eng_ab, 'Bamako' = 'Bamako', 'Gao' = 'Gao',
+        'Kayes' = 'Kayes', 'Kidal' = 'Kidal', 'Koulikoro' = 'Koulikoro',
+        'Mopti' = 'Mopti', 'Segou' = 'Segou', 'Sikasso' = 'Sikasso',
+        'Tombouctou' = 'Tombouctou'),
+      areaname_eng_iso)
+)
+
+ab03 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab03 %>% filter(cname_eng == 'Mali') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_mali %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_mali$NAME_0)
+geo_mali %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab03 <- ab03 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'Mali', 'Mali', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'Mali',
+      recode(areaname_eng_ab, 'Bamako' = 1, 'Gao' = 2, 'Kayes' = 3, 'Kidal' = 4,
+        'Koulikoro' = 5, 'Mopti' = 6, 'Segou' = 7, 'Sikasso' = 8,
+        'Tombouctou' = 9, .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab03 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab04 %>% filter(cname_eng == 'Mali') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_mali %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab04 <- ab04 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Mali',
+      recode(areaname_eng_ab, 'Bamako' = 'Bamako', 'Gao' = 'Gao',
+        'Kayes' = 'Kayes', 'Kidal' = 'Kidal', 'Koulikoro' = 'Koulikoro',
+        'Mopti' = 'Mopti', 'Segou' = 'Segou', 'Sikasso' = 'Sikasso',
+        'Tombouctou' = 'Tombouctou'),
+      areaname_eng_iso)
+)
+
+ab04 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab04 %>% filter(cname_eng == 'Mali') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_mali %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_mali$NAME_0)
+geo_mali %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab04 <- ab04 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'Mali', 'Mali', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'Mali',
+      recode(areaname_eng_ab, 'Bamako' = 1, 'Gao' = 2, 'Kayes' = 3, 'Kidal' = 4,
+        'Koulikoro' = 5, 'Mopti' = 6, 'Segou' = 7, 'Sikasso' = 8,
+        'Tombouctou' = 9, .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab04 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab05 %>% filter(cname_eng == 'Mali') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_mali %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab05 <- ab05 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Mali',
+      recode(areaname_eng_ab, 'Bamako' = 'Bamako', 'Kayes' = 'Kayes',
+        'Koulikoro' = 'Koulikoro', 'Mopti' = 'Mopti', 'Segou' = 'Segou',
+        'Sikasso' = 'Sikasso'),
+      areaname_eng_iso)
+)
+
+ab05 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab05 %>% filter(cname_eng == 'Mali') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_mali %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_mali$NAME_0)
+geo_mali %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab05 <- ab05 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'Mali', 'Mali', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'Mali',
+      recode(areaname_eng_ab, 'Bamako' = 1, 'Kayes' = 3, 'Koulikoro' = 5,
+        'Mopti' = 6, 'Segou' = 7, 'Sikasso' = 8, .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab05 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab06 %>% filter(cname_eng == 'Mali') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_mali %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab06 <- ab06 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Mali',
+      recode(areaname_eng_ab, 'Bamako' = 'Bamako', 'Gao' = 'Gao',
+        'Kayes' = 'Kayes', 'Kidal' = 'Kidal', 'Koulikoro' = 'Koulikoro',
+        'Mopti' = 'Mopti', 'Segou' = 'Segou', 'Sikasso' = 'Sikasso',
+        'Tombouctou' = 'Tombouctou'),
+      areaname_eng_iso)
+)
+
+ab06 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab06 %>% filter(cname_eng == 'Mali') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_mali %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_mali$NAME_0)
+geo_mali %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab06 <- ab06 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'Mali', 'Mali', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'Mali',
+      recode(areaname_eng_ab, 'Bamako' = 1, 'Gao' = 2, 'Kayes' = 3, 'Kidal' = 4,
+        'Koulikoro' = 5, 'Mopti' = 6, 'Segou' = 7, 'Sikasso' = 8,
+        'Tombouctou' = 9, .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab06 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4490,35 +4869,6 @@ ab06 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
 
 
 
-ab01 %>% filter(cname_eng == 'Malawi') %>% {sort(unique(.$areaname_eng_ab))}
-ab02 %>% filter(cname_eng == 'Malawi') %>% {sort(unique(.$areaname_eng_ab))}
-ab03 %>% filter(cname_eng == 'Malawi') %>% {sort(unique(.$areaname_eng_ab))}
-ab04 %>% filter(cname_eng == 'Malawi') %>% {sort(unique(.$areaname_eng_ab))}
-ab05 %>% filter(cname_eng == 'Malawi') %>% {sort(unique(.$areaname_eng_ab))}
-ab06 %>% filter(cname_eng == 'Malawi') %>% {sort(unique(.$areaname_eng_ab))}
-
-geo_malawi %>% group_by(NAME_1, ID_1, NAME_2, ID_2) %>% summarize() %>% print(n = Inf)
-
-
-'Mali' %in% ab01$cname_eng
-'Mali' %in% ab02$cname_eng
-'Mali' %in% ab03$cname_eng
-'Mali' %in% ab04$cname_eng
-'Mali' %in% ab05$cname_eng
-'Mali' %in% ab06$cname_eng
-
-ab01 %>% filter(cname_eng == 'Mali') %>% {sort(unique(.$areaname_eng_ab))}
-ab02 %>% filter(cname_eng == 'Mali') %>% {sort(unique(.$areaname_eng_ab))}
-ab03 %>% filter(cname_eng == 'Mali') %>% {sort(unique(.$areaname_eng_ab))}
-ab04 %>% filter(cname_eng == 'Mali') %>% {sort(unique(.$areaname_eng_ab))}
-ab05 %>% filter(cname_eng == 'Mali') %>% {sort(unique(.$areaname_eng_ab))}
-ab06 %>% filter(cname_eng == 'Mali') %>% {sort(unique(.$areaname_eng_ab))}
-
-geo_mali <-
-  read.csv('Data/GIS/Mali/MLI_adm4.csv', stringsAsFactors = FALSE) %>%
-  as_tibble()
-
-geo_mali %>% group_by(NAME_1, ID_1, NAME_2, ID_2) %>% summarize() %>% print(n = Inf)
 
 
 'Mauritius' %in% ab01$cname_eng
