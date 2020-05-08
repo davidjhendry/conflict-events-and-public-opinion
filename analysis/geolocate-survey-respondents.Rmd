@@ -4804,6 +4804,126 @@ ab06 <- ab06 %>% mutate(
 ab06 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
   summarize() %>% print(n = Inf)
 
+
+#### Mauritius
+## iso
+# è -> e
+iso_mauritius <- bind_cols(
+  cname_eng = rep('Mauritius', 17),
+  ISO1num = rep(466, 17),
+  ISO2str = c('MU-BR', 'MU-CU', 'MU-PU', 'MU-QB', 'MU-VP', 'MU-AG', 'MU-CC',
+    'MU-RO', 'MU-BL', 'MU-FL', 'MU-GP', 'MU-MO', 'MU-PA', 'MU-PW', 'MU-PL',
+    'MU-RR', 'MU-SA'),
+  ISO2numstr = rep('', 17),
+  ISO2num = rep(NA, 17),
+  areaname_conv_iso = c('Beau Bassin-Rose Hill', 'Curepipe', 'Port Louis',
+    'Quatre Bornes', 'Vacoas-Phoenix', 'Agalega Islands', 'Cargados Carajos',
+    'Rodrigues Island', 'Black River', 'Flacq', 'Grand Port', 'Moka',
+    'Pamplemousses', 'Plaines Wilhems', 'Port Louis', 'Rivière du Rempart',
+    'Savanne'),
+  areaname_eng_iso = c('Beau Bassin-Rose Hill', 'Curepipe', 'Port Louis',
+    'Quatre Bornes', 'Vacoas-Phoenix', 'Agalega Islands', 'Cargados Carajos',
+    'Rodrigues Island', 'Black River', 'Flacq', 'Grand Port', 'Moka',
+    'Pamplemousses', 'Plaines Wilhems', 'Port Louis', 'Riviere du Rempart',
+    'Savanne')
+)
+
+## gis
+geo_mauritius <-
+  read.csv('Data/GIS/Mauritius/MUS_adm1.csv', stringsAsFactors = FALSE) %>%
+  as_tibble()
+
+RaggedSideBySide(
+  ab05 %>% filter(cname_eng == 'Mauritius') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_mauritius %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab05 <- ab05 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Mauritius',
+      recode(areaname_eng_ab, 'Black River' = 'Black River', 'Flacq' = 'Flacq',
+        'Grand Port' = 'Grand Port', 'Moka' = 'Moka',
+        'Pamplemousses' = 'Pamplemousses',
+        'Plaines Wilhems' = 'Plaines Wilhems', 'Port Louis' = 'Port Louis',
+        'Riviere du Rempart' = 'Riviere du Rempart',
+        'Rodrigues' = 'Rodrigues Island', 'Savanne' = 'Savanne'),
+      areaname_eng_iso)
+)
+
+ab05 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab05 %>% filter(cname_eng == 'Mauritius') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_mauritius %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_mauritius$NAME_0)
+geo_mauritius %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab05 <- ab05 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'Mauritius', 'Mauritius', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'Mauritius',
+      recode(areaname_eng_ab, 'Black River' = 1, 'Flacq' = 3, 'Grand Port' = 4,
+        'Moka' = 5, 'Pamplemousses' = 7, 'Plaines Wilhems' = 8,
+        'Port Louis' = 9, 'Riviere du Rempart' = 10, 'Rodrigues' = 11,
+        'Savanne' = 12, .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab05 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab06 %>% filter(cname_eng == 'Mauritius') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_mauritius %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab06 <- ab06 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Mauritius',
+      recode(areaname_eng_ab, 'Black River' = 'Black River', 'Flacq' = 'Flacq',
+        'Grand Port' = 'Grand Port', 'Moka' = 'Moka',
+        'Pamplemousses' = 'Pamplemousses', 'Port Louis' = 'Port Louis',
+        'Riviere du Rempart' = 'Riviere du Rempart',
+        'Rodrigues' = 'Rodrigues Island', 'Savanne' = 'Savanne'),
+      areaname_eng_iso)
+)
+
+ab06 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab06 %>% filter(cname_eng == 'Mauritius') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_mauritius %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_mauritius$NAME_0)
+geo_mauritius %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab06 <- ab06 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'Mauritius', 'Mauritius', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'Mauritius',
+      recode(areaname_eng_ab, 'Black River' = 1, 'Flacq' = 3, 'Grand Port' = 4,
+        'Moka' = 5, 'Pamplemousses' = 7, 'Port Louis' = 9,
+        'Riviere du Rempart' = 10, 'Rodrigues' = 11, 'Savanne' = 12,
+        .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab06 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
 ```
 
 
