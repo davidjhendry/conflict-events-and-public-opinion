@@ -5837,27 +5837,6 @@ ab06 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
 
 
 
-'Namibia' %in% ab01$cname_eng
-'Namibia' %in% ab02$cname_eng
-'Namibia' %in% ab03$cname_eng
-'Namibia' %in% ab04$cname_eng
-'Namibia' %in% ab05$cname_eng
-'Namibia' %in% ab06$cname_eng
-
-ab01 %>% filter(cname_eng == 'Namibia') %>% {sort(unique(.$areaname_eng_ab))}
-ab02 %>% filter(cname_eng == 'Namibia') %>% {sort(unique(.$areaname_eng_ab))}
-ab03 %>% filter(cname_eng == 'Namibia') %>% {sort(unique(.$areaname_eng_ab))}
-ab04 %>% filter(cname_eng == 'Namibia') %>% {sort(unique(.$areaname_eng_ab))}
-ab05 %>% filter(cname_eng == 'Namibia') %>% {sort(unique(.$areaname_eng_ab))}
-ab06 %>% filter(cname_eng == 'Namibia') %>% {sort(unique(.$areaname_eng_ab))}
-
-geo_namibia <-
-  read.csv('Data/GIS/Namibia/NAM_adm2.csv', stringsAsFactors = FALSE) %>%
-  as_tibble()
-
-geo_namibia %>% group_by(NAME_1, ID_1, NAME_2, ID_2) %>% summarize() %>% print(n = Inf)
-
-
 'Niger' %in% ab01$cname_eng
 'Niger' %in% ab02$cname_eng
 'Niger' %in% ab03$cname_eng
