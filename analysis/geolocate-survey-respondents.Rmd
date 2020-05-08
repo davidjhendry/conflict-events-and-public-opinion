@@ -631,7 +631,7 @@ ab05 <- ab05.raw %>%
       `502` = 'Koulikoro', `503` = 'Sikasso', `504` = 'Segou', `505` = 'Mopti',
       `509` = 'Bamako', `540` = 'Maputo Province', `541` = 'Maputo City',
       `542` = 'Gaza', `543` = 'Inhambane', `544` = 'Sofala', `545` = 'Tete',
-      `546` = ' Manica', `547` = 'Zambezia', `548` = 'Nampula',
+      `546` = 'Manica', `547` = 'Zambezia', `548` = 'Nampula',
       `549` = 'Cabo Delgado', `550` = 'Niassa', `580` = 'Caprivi',
       `581` = 'Erongo', `582` = 'Hardap', `583` = 'Karas', `584` = 'Kavango',
       `585` = 'Khomas', `586` = 'Kunene', `587` = 'Ohangwena',
@@ -5167,7 +5167,277 @@ ab06 <- ab06 %>% mutate(
 ab06 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
   summarize() %>% print(n = Inf)
 
+
+#### Mozambique
+## iso
+# é -> e
+iso_mozambique <- bind_cols(
+  cname_eng = rep('Mozambique', 11),
+  ISO1num = rep(508, 11),
+  ISO2str = c('MZ-MPM', 'MZ-P', 'MZ-G', 'MZ-I', 'MZ-B', 'MZ-L', 'MZ-N', 'MZ-A',
+    'MZ-S', 'MZ-T', 'MZ-Q'),
+  ISO2numstr = rep('', 11),
+  ISO2num = rep(NA, 11),
+  areaname_conv_iso = c('Maputo', 'Cabo Delgado', 'Gaza', 'Inhambane', 'Manica',
+    'Maputo', 'Nampula', 'Niassa', 'Sofala', 'Tete', 'Zambézia'),
+  areaname_eng_iso = c('Maputo', 'Cabo Delgado', 'Gaza', 'Inhambane', 'Manica',
+    'Maputo', 'Nampula', 'Niassa', 'Sofala', 'Tete', 'Zambezia')
+)
+
+## gis
+geo_mozambique <-
+  read.csv('Data/GIS/Mozambique/MOZ_adm1.csv', stringsAsFactors = FALSE) %>%
+  as_tibble()
+
+RaggedSideBySide(
+  ab02 %>% filter(cname_eng == 'Mozambique') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_mozambique %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab02 <- ab02 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Mozambique',
+      recode(areaname_eng_ab, 'CaboDelgado' = 'Cabo Delgado', 'Gaza' = 'Gaza',
+        'Inhambane' = 'Inhambane', 'Manica' = 'Manica',
+        'Maputo(Cid.)' = 'Maputo', 'Maputo(Prov.)' = 'Maputo',
+        'Nampula' = 'Nampula', 'Niassa' = 'Niassa', 'Sofala' = 'Sofala',
+        'Tete' = 'Tete', 'Zambezia' = 'Zambezia'),
+      areaname_eng_iso)
+)
+
+ab02 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab02 %>% filter(cname_eng == 'Mozambique') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_mozambique %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_mozambique$NAME_0)
+geo_mozambique %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab02 <- ab02 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'Mozambique', 'Mozambique', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'Mozambique',
+      recode(areaname_eng_ab, 'CaboDelgado' = 1, 'Gaza' = 2, 'Inhambane' = 3,
+        'Manica' = 4, 'Maputo(Prov.)' = 6, 'Maputo(Cid.)' = 5, 'Nampula' = 7,
+        'Niassa' = 8, 'Sofala' = 9, 'Tete' = 10, 'Zambezia' = 11,
+        .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab02 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab03 %>% filter(cname_eng == 'Mozambique') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_mozambique %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab03 <- ab03 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Mozambique',
+      recode(areaname_eng_ab, 'Cabo Delgado' = 'Cabo Delgado', 'Gaza' = 'Gaza',
+        'Inhambane' = 'Inhambane', 'Manica' = 'Manica',
+        'Maputo City' = 'Maputo', 'Maputo province' = 'Maputo',
+        'Nampula' = 'Nampula', 'Niassa' = 'Niassa', 'Sofala' = 'Sofala',
+        'Tete' = 'Tete', 'Zambezia' = 'Zambezia'),
+      areaname_eng_iso)
+)
+
+ab03 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab03 %>% filter(cname_eng == 'Mozambique') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_mozambique %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_mozambique$NAME_0)
+geo_mozambique %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab03 <- ab03 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'Mozambique', 'Mozambique', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'Mozambique',
+      recode(areaname_eng_ab, 'Cabo Delgado' = 1, 'Gaza' = 2, 'Inhambane' = 3,
+        'Manica' = 4, 'Maputo province' = 6, 'Maputo City' = 5, 'Nampula' = 7,
+        'Niassa' = 8, 'Sofala' = 9, 'Tete' = 10, 'Zambezia' = 11,
+        .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab03 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab04 %>% filter(cname_eng == 'Mozambique') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_mozambique %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab04 <- ab04 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Mozambique',
+      recode(areaname_eng_ab, 'Cabo Delgado' = 'Cabo Delgado', 'Gaza' = 'Gaza',
+        'Inhambane' = 'Inhambane', 'Manica' = 'Manica',
+        'Maputo' = 'Maputo', 'Maputo City' = 'Maputo', 'Nampula' = 'Nampula',
+        'Niassa' = 'Niassa', 'Sofala' = 'Sofala', 'Tete' = 'Tete',
+        'Zambezia' = 'Zambezia'),
+      areaname_eng_iso)
+)
+
+ab04 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab04 %>% filter(cname_eng == 'Mozambique') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_mozambique %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_mozambique$NAME_0)
+geo_mozambique %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab04 <- ab04 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'Mozambique', 'Mozambique', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'Mozambique',
+      recode(areaname_eng_ab, 'Cabo Delgado' = 1, 'Gaza' = 2, 'Inhambane' = 3,
+        'Manica' = 4, 'Maputo' = 6, 'Maputo City' = 5, 'Nampula' = 7,
+        'Niassa' = 8, 'Sofala' = 9, 'Tete' = 10, 'Zambezia' = 11,
+        .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab04 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab05 %>% filter(cname_eng == 'Mozambique') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_mozambique %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab05 <- ab05 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Mozambique',
+      recode(areaname_eng_ab, 'Cabo Delgado' = 'Cabo Delgado', 'Gaza' = 'Gaza',
+        'Inhambane' = 'Inhambane', 'Manica' = 'Manica',
+        'Maputo' = 'Maputo City', 'Maputo Province' = 'Maputo',
+        'Nampula' = 'Nampula', 'Niassa' = 'Niassa', 'Sofala' = 'Sofala',
+        'Tete' = 'Tete', 'Zambezia' = 'Zambezia'),
+      areaname_eng_iso)
+)
+
+ab05 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab05 %>% filter(cname_eng == 'Mozambique') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_mozambique %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_mozambique$NAME_0)
+geo_mozambique %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab05 <- ab05 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'Mozambique', 'Mozambique', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'Mozambique',
+      recode(areaname_eng_ab, 'Cabo Delgado' = 1, 'Gaza' = 2, 'Inhambane' = 3,
+        'Manica' = 4, 'Maputo Province' = 6, 'Maputo City' = 5, 'Nampula' = 7,
+        'Niassa' = 8, 'Sofala' = 9, 'Tete' = 10, 'Zambezia' = 11,
+        .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab05 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab06 %>% filter(cname_eng == 'Mozambique') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_mozambique %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab06 <- ab06 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Mozambique',
+      recode(areaname_eng_ab, 'Cabo Delgado' = 'Cabo Delgado', 'Gaza' = 'Gaza',
+        'Inhambane' = 'Inhambane', 'Manica' = 'Manica',
+        'Maputo' = 'Maputo City', 'Maputo Province' = 'Maputo',
+        'Nampula' = 'Nampula', 'Niassa' = 'Niassa', 'Sofala' = 'Sofala',
+        'Tete' = 'Tete', 'Zambezia' = 'Zambezia'),
+      areaname_eng_iso)
+)
+
+ab06 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab06 %>% filter(cname_eng == 'Mozambique') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_mozambique %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_mozambique$NAME_0)
+geo_mozambique %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab06 <- ab06 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'Mozambique', 'Mozambique', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'Mozambique',
+      recode(areaname_eng_ab, 'Cabo Delgado' = 1, 'Gaza' = 2, 'Inhambane' = 3,
+        'Manica' = 4, 'Maputo Province' = 6, 'Maputo City' = 5, 'Nampula' = 7,
+        'Niassa' = 8, 'Sofala' = 9, 'Tete' = 10, 'Zambezia' = 11,
+        .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab06 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5234,41 +5504,6 @@ ab06 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
 
 
 
-'Morocco' %in% ab01$cname_eng
-'Morocco' %in% ab02$cname_eng
-'Morocco' %in% ab03$cname_eng
-'Morocco' %in% ab04$cname_eng
-'Morocco' %in% ab05$cname_eng
-'Morocco' %in% ab06$cname_eng
-
-ab05 %>% filter(cname_eng == 'Morocco') %>% {sort(unique(.$areaname_eng_ab))}
-ab06 %>% filter(cname_eng == 'Morocco') %>% {sort(unique(.$areaname_eng_ab))}
-
-geo_morocco <-
-  read.csv('Data/GIS/Morocco/MAR_adm4.csv', stringsAsFactors = FALSE) %>%
-  as_tibble()
-
-geo_morocco %>% group_by(NAME_1, ID_1, NAME_2, ID_2) %>% summarize() %>% print(n = Inf)
-
-
-'Mozambique' %in% ab01$cname_eng
-'Mozambique' %in% ab02$cname_eng
-'Mozambique' %in% ab03$cname_eng
-'Mozambique' %in% ab04$cname_eng
-'Mozambique' %in% ab05$cname_eng
-'Mozambique' %in% ab06$cname_eng
-
-ab02 %>% filter(cname_eng == 'Mozambique') %>% {sort(unique(.$areaname_eng_ab))}
-ab03 %>% filter(cname_eng == 'Mozambique') %>% {sort(unique(.$areaname_eng_ab))}
-ab04 %>% filter(cname_eng == 'Mozambique') %>% {sort(unique(.$areaname_eng_ab))}
-ab05 %>% filter(cname_eng == 'Mozambique') %>% {sort(unique(.$areaname_eng_ab))}
-ab06 %>% filter(cname_eng == 'Mozambique') %>% {sort(unique(.$areaname_eng_ab))}
-
-geo_mozambique <-
-  read.csv('Data/GIS/Mozambique/MOZ_adm3.csv', stringsAsFactors = FALSE) %>%
-  as_tibble()
-
-geo_mozambique %>% group_by(NAME_1, ID_1, NAME_2, ID_2) %>% summarize() %>% print(n = Inf)
 
 
 'Namibia' %in% ab01$cname_eng
