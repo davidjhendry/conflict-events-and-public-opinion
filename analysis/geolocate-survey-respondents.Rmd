@@ -4924,6 +4924,249 @@ ab06 <- ab06 %>% mutate(
 ab06 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
   summarize() %>% print(n = Inf)
 
+
+#### Morocco
+## iso
+# é -> e; â -> a; è -> e; ï -> i
+iso_morocco <- bind_cols(
+  cname_eng = rep('Morocco', 12),
+  ISO1num = rep(504, 12),
+  ISO2str = c('MA-05', 'MA-06', 'MA-12', 'MA-08', 'MA-03', 'MA-10', 'MA-11',
+    'MA-07', 'MA-02', 'MA-04', 'MA-09', 'MA-01'),
+  ISO2numstr = rep('', 12),
+  ISO2num = rep(NA, 12),
+  areaname_conv_iso = c('Béni Mellal-Khénifra', 'Casablanca-Settat',
+    'Dakhla-Oued Ed-Dahab', 'Drâa-Tafilalet', 'Fès-Meknès', 'Guelmim-Oued Noun',
+    'Laâyoune-Sakia El Hamra', 'Marrakech-Safi', 'L\'Oriental',
+    'Rabat-Salé-Kénitra', 'Souss-Massa', 'Tanger-Tétouan-Al Hoceïma'),
+  areaname_eng_iso = c('Beni Mellal-Khenifra', 'Casablanca-Settat',
+    'Dakhla-Oued Ed-Dahab', 'Draa-Tafilalet', 'Fes-Meknes', 'Guelmim-Oued Noun',
+    'Laayoune-Sakia El Hamra', 'Marrakech-Safi', 'L\'Oriental',
+    'Rabat-Sale-Kenitra', 'Souss-Massa', 'Tanger-Tetouan-Al Hoceima')
+)
+
+iso_morocco2 <- bind_cols(
+  cname_eng = rep('Morocco', 75),
+  ISO1num = rep(504, 75),
+  ISO2str2 = c('MA-AGD', 'MA-AOU', 'MA-ASZ', 'MA-AZI', 'MA-BEM', 'MA-BES',
+    'MA-BER', 'MA-BRR', 'MA-BOD', 'MA-BOM', 'MA-CAS', 'MA-CHE', 'MA-CHI',
+    'MA-CHT', 'MA-DRI', 'MA-ERR', 'MA-ESM', 'MA-ESI', 'MA-FAH', 'MA-FES',
+    'MA-FIG', 'MA-FQH', 'MA-GUE', 'MA-GUF', 'MA-HAJ', 'MA-HAO', 'MA-HOC',
+    'MA-IFR', 'MA-INE', 'MA-JDI', 'MA-JRA', 'MA-KES', 'MA-KEN', 'MA-KHE',
+    'MA-KHN', 'MA-KHO', 'MA-LAA', 'MA-LAR', 'MA-MAR', 'MA-MDF', 'MA-MED',
+    'MA-MEK', 'MA-MID', 'MA-MOH', 'MA-MOU', 'MA-NAD', 'MA-NOU', 'MA-OUA',
+    'MA-OUD', 'MA-OUZ', 'MA-OUJ', 'MA-RAB', 'MA-REH', 'MA-SAF', 'MA-SAL',
+    'MA-SEF', 'MA-SET', 'MA-SIB', 'MA-SIF', 'MA-SIK', 'MA-SIL', 'MA-SKH',
+    'MA-TNT', 'MA-TNG', 'MA-TAO', 'MA-TAI', 'MA-TAF', 'MA-TAR', 'MA-TAT',
+    'MA-TAZ', 'MA-TET', 'MA-TIN', 'MA-TIZ', 'MA-YUS', 'MA-ZAG'),
+  ISO2numstr = rep('', 75),
+  ISO2num = rep(NA, 75),
+  areaname_conv_iso2 = c('Agadir-Ida-Ou-Tanane', 'Aousserd', 'Assa-Zag',
+    'Azilal', 'Béni Mellal', 'Benslimane', 'Berkane', 'Berrechid', 'Boujdour',
+    'Boulemane', 'Casablanca [Dar el Beïda]', 'Chefchaouen', 'Chichaoua',
+    'Chtouka-Ait Baha', 'Driouch', 'Errachidia', 'Es-Semara', 'Essaouira',
+    'Fahs-Anjra', 'Fès', 'Figuig', 'Fquih Ben Salah', 'Guelmim', 'Guercif',
+    'El Hajeb', 'Al Haouz', 'Al Hoceïma', 'Ifrane', 'Inezgane-Ait Melloul',
+    'El Jadida', 'Jerada', 'El Kelâa des Sraghna', 'Kénitra', 'Khemisset',
+    'Khenifra', 'Khouribga', 'Laâyoune', 'Larache', 'Marrakech',
+    'M\'diq-Fnideq', 'Médiouna', 'Meknès', 'Midelt', 'Mohammadia',
+    'Moulay Yacoub', 'Nador', 'Nouaceur', 'Ouarzazate', 'Oued Ed-Dahab',
+    'Ouezzane', 'Oujda-Angad', 'Rabat', 'Rehamna', 'Safi', 'Salé', 'Sefrou',
+    'Settat', 'Sidi Bennour', 'Sidi Ifni', 'Sidi Kacem', 'Sidi Slimane',
+    'Skhirate-Témara', 'Tan-Tan', 'Tanger-Assilah', 'Taounate', 'Taourirt',
+    'Tarfaya', 'Taroudant', 'Tata', 'Taza', 'Tétouan', 'Tinghir', 'Tiznit',
+    'Youssoufia', 'Zagora'),
+  areaname_eng_iso2 = c('Agadir-Ida-Ou-Tanane', 'Aousserd', 'Assa-Zag',
+    'Azilal', 'Beni Mellal', 'Benslimane', 'Berkane', 'Berrechid', 'Boujdour',
+    'Boulemane', 'Casablanca [Dar el Beida]', 'Chefchaouen', 'Chichaoua',
+    'Chtouka-Ait Baha', 'Driouch', 'Errachidia', 'Es-Semara', 'Essaouira',
+    'Fahs-Anjra', 'Fes', 'Figuig', 'Fquih Ben Salah', 'Guelmim', 'Guercif',
+    'El Hajeb', 'Al Haouz', 'Al Hoceima', 'Ifrane', 'Inezgane-Ait Melloul',
+    'El Jadida', 'Jerada', 'El Kelaa des Sraghna', 'Kenitra', 'Khemisset',
+    'Khenifra', 'Khouribga', 'Laayoune', 'Larache', 'Marrakech',
+    'M\'diq-Fnideq', 'Mediouna', 'Meknes', 'Midelt', 'Mohammadia',
+    'Moulay Yacoub', 'Nador', 'Nouaceur', 'Ouarzazate', 'Oued Ed-Dahab',
+    'Ouezzane', 'Oujda-Angad', 'Rabat', 'Rehamna', 'Safi', 'Sale', 'Sefrou',
+    'Settat', 'Sidi Bennour', 'Sidi Ifni', 'Sidi Kacem', 'Sidi Slimane',
+    'Skhirate-Temara', 'Tan-Tan', 'Tanger-Assilah', 'Taounate', 'Taourirt',
+    'Tarfaya', 'Taroudant', 'Tata', 'Taza', 'Tetouan', 'Tinghir', 'Tiznit',
+    'Youssoufia', 'Zagora')
+)
+
+## gis
+geo_morocco <-
+  read.csv('Data/GIS/Morocco/MAR_adm1.csv', stringsAsFactors = FALSE) %>%
+  as_tibble()
+
+'Morocco' %in% ab01$cname_eng
+'Morocco' %in% ab02$cname_eng
+'Morocco' %in% ab03$cname_eng
+'Morocco' %in% ab04$cname_eng
+'Morocco' %in% ab05$cname_eng
+'Morocco' %in% ab06$cname_eng
+
+RaggedSideBySide(
+  ab05 %>% filter(cname_eng == 'Morocco') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_morocco %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+RaggedSideBySide(
+  ab05 %>% filter(cname_eng == 'Morocco') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_morocco2 %>% {sort(unique(.$areaname_eng_iso2))}
+)
+
+ab05 <- ab05 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Morocco',
+      recode(areaname_eng_ab, 'Tangier-Tetouan' = 'Tanger-Tetouan-Al Hoceima',
+        'Oriental' = 'L\'Oriental', 'Fes-Boulemane' = 'Fes-Meknes',
+        'Meknes-Tafilalet' = 'Fes-Meknes',
+        'Taza-Al Hoceima-Taounate' = 'Fes-Meknes',
+        'Rabat-Sale-Zemmour-Zaer' = 'Rabat-Sale-Kenitra',
+        'Gharb-Charda-Beni Hssen' = 'Rabat-Sale-Kenitra',
+        'Tadla-Azilal' = 'Beni Mellal-Khenifra',
+        'Chaouia-Ouardigha' = 'Beni Mellal-Khenifra',
+        'Grand Casablanca' = 'Casablanca-Settat',
+        'Doukkala-Abda' = 'Casablanca-Settat',
+        'Marrakech-Tensift-El Haouz' = 'Marrakech-Safi',
+        'Souss-Massa-Draa' = 'Souss-Massa',
+        'Laayoune-Boujdour-Sakia El Hamra' = 'Laayoune-Sakia El Hamra',
+        'Guelmim-Es Semara' = 'Laayoune-Sakia El Hamra',
+        'Oued Ed-Dahab-Lagouira' = 'Dakhla-Oued Ed-Dahab'),
+      areaname_eng_iso),
+  areaname_eng_iso2 =
+    if_else(cname_eng == 'Morocco',
+      recode(areaname_eng_ab, 'Tangier-Tetouan' = 'Al Hoceima',
+        'Oriental' = 'Berkane', 'Fes-Boulemane' = 'Boulemane',
+        'Meknes-Tafilalet' = 'El Hajeb', 'Taza-Al Hoceima-Taounate' = 'Fes',
+        'Rabat-Sale-Zemmour-Zaer' = 'Kenitra',
+        'Gharb-Charda-Beni Hssen' = 'Khemisset', 'Tadla-Azilal' = 'Azilal',
+        'Chaouia-Ouardigha' = 'Beni Mellal', 'Grand Casablanca' = 'Benslimane',
+        'Doukkala-Abda' = 'Berrechid',
+        'Marrakech-Tensift-El Haouz' = 'Al Haouz',
+        'Souss-Massa-Draa' = 'Agadir-Ida-Ou-Tanane',
+        'Laayoune-Boujdour-Sakia El Hamra' = 'Boujdour',
+        'Guelmim-Es Semara' = 'Es-Semara',
+        'Oued Ed-Dahab-Lagouira' = 'Aousserd'),
+      areaname_eng_iso2)
+)
+
+ab05 %>%
+  group_by(cname_eng, areaname_eng_ab, areaname_eng_iso, areaname_eng_iso2) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab05 %>% filter(cname_eng == 'Morocco') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_morocco %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_morocco$NAME_0)
+geo_morocco %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab05 <- ab05 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'Morocco', 'Morocco', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'Morocco',
+      recode(areaname_eng_ab, 'Chaouia-Ouardigha' = 1, 'Doukkala-Abda' = 2,
+        'Fes-Boulemane' = 3, 'Gharb-Charda-Beni Hssen' = 4,
+        'Grand Casablanca' = 5, 'Guelmim-Es Semara' = 6,
+        'Laayoune-Boujdour-Sakia El Hamra' = 7,
+        'Marrakech-Tensift-El Haouz' = 8, 'Meknes-Tafilalet' = 9,
+        'Oriental' = 10, 'Rabat-Sale-Zemmour-Zaer' = 11,
+        'Souss-Massa-Draa' = 12, 'Tadla-Azilal' = 13, 'Tangier-Tetouan' = 14,
+        'Taza-Al Hoceima-Taounate' = 15, .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab05 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab06 %>% filter(cname_eng == 'Morocco') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_morocco %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+RaggedSideBySide(
+  ab06 %>% filter(cname_eng == 'Morocco') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_morocco2 %>% {sort(unique(.$areaname_eng_iso2))}
+)
+
+ab06 <- ab06 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Morocco',
+      recode(areaname_eng_ab, 'Tangier-Tetouan' = 'Tanger-Tetouan-Al Hoceima',
+        'Oriental' = 'L\'Oriental', 'Fes-Boulemane' = 'Fes-Meknes',
+        'Meknes-Tafilalet' = 'Fes-Meknes',
+        'Taza-Al Hoceima-Taounate' = 'Fes-Meknes',
+        'Rabat-Sale-Zemmour-Zaer' = 'Rabat-Sale-Kenitra',
+        'Gharb-Charda-Beni Hssen' = 'Rabat-Sale-Kenitra',
+        'Tadla-Azilal' = 'Beni Mellal-Khenifra',
+        'Chaouia-Ouardigha' = 'Beni Mellal-Khenifra',
+        'Grand Casablanca' = 'Casablanca-Settat',
+        'Doukkala-Abda' = 'Casablanca-Settat',
+        'Marrakech-Tensift-El Haouz' = 'Marrakech-Safi',
+        'Souss-Massa-Draa' = 'Souss-Massa',
+        'Laayoune-Boujdour-Sakia El Hamra' = 'Laayoune-Sakia El Hamra',
+        'Guelmim-Es Semara' = 'Laayoune-Sakia El Hamra',
+        'Oued Ed-Dahab-Lagouira' = 'Dakhla-Oued Ed-Dahab'),
+      areaname_eng_iso),
+  areaname_eng_iso2 =
+    if_else(cname_eng == 'Morocco',
+      recode(areaname_eng_ab, 'Tangier-Tetouan' = 'Al Hoceima',
+        'Oriental' = 'Berkane', 'Fes-Boulemane' = 'Boulemane',
+        'Meknes-Tafilalet' = 'El Hajeb', 'Taza-Al Hoceima-Taounate' = 'Fes',
+        'Rabat-Sale-Zemmour-Zaer' = 'Kenitra',
+        'Gharb-Charda-Beni Hssen' = 'Khemisset', 'Tadla-Azilal' = 'Azilal',
+        'Chaouia-Ouardigha' = 'Beni Mellal', 'Grand Casablanca' = 'Benslimane',
+        'Doukkala-Abda' = 'Berrechid',
+        'Marrakech-Tensift-El Haouz' = 'Al Haouz',
+        'Souss-Massa-Draa' = 'Agadir-Ida-Ou-Tanane',
+        'Laayoune-Boujdour-Sakia El Hamra' = 'Boujdour',
+        'Guelmim-Es Semara' = 'Es-Semara',
+        'Oued Ed-Dahab-Lagouira' = 'Aousserd'),
+      areaname_eng_iso2)
+)
+
+ab06 %>%
+  group_by(cname_eng, areaname_eng_ab, areaname_eng_iso, areaname_eng_iso2) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab06 %>% filter(cname_eng == 'Morocco') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_morocco %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_morocco$NAME_0)
+geo_morocco %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab06 <- ab06 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'Morocco', 'Morocco', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'Morocco',
+      recode(areaname_eng_ab, 'Chaouia-Ouardigha' = 1, 'Doukkala-Abda' = 2,
+        'Fes-Bouleman' = 3, 'Gharb-Chrarda-Beni-Hssen' = 4,
+        'Grand Casablanca' = 5, 'Guelmim-Es-Semara' = 6,
+        'Laayoune-Boujdour-Sakia El Hamra' = 7,
+        'Marrakech-Tensift-Al-Haouz' = 8, 'Meknes-Tafilalet' = 9,
+        'Oriental' = 10, 'Rabat-Sale-Zemmour-Zaer' = 11,
+        'Souss-Massa-Draa' = 12, 'Tadla-Azilal' = 13, 'Tanger-Tetouan' = 14,
+        'Taza-Al Hoceima-Taounate' = 15, .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab06 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
 ```
 
 
@@ -4989,23 +5232,6 @@ ab06 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
 
 
 
-
-
-'Mauritius' %in% ab01$cname_eng
-'Mauritius' %in% ab02$cname_eng
-'Mauritius' %in% ab03$cname_eng
-'Mauritius' %in% ab04$cname_eng
-'Mauritius' %in% ab05$cname_eng
-'Mauritius' %in% ab06$cname_eng
-
-ab05 %>% filter(cname_eng == 'Mauritius') %>% {sort(unique(.$areaname_eng_ab))}
-ab06 %>% filter(cname_eng == 'Mauritius') %>% {sort(unique(.$areaname_eng_ab))}
-
-geo_mauritius <-
-  read.csv('Data/GIS/Mauritius/MUS_adm1.csv', stringsAsFactors = FALSE) %>%
-  as_tibble()
-
-geo_mauritius %>% group_by(NAME_1, ID_1) %>% summarize() %>% print(n = Inf)
 
 
 'Morocco' %in% ab01$cname_eng
