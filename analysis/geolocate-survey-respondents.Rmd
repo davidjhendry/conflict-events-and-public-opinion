@@ -5425,7 +5425,7 @@ ab06 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
 #### Namibia
 ## iso
 iso_namibia <- bind_cols(
-  cname_eng = rep('Mozambique', 14),
+  cname_eng = rep('Namibia', 14),
   ISO1num = rep(516, 14),
   ISO2str = c('NA-ER', 'NA-HA', 'NA-KA', 'NA-KE', 'NA-KW', 'NA-KH', 'NA-KU',
     'NA-OW', 'NA-OH', 'NA-OS', 'NA-ON', 'NA-OT', 'NA-OD', 'NA-CA'),
@@ -5728,6 +5728,116 @@ ab06 <- ab06 %>% mutate(
 ab06 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
   summarize() %>% print(n = Inf)
 
+#### Niger
+## iso
+# é -> e
+iso_niger <- bind_cols(
+  cname_eng = rep('Niger', 8),
+  ISO1num = rep(562, 8),
+  ISO2str = c('NE-8', 'NE-1', 'NE-2', 'NE-3', 'NE-4', 'NE-5', 'NE-6', 'NE-7'),
+  ISO2numstr = rep('', 8),
+  ISO2num = rep(NA, 8),
+  areaname_conv_iso = c('Niamey', 'Agadez', 'Diffa', 'Dosso', 'Maradi',
+    'Tahoua', 'Tillabéri', 'Zinder'),
+  areaname_eng_iso = c('Niamey', 'Agadez', 'Diffa', 'Dosso', 'Maradi', 'Tahoua',
+    'Tillaberi', 'Zinder')
+)
+
+## gis
+geo_niger <-
+  read.csv('Data/GIS/Niger/NER_adm1.csv', stringsAsFactors = FALSE) %>%
+  as_tibble()
+
+'Niger' %in% ab01$cname_eng
+'Niger' %in% ab02$cname_eng
+'Niger' %in% ab03$cname_eng
+'Niger' %in% ab04$cname_eng
+'Niger' %in% ab05$cname_eng
+'Niger' %in% ab06$cname_eng
+
+RaggedSideBySide(
+  ab05 %>% filter(cname_eng == 'Niger') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_niger %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab05 <- ab05 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Niger',
+      recode(areaname_eng_ab, 'Agadez' = 'Agadez', 'Diffa' = 'Diffa',
+        'Dosso' = 'Dosso', 'Maradi' = 'Maradi', 'Niamey' = 'Niamey',
+        'Tahoua' = 'Tahoua', 'Tillaberi' = 'Tillaberi', 'Zinder' = 'Zinder'),
+      areaname_eng_iso)
+)
+
+ab05 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab05 %>% filter(cname_eng == 'Niger') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_niger %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_niger$NAME_0)
+geo_niger %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab05 <- ab05 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'Niger', 'Niger', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'Niger',
+      recode(areaname_eng_ab, 'Agadez' = 1, 'Diffa' = 2, 'Dosso' = 3,
+        'Maradi' = 4, 'Niamey' = 5, 'Tahoua' = 6, 'Tillaberi' = 7,
+        'Zinder' = 8, .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab05 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab06 %>% filter(cname_eng == 'Niger') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_niger %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab06 <- ab06 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Niger',
+      recode(areaname_eng_ab, 'Agadez' = 'Agadez', 'Dosso' = 'Dosso',
+        'Maradi' = 'Maradi', 'Niamey' = 'Niamey', 'Tahoua' = 'Tahoua',
+        'Tillaberi' = 'Tillaberi', 'Zinder' = 'Zinder'),
+      areaname_eng_iso)
+)
+
+ab06 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab06 %>% filter(cname_eng == 'Niger') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_niger %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_niger$NAME_0)
+geo_niger %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab06 <- ab06 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'Niger', 'Niger', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'Niger',
+      recode(areaname_eng_ab, 'Agadez' = 1, 'Dosso' = 3, 'Maradi' = 4,
+        'Niamey' = 5, 'Tahoua' = 6, 'Tillaberi' = 7, 'Zinder' = 8,
+        .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab06 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
 
 ```
 
