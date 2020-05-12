@@ -6627,6 +6627,303 @@ ab06 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
   summarize() %>% print(n = Inf)
 
 
+#### South Africa
+## iso
+iso_southafrica <- bind_cols(
+  cname_eng = rep('South Africa', 9),
+  ISO1num = rep(686, 9),
+  ISO2str = c('ZA-EC', 'ZA-FS', 'ZA-GP', 'ZA-KZN', 'ZA-LP', 'ZA-MP', 'ZA-NC',
+    'ZA-NW', 'ZA-WC'),
+  ISO2numstr = rep('', 9),
+  ISO2num = rep(NA, 9),
+  areaname_conv_iso = c('Eastern Cape', 'Free State', 'Gauteng',
+    'Kwazulu-Natal', 'Limpopo', 'Mpumalanga', 'Northern Cape', 'North-West',
+    'Western Cape'),
+  areaname_eng_iso = c('Eastern Cape', 'Free State', 'Gauteng',
+    'Kwazulu-Natal', 'Limpopo', 'Mpumalanga', 'Northern Cape', 'North-West',
+    'Western Cape')
+)
+
+## gis
+geo_southafrica <-
+  read.csv('Data/GIS/SouthAfrica/ZAF_adm2.csv', stringsAsFactors = FALSE) %>%
+  as_tibble()
+
+'South Africa' %in% ab01$cname_eng
+'South Africa' %in% ab02$cname_eng
+'South Africa' %in% ab03$cname_eng
+'South Africa' %in% ab04$cname_eng
+'South Africa' %in% ab05$cname_eng
+'South Africa' %in% ab06$cname_eng
+
+RaggedSideBySide(
+  ab01 %>% filter(cname_eng == 'South Africa') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_southafrica %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab01 <- ab01 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'South Africa',
+      recode(areaname_eng_ab, 'Eastern Cape' = 'Eastern Cape',
+        'Free State' = 'Free State', 'Gauteng' = 'Gauteng',
+        'Kwa-Zulu Natal' = 'Kwazulu-Natal', 'Mpumalanga' = 'Limpopo',
+        'North West' = 'Mpumalanga', 'Northern Cape' = 'North-West',
+        'Northern Province' = 'Northern Cape', 'Western Cape' = 'Western Cape'),
+      areaname_eng_iso)
+)
+
+ab01 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab01 %>% filter(cname_eng == 'South Africa') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_southafrica %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_southafrica$NAME_0)
+geo_southafrica %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab01 <- ab01 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'South Africa', 'South Africa', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'South Africa',
+      recode(areaname_eng_ab, 'Eastern Cape' = 1, 'Free State' = 2,
+        'Gauteng' = 3, 'Kwa-Zulu Natal' = 4, 'Northern Province' = 5,
+        'Mpumalanga' = 6, 'North West' = 7, 'Northern Cape' = 8,
+        'Western Cape' = 10, .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab01 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab02 %>% filter(cname_eng == 'South Africa') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_southafrica %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab02 <- ab02 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'South Africa',
+      recode(areaname_eng_ab, 'EasternCape' = 'Eastern Cape',
+        'FreeState' = 'Free State', 'Gauteng' = 'Gauteng',
+        'KwaZuluNatal' = 'Kwazulu-Natal', 'Limpopo' = 'Limpopo',
+        'Mpumulanga' = 'Mpumalanga', 'NorthernCape' = 'North-West',
+        'NorthWest' = 'Northern Cape', 'WesternCape' = 'Western Cape'),
+      areaname_eng_iso)
+)
+
+ab02 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab02 %>% filter(cname_eng == 'South Africa') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_southafrica %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_southafrica$NAME_0)
+geo_southafrica %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab02 <- ab02 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'South Africa', 'South Africa', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'South Africa',
+      recode(areaname_eng_ab, 'EasternCape' = 1, 'FreeState' = 2, 'Gauteng' = 3,
+        'KwaZuluNatal' = 4, 'Limpopo' = 5, 'Mpumulanga' = 6, 'NorthernCape' = 8,
+        'NorthWest' = 7, 'WesternCape' = 10, .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab02 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab03 %>% filter(cname_eng == 'South Africa') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_southafrica %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab03 <- ab03 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'South Africa',
+      recode(areaname_eng_ab, 'Eastern Cape' = 'Eastern Cape',
+        'Free State' = 'Free State', 'Gauteng' = 'Gauteng',
+        'KwaZulu-Natal' = 'Kwazulu-Natal', 'Limpopo' = 'Limpopo',
+        'Mpumalanga' = 'Mpumalanga', 'North West' = 'North-West',
+        'Northern Cape' = 'Northern Cape', 'Western Cape' = 'Western Cape'),
+      areaname_eng_iso)
+)
+
+ab03 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab03 %>% filter(cname_eng == 'South Africa') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_southafrica %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_southafrica$NAME_0)
+geo_southafrica %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab03 <- ab03 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'South Africa', 'South Africa', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'South Africa',
+      recode(areaname_eng_ab, 'Eastern Cape' = 1, 'Free State' = 2,
+        'Gauteng' = 3, 'KwaZulu-Natal' = 4, 'Limpopo' = 5, 'Mpumalanga' = 6,
+        'North West' = 7, 'Northern Cape' = 8, 'Western Cape' = 10,
+        .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab03 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab04 %>% filter(cname_eng == 'South Africa') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_southafrica %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab04 <- ab04 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'South Africa',
+      recode(areaname_eng_ab, 'Eastern Cape' = 'Eastern Cape',
+        'Free State' = 'Free State', 'Gauteng' = 'Gauteng',
+        'Kwazulu Natal' = 'Kwazulu-Natal', 'Limpopo' = 'Limpopo',
+        'Mpumalanga' = 'Mpumalanga', 'North West' = 'North-West',
+        'Northern Cape' = 'Northern Cape', 'Western Cape' = 'Western Cape'),
+      areaname_eng_iso)
+)
+
+ab04 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab04 %>% filter(cname_eng == 'South Africa') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_southafrica %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_southafrica$NAME_0)
+geo_southafrica %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab04 <- ab04 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'South Africa', 'South Africa', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'South Africa',
+      recode(areaname_eng_ab, 'Eastern Cape' = 1, 'Free State' = 2,
+        'Gauteng' = 3, 'Kwazulu Natal' = 4, 'Limpopo' = 5, 'Mpumalanga' = 6,
+        'North West' = 7, 'Northern Cape' = 8, 'Western Cape' = 10,
+        .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab04 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab05 %>% filter(cname_eng == 'South Africa') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_southafrica %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab05 <- ab05 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'South Africa',
+      recode(areaname_eng_ab, 'Eastern Cape' = 'Eastern Cape',
+        'Free State' = 'Free State', 'Gauteng' = 'Gauteng',
+        'Kwazulu Natal' = 'Kwazulu-Natal', 'Limpopo' = 'Limpopo',
+        'Mpumalanga' = 'Mpumalanga', 'North West' = 'North-West',
+        'Northern Cape' = 'Northern Cape', 'Western Cape' = 'Western Cape'),
+      areaname_eng_iso)
+)
+
+ab05 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab05 %>% filter(cname_eng == 'South Africa') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_southafrica %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_southafrica$NAME_0)
+geo_southafrica %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab05 <- ab05 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'South Africa', 'South Africa', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'South Africa',
+      recode(areaname_eng_ab, 'Eastern Cape' = 1, 'Free State' = 2,
+        'Gauteng' = 3, 'Kwazulu Natal' = 4, 'Limpopo' = 5, 'Mpumalanga' = 6,
+        'North West' = 7, 'Northern Cape' = 8, 'Western Cape' = 10,
+        .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab05 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab06 %>% filter(cname_eng == 'South Africa') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_southafrica %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab06 <- ab06 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'South Africa',
+      recode(areaname_eng_ab, 'Eastern Cape' = 'Eastern Cape',
+        'Free State' = 'Free State', 'Gauteng' = 'Gauteng',
+        'Kwazulu Natal' = 'Kwazulu-Natal', 'Limpopo' = 'Limpopo',
+        'Mpumalanga' = 'Mpumalanga', 'North West' = 'North-West',
+        'Northern Cape' = 'Northern Cape', 'Western Cape' = 'Western Cape'),
+      areaname_eng_iso)
+)
+
+ab06 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab06 %>% filter(cname_eng == 'South Africa') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_southafrica %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_southafrica$NAME_0)
+geo_southafrica %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab06 <- ab06 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'South Africa', 'South Africa', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'South Africa',
+      recode(areaname_eng_ab, 'Eastern Cape' = 1, 'Free State' = 2,
+        'Gauteng' = 3, 'Kwazulu Natal' = 4, 'Limpopo' = 5, 'Mpumalanga' = 6,
+        'North West' = 7, 'Northern Cape' = 8, 'Western Cape' = 10,
+        .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab06 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
 
 ```
 
@@ -6677,53 +6974,7 @@ ab06 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ################################################################################
-
-
-'South Africa' %in% ab01$cname_eng
-'South Africa' %in% ab02$cname_eng
-'South Africa' %in% ab03$cname_eng
-'South Africa' %in% ab04$cname_eng
-'South Africa' %in% ab05$cname_eng
-'South Africa' %in% ab06$cname_eng
-
-ab01 %>% filter(cname_eng == 'South Africa') %>% {sort(unique(.$areaname_eng_ab))}
-ab02 %>% filter(cname_eng == 'South Africa') %>% {sort(unique(.$areaname_eng_ab))}
-ab03 %>% filter(cname_eng == 'South Africa') %>% {sort(unique(.$areaname_eng_ab))}
-ab04 %>% filter(cname_eng == 'South Africa') %>% {sort(unique(.$areaname_eng_ab))}
-ab05 %>% filter(cname_eng == 'South Africa') %>% {sort(unique(.$areaname_eng_ab))}
-ab06 %>% filter(cname_eng == 'South Africa') %>% {sort(unique(.$areaname_eng_ab))}
-
-geo_southafrica <-
-  read.csv('Data/GIS/SouthAfrica/ZAF_adm2.csv', stringsAsFactors = FALSE) %>%
-  as_tibble()
-
-geo_southafrica %>% group_by(NAME_1, ID_1) %>% summarize() %>% print(n = Inf)
-
 
 'Sudan' %in% ab01$cname_eng
 'Sudan' %in% ab02$cname_eng
