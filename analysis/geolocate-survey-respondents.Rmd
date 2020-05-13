@@ -6191,7 +6191,7 @@ ab06 <- ab06 %>% mutate(
       as.double(ID_1))
 )
 
-ab06 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+ab01 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
   summarize() %>% print(n = Inf)
 
 
@@ -6631,7 +6631,7 @@ ab06 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
 ## iso
 iso_southafrica <- bind_cols(
   cname_eng = rep('South Africa', 9),
-  ISO1num = rep(686, 9),
+  ISO1num = rep(710, 9),
   ISO2str = c('ZA-EC', 'ZA-FS', 'ZA-GP', 'ZA-KZN', 'ZA-LP', 'ZA-MP', 'ZA-NC',
     'ZA-NW', 'ZA-WC'),
   ISO2numstr = rep('', 9),
@@ -6925,9 +6925,128 @@ ab06 <- ab06 %>% mutate(
 ab06 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
   summarize() %>% print(n = Inf)
 
+
+#### Sudan
+## iso
+iso_sudan <- bind_cols(
+  cname_eng = rep('Sudan', 18),
+  ISO1num = rep(729, 18),
+  ISO2str = c('SD-RS', 'SD-GZ', 'SD-KH', 'SD-GD', 'SD-NR', 'SD-NW', 'SD-NB',
+    'SD-NO', 'SD-DW', 'SD-GK', 'SD-DS', 'SD-KS', 'SD-KA', 'SD-DN', 'SD-KN',
+    'SD-DE', 'SD-SI', 'SD-DC'),
+  ISO2numstr = rep('', 18),
+  ISO2num = rep(NA, 18),
+  areaname_conv_iso = c('Al Baḩr al Aḩmar', 'Al Jazīrah', 'Al Kharţūm',
+    'Al Qaḑārif', 'Nahr an Nīl', 'An Nīl al Abyaḑ', 'An Nīl al Azraq',
+    'Ash Shamālīyah', 'Gharb Dārfūr', 'Gharb Kurdufān', 'Janūb Dārfūr',
+    'Janūb Kurdufān', 'Kassalā', 'Shamāl Dārfūr', 'Shiamāl Kurdufān',
+    'Sharq Dārfūr', 'Sinnār', 'Wasaţ Dārfūr Zālinjay'),
+  areaname_eng_iso = c('Red Sea', 'Gezira', 'Khartoum', 'Gedaref', 'River Nile',
+    'White Nile', 'Blue Nile', 'Northern', 'West Darfur', 'West Kordofan',
+    'South Darfur', 'South Kordofan', 'Kassala', 'North Darfur',
+    'North Kordofan', 'East Darfur', 'Sennar', 'Central Darfur')
+)
+
+## gis
+geo_sudan <-
+  read.csv('Data/GIS/Sudan/SDN_adm1.csv', stringsAsFactors = FALSE) %>%
+  as_tibble()
+
+'Sudan' %in% ab01$cname_eng
+'Sudan' %in% ab02$cname_eng
+'Sudan' %in% ab03$cname_eng
+'Sudan' %in% ab04$cname_eng
+'Sudan' %in% ab05$cname_eng
+'Sudan' %in% ab06$cname_eng
+
+RaggedSideBySide(
+  ab05 %>% filter(cname_eng == 'Sudan') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_sudan %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab05 <- ab05 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Sudan',
+      recode(areaname_eng_ab, 'Blue Nile' = 'Blue Nile', 'Gadarif' = 'Gedaref',
+        'Gezira' = 'Gezira', 'Kassala' = 'Kassala', 'Khartom' = 'Khartoum',
+        'Nahr ALnil' = 'River Nile', 'North' = 'Northern',
+        'North Darfur' = 'North Darfur', 'North Kordufan' = 'North Kordofan',
+        'Red Sea' = 'Red Sea', 'Sennar' = 'Sennar',
+        'South Darfur' = 'South Darfur', 'South Kordufan' = 'South Kordofan',
+        'West Darfur' = 'West Darfur', 'White Nile' = 'White Nile'),
+      areaname_eng_iso)
+)
+
+ab05 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab05 %>% filter(cname_eng == 'Sudan') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_sudan %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_sudan$NAME_0)
+geo_southafrica %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab05 <- ab05 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'Sudan', 'Sudan', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'Sudan',
+      recode(areaname_eng_ab, 'Gezira' = 1, 'Gadarif' = 2, 'Blue Nile' = 3,
+        'Kassala' = 6, 'Khartom' = 7, 'North Darfur' = 8, 'North Kordufan' = 9,
+        'North' = 10, 'Red Sea' = 11, 'Nahr ALnil' = 12, 'Sennar' = 13,
+        'South Darfur' = 14, 'South Kordufan' = 15, 'West Darfur' = 16,
+        'White Nile' = 18, .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab05 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab06 %>% filter(cname_eng == 'Sudan') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_sudan %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab06 <- ab06 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Sudan',
+      recode(areaname_eng_ab, 'Khartoum' = 'Khartoum'),
+      areaname_eng_iso)
+)
+
+ab06 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab06 %>% filter(cname_eng == 'Sudan') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_sudan %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_sudan$NAME_0)
+geo_southafrica %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab06 <- ab06 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'Sudan', 'Sudan', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'Sudan',
+      recode(areaname_eng_ab, 'Khartoum' = 7, .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab06 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+
 ```
-
-
 
 
 
