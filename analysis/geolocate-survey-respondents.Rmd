@@ -6988,7 +6988,7 @@ RaggedSideBySide(
 )
 
 unique(geo_sudan$NAME_0)
-geo_southafrica %>% group_by(NAME_1, ID_1) %>%
+geo_sudan %>% group_by(NAME_1, ID_1) %>%
   summarize() %>% print(n = Inf)
 
 ab05 <- ab05 %>% mutate(
@@ -7030,7 +7030,7 @@ RaggedSideBySide(
 )
 
 unique(geo_sudan$NAME_0)
-geo_southafrica %>% group_by(NAME_1, ID_1) %>%
+geo_sudan %>% group_by(NAME_1, ID_1) %>%
   summarize() %>% print(n = Inf)
 
 ab06 <- ab06 %>% mutate(
@@ -7045,6 +7045,110 @@ ab06 <- ab06 %>% mutate(
 ab06 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
   summarize() %>% print(n = Inf)
 
+
+#### Swaziland (Eswatini)
+## iso
+iso_swaziland <- bind_cols(
+  cname_eng = rep('Swaziland', 4),
+  ISO1num = rep(748, 4),
+  ISO2str = c('SZ-HH', 'SZ-LU', 'SZ-MA', 'SZ-SH'),
+  ISO2numstr = rep('', 4),
+  ISO2num = rep(NA, 4),
+  areaname_conv_iso = c('Hhohho', 'Lubombo', 'Manzini', 'Shiselweni'),
+  areaname_eng_iso = c('Hhohho', 'Lubombo', 'Manzini', 'Shiselweni')
+)
+
+## gis
+geo_swaziland <-
+  read.csv('Data/GIS/Swaziland/SWZ_adm1.csv', stringsAsFactors = FALSE) %>%
+  as_tibble()
+
+'Swaziland' %in% ab01$cname_eng
+'Swaziland' %in% ab02$cname_eng
+'Swaziland' %in% ab03$cname_eng
+'Swaziland' %in% ab04$cname_eng
+'Swaziland' %in% ab05$cname_eng
+'Swaziland' %in% ab06$cname_eng
+
+RaggedSideBySide(
+  ab05 %>% filter(cname_eng == 'Swaziland') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_swaziland %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab05 <- ab05 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Swaziland',
+      recode(areaname_eng_ab, 'Hhohho' = 'Hhohho', 'Lubombo' = 'Lubombo',
+        'Manzini' = 'Manzini', 'Shiselweni' = 'Shiselweni'),
+      areaname_eng_iso)
+)
+
+ab05 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab05 %>% filter(cname_eng == 'Swaziland') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_swaziland %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_swaziland$NAME_0)
+geo_swaziland %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab05 <- ab05 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'Swaziland', 'Swaziland', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'Swaziland',
+      recode(areaname_eng_ab, 'Hhohho' = 1, 'Lubombo' = 2, 'Manzini' = 3,
+        'Shiselweni' = 4, .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab05 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab06 %>% filter(cname_eng == 'Swaziland') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_swaziland %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab06 <- ab06 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Swaziland',
+      recode(areaname_eng_ab, 'Hhohho' = 'Hhohho', 'Lubombo' = 'Lubombo',
+        'Manzini' = 'Manzini', 'Shiselweni' = 'Shiselweni'),
+      areaname_eng_iso)
+)
+
+ab06 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab05 %>% filter(cname_eng == 'Swaziland') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_swaziland %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_swaziland$NAME_0)
+geo_swaziland %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab06 <- ab06 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'Swaziland', 'Swaziland', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'Swaziland',
+      recode(areaname_eng_ab, 'Hhohho' = 1, 'Lubombo' = 2, 'Manzini' = 3,
+        'Shiselweni' = 4, .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab06 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
 
 ```
 
@@ -7094,39 +7198,6 @@ ab06 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
 
 
 ################################################################################
-
-'Sudan' %in% ab01$cname_eng
-'Sudan' %in% ab02$cname_eng
-'Sudan' %in% ab03$cname_eng
-'Sudan' %in% ab04$cname_eng
-'Sudan' %in% ab05$cname_eng
-'Sudan' %in% ab06$cname_eng
-
-ab05 %>% filter(cname_eng == 'Sudan') %>% {sort(unique(.$areaname_eng_ab))}
-ab06 %>% filter(cname_eng == 'Sudan') %>% {sort(unique(.$areaname_eng_ab))}
-
-geo_sudan <-
-  read.csv('Data/GIS/Sudan/SDN_adm3.csv', stringsAsFactors = FALSE) %>%
-  as_tibble()
-
-geo_sudan %>% group_by(NAME_1, ID_1, NAME_2, ID_2) %>% summarize() %>% print(n = Inf)
-
-
-'Swaziland' %in% ab01$cname_eng
-'Swaziland' %in% ab02$cname_eng
-'Swaziland' %in% ab03$cname_eng
-'Swaziland' %in% ab04$cname_eng
-'Swaziland' %in% ab05$cname_eng
-'Swaziland' %in% ab06$cname_eng
-
-ab05 %>% filter(cname_eng == 'Swaziland') %>% {sort(unique(.$areaname_eng_ab))}
-ab06 %>% filter(cname_eng == 'Swaziland') %>% {sort(unique(.$areaname_eng_ab))}
-
-geo_swaziland <-
-  read.csv('Data/GIS/Swaziland/SWZ_adm1.csv', stringsAsFactors = FALSE) %>%
-  as_tibble()
-
-geo_swaziland %>% group_by(NAME_1, ID_1) %>% summarize() %>% print(n = Inf)
 
 
 'Tanzania' %in% ab01$cname_eng
