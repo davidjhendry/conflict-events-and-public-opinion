@@ -7128,7 +7128,7 @@ ab06 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
   summarize() %>% print(n = Inf)
 
 RaggedSideBySide(
-  ab05 %>% filter(cname_eng == 'Swaziland') %>%
+  ab06 %>% filter(cname_eng == 'Swaziland') %>%
     {sort(unique(.$areaname_eng_ab))}, geo_swaziland %>%
     {sort(unique(.$NAME_1))}
 )
@@ -7149,6 +7149,381 @@ ab06 <- ab06 %>% mutate(
 
 ab06 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
   summarize() %>% print(n = Inf)
+
+
+#### Tanzania
+## iso
+iso_tanzania <- bind_cols(
+  cname_eng = rep('Tanzania', 31),
+  ISO1num = rep(834, 31),
+  ISO2str = c('TZ-01', 'TZ-02', 'TZ-03', 'TZ-27', 'TZ-04', 'TZ-05', 'TZ-06',
+    'TZ-07', 'TZ-28', 'TZ-08', 'TZ-09', 'TZ-10', 'TZ-11', 'TZ-12', 'TZ-26',
+    'TZ-13', 'TZ-14', 'TZ-15', 'TZ-16', 'TZ-17', 'TZ-18', 'TZ-29', 'TZ-19',
+    'TZ-20', 'TZ-21', 'TZ-22', 'TZ-30', 'TZ-23', 'TZ-31', 'TZ-24', 'TZ-25'),
+  ISO2numstr = rep('', 31),
+  ISO2num = rep(NA, 31),
+  areaname_conv_iso = c('Arusha', 'Dar es Salaam', 'Dodoma', 'Geita', 'Iringa',
+    'Kagera', 'Kaskazini Pemba', 'Kaskazini Unguja', 'Katavi', 'Kigoma',
+    'Kilimanjaro', 'Kusini Pemba', 'Kusini Unguja', 'Lindi', 'Manyara', 'Mara',
+    'Mbeya', 'Mjini Magharibi', 'Morogoro', 'Mtwara', 'Mwanza', 'Njombe',
+    'Pwani Coast', 'Rukwa', 'Ruvuma', 'Shinyanga', 'Simiyu', 'Singida',
+    'Songwe', 'Tabora', 'Tanga'),
+  areaname_eng_iso = c('Arusha', 'Dar es Salaam', 'Dodoma', 'Geita', 'Iringa',
+    'Kagera', 'Pemba North', 'Zanzibar North', 'Katavi', 'Kigoma',
+    'Kilimanjaro', 'Pemba South', 'Zanzibar South', 'Lindi', 'Manyara', 'Mara',
+    'Mbeya', 'Zanzibar West', 'Morogoro', 'Mtwara', 'Mwanza', 'Njombe',
+    'Pwani Coast', 'Rukwa', 'Ruvuma', 'Shinyanga', 'Simiyu', 'Singida',
+    'Songwe', 'Tabora', 'Tanga')
+)
+
+## gis
+geo_tanzania <-
+  read.csv('Data/GIS/Tanzania/TZA_adm1.csv', stringsAsFactors = FALSE) %>%
+  as_tibble()
+
+'Tanzania' %in% ab01$cname_eng
+'Tanzania' %in% ab02$cname_eng
+'Tanzania' %in% ab03$cname_eng
+'Tanzania' %in% ab04$cname_eng
+'Tanzania' %in% ab05$cname_eng
+'Tanzania' %in% ab06$cname_eng
+
+RaggedSideBySide(
+  ab01 %>% filter(cname_eng == 'Tanzania') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_tanzania %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab01 <- ab01 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Tanzania',
+      recode(areaname_eng_ab, 'Arusha' = 'Arusha',
+        'Dar es Salaam' = 'Dar es Salaam', 'Coast' = 'Pwani Coast',
+        'Dodoma' = 'Dodoma', 'Iringa' = 'Iringa', 'Kagera' = 'Kagera',
+        'Kaskazini Pemba' = 'Pemba North',
+        'Kaskazini Unguja' = 'Zanzibar North', 'Kigoma' = 'Kigoma',
+        'Kilimanjaro' = 'Kilimanjaro', 'Lindi' = 'Lindi',
+        'Kusini Pemba' = 'Pemba South', 'Kusini Unguja' = 'Zanzibar South',
+        'Mara' = 'Mara', 'Mbeya' = 'Mbeya', 'Morogoro' = 'Morogoro',
+        'Mtwara' = 'Mtwara', 'Mjini Magharibi' = 'Zanzibar West',
+        'Mwanza' = 'Mwanza', 'Rukwa' = 'Rukwa', 'Ruvuma' = 'Ruvuma',
+        'Singida' = 'Singida', 'Sinyanga' = 'Shinyanga', 'Tabora' = 'Tabora',
+        'Tanga' = 'Tanga'),
+      areaname_eng_iso)
+)
+
+ab01 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab01 %>% filter(cname_eng == 'Tanzania') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_tanzania %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_tanzania$NAME_0)
+geo_tanzania %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab01 <- ab01 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'Tanzania', 'Tanzania', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'Tanzania',
+      recode(areaname_eng_ab, 'Arusha' = 1, 'Dar es Salaam' = 2, 'Dodoma' = 3,
+        'Iringa' = 4, 'Kagera' = 5, 'Kaskazini Pemba' = 6,
+        'Kaskazini Unguja' = 7, 'Kigoma' = 8, 'Kilimanjaro' = 9,
+        'Kusini Pemba' = 10, 'Lindi' = 11, 'Mara' = 13, 'Mbeya' = 14,
+        'Morogoro' = 15, 'Mtwara' = 16, 'Mwanza' = 17, 'Coast' = 18,
+        'Rukwa' = 19, 'Ruvuma' = 20, 'Sinyanga' = 21, 'Singida' = 22,
+        'Tabora' = 23, 'Tanga' = 24, 'Kusini Unguja' = 25,
+        'Mjini Magharibi' = 26, .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab01 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab02 %>% filter(cname_eng == 'Tanzania') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_tanzania %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab02 <- ab02 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Tanzania',
+      recode(areaname_eng_ab, 'Arusha' = 'Arusha', 'Dar' = 'Dar es Salaam',
+        'Dodoma' = 'Dodoma', 'Iringa' = 'Iringa', 'Kagera' = 'Kagera',
+        'KaskaziniPemba' = 'Pemba North', 'KaskaziniUnguja' = 'Zanzibar North',
+        'Kigoma' = 'Kigoma', 'Kilimajaro' = 'Kilimanjaro',
+        'KusiniPemba' = 'Pemba South', 'KusiniUnguja' = 'Zanzibar South',
+        'Lindi' = 'Lindi', 'Manyara' = 'Manyara', 'Mara' = 'Mara',
+        'Mbeya' = 'Mbeya', 'MjiniMagharibi' = 'Zanzibar West',
+        'Morogoro' = 'Morogoro', 'Mtwara' = 'Mtwara', 'Mwanza' = 'Mwanza',
+        'Pwani' = 'Pwani Coast', 'Rukwa' = 'Rukwa', 'Ruvuma' = 'Ruvuma',
+        'Shinyanga' = 'Shinyanga', 'Singida' = 'Singida', 'Tabora' = 'Tabora',
+        'Tanga' = 'Tanga'),
+      areaname_eng_iso)
+)
+
+ab02 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab02 %>% filter(cname_eng == 'Tanzania') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_tanzania %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_tanzania$NAME_0)
+geo_tanzania %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab02 <- ab02 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'Tanzania', 'Tanzania', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'Tanzania',
+      recode(areaname_eng_ab, 'Arusha' = 1, 'Dar' = 2, 'Dodoma' = 3,
+        'Iringa' = 4, 'Kagera' = 5, 'KaskaziniPemba' = 6, 'KaskaziniUnguja' = 7,
+        'Kigoma' = 8, 'Kilimajaro' = 9, 'KusiniPemba' = 10, 'Lindi' = 11,
+        'Manyara' = 12, 'Mara' = 13, 'Mbeya' = 14, 'Morogoro' = 15,
+        'Mtwara' = 16, 'Mwanza' = 17, 'Pwani' = 18, 'Rukwa' = 19, 'Ruvuma' = 20,
+        'Shinyanga' = 21, 'Singida' = 22, 'Tabora' = 23, 'Tanga' = 24,
+        'KusiniUnguja' = 25, 'MjiniMagharibi' = 26, .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab02 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab03 %>% filter(cname_eng == 'Tanzania') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_tanzania %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab03 <- ab03 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Tanzania',
+      recode(areaname_eng_ab, 'Arusha' = 'Arusha',
+        'Dar es Salaam' = 'Dar es Salaam', 'Dodoma' = 'Dodoma',
+        'Iringa' = 'Iringa', 'Kagera' = 'Kagera', 'Kigoma' = 'Kigoma',
+        'Kilimanjaro' = 'Kilimanjaro', 'Lindi' = 'Lindi', 'Manyara' = 'Manyara',
+        'Mara' = 'Mara', 'Mbeya' = 'Mbeya', 'Morogoro' = 'Morogoro',
+        'Mtwara' = 'Mtwara', 'Mwanza' = 'Mwanza', 'North Pemba' = 'Pemba North',
+        'North Unguja' = 'Zanzibar North', 'Pwani' = 'Pwani Coast',
+        'Rukwa' = 'Rukwa', 'Ruvuma' = 'Ruvuma', 'Shinyanga' = 'Shinyanga',
+        'Singida' = 'Singida', 'South Pemba' = 'Pemba South',
+        'South Unguja' = 'Zanzibar South', 'Tabora' = 'Tabora',
+        'Tanga' = 'Tanga', 'Urban West' = 'Zanzibar West'),
+      areaname_eng_iso)
+)
+
+ab03 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab03 %>% filter(cname_eng == 'Tanzania') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_tanzania %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_tanzania$NAME_0)
+geo_tanzania %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab03 <- ab03 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'Tanzania', 'Tanzania', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'Tanzania',
+      recode(areaname_eng_ab, 'Arusha' = 1, 'Dar es Salaam' = 2, 'Dodoma' = 3,
+        'Iringa' = 4, 'Kagera' = 5, 'North Pemba' = 6, 'North Unguja' = 7,
+        'Kigoma' = 8, 'Kilimanjaro' = 9, 'South Pemba' = 10, 'Lindi' = 11,
+        'Manyara' = 12, 'Mara' = 13, 'Mbeya' = 14, 'Morogoro' = 15,
+        'Mtwara' = 16, 'Mwanza' = 17, 'Pwani' = 18, 'Rukwa' = 19, 'Ruvuma' = 20,
+        'Shinyanga' = 21, 'Singida' = 22, 'Tabora' = 23, 'Tanga' = 24,
+        'South Unguja' = 25, 'Urban West' = 26, .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab03 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab04 %>% filter(cname_eng == 'Tanzania') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_tanzania %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab04 <- ab04 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Tanzania',
+      recode(areaname_eng_ab, 'Arusha' = 'Arusha',
+        'Coast (Pwani)' = 'Pwani Coast', 'Dar es Salaam' = 'Dar es Salaam',
+        'Dodoma' = 'Dodoma', 'Iringa' = 'Iringa', 'Kagera' = 'Kagera',
+        'Kigoma' = 'Kigoma', 'Kilimanjaro' = 'Kilimanjaro', 'Lindi' = 'Lindi',
+        'Manyara' = 'Manyara', 'Mara' = 'Mara', 'Mbeya' = 'Mbeya',
+        'Morogoro' = 'Morogoro', 'Mtwara' = 'Mtwara', 'Mwanza' = 'Mwanza',
+        'North Pemba' = 'Pemba North', 'North Unguja' = 'Zanzibar North',
+        'Rukwa' = 'Rukwa', 'Ruvuma' = 'Ruvuma', 'Shinyanga' = 'Shinyanga',
+        'Singida' = 'Singida', 'South Pemba' = 'Pemba South',
+        'South Unguja' = 'Zanzibar South', 'Tabora' = 'Tabora',
+        'Tanga' = 'Tanga', 'Urban West' = 'Zanzibar West'),
+      areaname_eng_iso)
+)
+
+ab04 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab04 %>% filter(cname_eng == 'Tanzania') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_tanzania %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_tanzania$NAME_0)
+geo_tanzania %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab04 <- ab04 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'Tanzania', 'Tanzania', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'Tanzania',
+      recode(areaname_eng_ab, 'Arusha' = 1, 'Dar es Salaam' = 2, 'Dodoma' = 3,
+        'Iringa' = 4, 'Kagera' = 5, 'North Pemba' = 6, 'North Unguja' = 7,
+        'Kigoma' = 8, 'Kilimanjaro' = 9, 'South Pemba' = 10, 'Lindi' = 11,
+        'Manyara' = 12, 'Mara' = 13, 'Mbeya' = 14, 'Morogoro' = 15,
+        'Mtwara' = 16, 'Mwanza' = 17, 'Coast (Pwani)' = 18, 'Rukwa' = 19,
+        'Ruvuma' = 20, 'Shinyanga' = 21, 'Singida' = 22, 'Tabora' = 23,
+        'Tanga' = 24, 'South Unguja' = 25, 'Urban West' = 26,
+        .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab04 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab05 %>% filter(cname_eng == 'Tanzania') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_tanzania %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab05 <- ab05 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Tanzania',
+      recode(areaname_eng_ab, 'Arusha' = 'Arusha',
+        'Dar es Salaam' = 'Dar es Salaam', 'Dodoma' = 'Dodoma',
+        'Iringa' = 'Iringa', 'Kagera' = 'Kagera', 'Kigoma' = 'Kigoma',
+        'Kilimanjaro' = 'Kilimanjaro', 'Lindi' = 'Lindi', 'Manyara' = 'Manyara',
+        'Mara' = 'Mara', 'Mbeya' = 'Mbeya', 'Mjini Magharibi' = 'Zanzibar West',
+        'Morogoro' = 'Morogoro', 'Mrwara' = 'Mtwara', 'Mwanza' = 'Mwanza',
+        'Pemba Kaskazini' = 'Pemba North', 'Pemba Kusini' = 'Pemba South',
+        'Pwani' = 'Pwani Coast', 'Rukwa' = 'Rukwa', 'Ruvuma' = 'Ruvuma',
+        'Shinyanga' = 'Shinyanga', 'Singida' = 'Singida', 'Tabora' = 'Tabora',
+        'Tanga' = 'Tanga', 'Unfuja Kusini' = 'Zanzibar South',
+        'Unguja Kaskazini' = 'Zanzibar North'),
+      areaname_eng_iso)
+)
+
+ab05 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab05 %>% filter(cname_eng == 'Tanzania') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_tanzania %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_tanzania$NAME_0)
+geo_tanzania %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab05 <- ab05 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'Tanzania', 'Tanzania', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'Tanzania',
+      recode(areaname_eng_ab, 'Arusha' = 1, 'Dar es Salaam' = 2, 'Dodoma' = 3,
+        'Iringa' = 4, 'Kagera' = 5, 'Pemba Kaskazini' = 6,
+        'Unguja Kaskazini' = 7, 'Kigoma' = 8, 'Kilimanjaro' = 9,
+        'Pemba Kusini' = 10, 'Lindi' = 11, 'Manyara' = 12, 'Mara' = 13,
+        'Mbeya' = 14, 'Morogoro' = 15, 'Mrwara' = 16, 'Mwanza' = 17,
+        'Pwani' = 18, 'Rukwa' = 19, 'Ruvuma' = 20, 'Shinyanga' = 21,
+        'Singida' = 22, 'Tabora' = 23, 'Tanga' = 24, 'Unfuja Kusini' = 25,
+        'Mjini Magharibi' = 26, .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab05 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab06 %>% filter(cname_eng == 'Tanzania') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_tanzania %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab06 <- ab06 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Tanzania',
+      recode(areaname_eng_ab, 'Arusha' = 'Arusha',
+        'Dar es Salaam' = 'Dar es Salaam', 'Dodoma' = 'Dodoma',
+        'Geita' = 'Geita', 'Iringa' = 'Iringa', 'Kagera' = 'Kagera',
+        'Katavi' = 'Katavi', 'Kigoma' = 'Kigoma', 'Kilimanjaro' = 'Kilimanjaro',
+        'Lindi' = 'Lindi', 'Manyara' = 'Manyara', 'Mara' = 'Mara',
+        'Mbeya' = 'Mbeya', 'Mjini Magharibi' = 'Zanzibar West',
+        'Morogoro' = 'Morogoro', 'Mrwara' = 'Mtwara', 'Mwanza' = 'Mwanza',
+        'Njombe' = 'Njombe', 'Pemba Kaskazini' = 'Pemba North',
+        'Pemba Kusini' = 'Pemba South', 'Pwani' = 'Pwani Coast',
+        'Rukwa' = 'Rukwa', 'Ruvuma' = 'Ruvuma', 'Shinyanga' = 'Shinyanga',
+        'Simiyu' = 'Simiyu', 'Singida' = 'Singida', 'Tabora' = 'Tabora',
+        'Tanga' = 'Tanga', 'Unfuja Kusini' = 'Zanzibar North',
+        'Unguja Kaskazini' = 'Zanzibar South'),
+      areaname_eng_iso)
+)
+
+ab06 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab06 %>% filter(cname_eng == 'Tanzania') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_tanzania %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_tanzania$NAME_0)
+geo_tanzania %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab06 <- ab06 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'Tanzania', 'Tanzania', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'Tanzania',
+      recode(areaname_eng_ab, 'Arusha' = 1, 'Dar es Salaam' = 2, 'Dodoma' = 3,
+        'Iringa' = 4, 'Njombe' = 4, 'Kagera' = 5, 'Pemba Kaskazini' = 6,
+        'Unguja Kaskazini' = 7, 'Kigoma' = 8, 'Kilimanjaro' = 9,
+        'Pemba Kusini' = 10, 'Lindi' = 11, 'Manyara' = 12, 'Mara' = 13,
+        'Mbeya' = 14, 'Morogoro' = 15, 'Mrwara' = 16, 'Mwanza' = 17,
+        'Geita' = 17, 'Pwani' = 18, 'Rukwa' = 19, 'Ruvuma' = 20,
+        'Shinyanga' = 21, 'Simiyu' = 21, 'Singida' = 22, 'Tabora' = 23,
+        'Tanga' = 24, 'Unfuja Kusini' = 25, 'Mjini Magharibi' = 26,
+        .default = NA_real_),
+      as.double(ID_1)),
+  ID_2 =
+    if_else(cname_eng == 'Tanzania',
+      recode(areaname_eng_ab, 'Njombe' = 22, 'Geita' = 84, .default = NA_real_),
+      as.double(ID_2)),
+)
+
+ab06 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1, ID_2) %>%
+  summarize() %>% print(n = Inf)
+
 
 ```
 
@@ -7191,35 +7566,7 @@ ab06 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
 
 
 
-
-
-
-
-
-
 ################################################################################
-
-
-'Tanzania' %in% ab01$cname_eng
-'Tanzania' %in% ab02$cname_eng
-'Tanzania' %in% ab03$cname_eng
-'Tanzania' %in% ab04$cname_eng
-'Tanzania' %in% ab05$cname_eng
-'Tanzania' %in% ab06$cname_eng
-
-ab01 %>% filter(cname_eng == 'Tanzania') %>% {sort(unique(.$areaname_eng_ab))}
-ab02 %>% filter(cname_eng == 'Tanzania') %>% {sort(unique(.$areaname_eng_ab))}
-ab03 %>% filter(cname_eng == 'Tanzania') %>% {sort(unique(.$areaname_eng_ab))}
-ab04 %>% filter(cname_eng == 'Tanzania') %>% {sort(unique(.$areaname_eng_ab))}
-ab05 %>% filter(cname_eng == 'Tanzania') %>% {sort(unique(.$areaname_eng_ab))}
-ab06 %>% filter(cname_eng == 'Tanzania') %>% {sort(unique(.$areaname_eng_ab))}
-
-geo_tanzania <-
-  read.csv('Data/GIS/Tanzania/TZA_adm3.csv', stringsAsFactors = FALSE) %>%
-  as_tibble()
-
-geo_tanzania %>% group_by(NAME_1, ID_1, NAME_2, ID_2) %>% summarize() %>% print(n = Inf)
-
 
 'Togo' %in% ab01$cname_eng
 'Togo' %in% ab02$cname_eng
