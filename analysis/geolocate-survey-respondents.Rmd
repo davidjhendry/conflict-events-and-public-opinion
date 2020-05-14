@@ -903,7 +903,7 @@ ab06 <- ab06.raw %>%
       `1542` = 'Khartoum', `1543` = 'Central', `1544` = 'Kurdufan',
       `1545` = 'Darfur', `1580` = 'Tunis', `1581` = 'Ariana',
       `1582` = 'Manouba', `1583` = 'Ben Arous', `1584` = 'Sfax',
-      `1585` = 'Sousse', `1586` = 'Nabeul', `1587` = 'Bizerte ',
+      `1585` = 'Sousse', `1586` = 'Nabeul', `1587` = 'Bizerte',
       `1588` = 'Zaghouan', `1589` = 'Sidi Bouzid', `1590` = 'Le Kef',
       `1591` = 'Kasserine', `1592` = 'Jendouba', `1593` = 'Beja',
       `1594` = 'Siliana', `1595` = 'Kairouan', `1596` = 'Monastir',
@@ -7631,10 +7631,487 @@ ab06 <- ab06 %>% mutate(
 ab06 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
   summarize() %>% print(n = Inf)
 
+
+#### Tunisia
+## iso
+# é -> e; è -> e
+iso_tunisia <- bind_cols(
+  cname_eng = rep('Tunisia', 24),
+  ISO1num = rep(788, 24),
+  ISO2str = c('TN-31', 'TN-13', 'TN-23', 'TN-81', 'TN-71', 'TN-32', 'TN-41',
+    'TN-42', 'TN-73', 'TN-12', 'TN-14', 'TN-33', 'TN-53', 'TN-82', 'TN-52',
+    'TN-21', 'TN-61', 'TN-43', 'TN-34', 'TN-51', 'TN-83', 'TN-72', 'TN-11',
+    'TN-22'),
+  ISO2numstr = rep('', 24),
+  ISO2num = rep(NA, 24),
+  areaname_conv_iso = c('Béja', 'Ben Arous', 'Bizerte', 'Gabès', 'Gafsa',
+    'Jendouba', 'Kairouan', 'Kasserine', 'Kébili', 'L\'Ariana', 'La Manouba',
+    'Le Kef', 'Mahdia', 'Médenine', 'Monastir', 'Nabeul', 'Sfax', 'Sidi Bouzid',
+    'Siliana', 'Sousse', 'Tataouine', 'Tozeur', 'Tunis', 'Zaghouan'),
+  areaname_eng_iso = c('Beja', 'Ben Arous', 'Bizerte', 'Gabes', 'Gafsa',
+    'Jendouba', 'Kairouan', 'Kasserine', 'Kebili', 'L\'Ariana', 'La Manouba',
+    'Le Kef', 'Mahdia', 'Medenine', 'Monastir', 'Nabeul', 'Sfax', 'Sidi Bouzid',
+    'Siliana', 'Sousse', 'Tataouine', 'Tozeur', 'Tunis', 'Zaghouan')
+)
+
+## gis
+geo_tunisia <-
+  read.csv('Data/GIS/Tunisia/TUN_adm1.csv', stringsAsFactors = FALSE) %>%
+  as_tibble()
+
+'Tunisia' %in% ab01$cname_eng
+'Tunisia' %in% ab02$cname_eng
+'Tunisia' %in% ab03$cname_eng
+'Tunisia' %in% ab04$cname_eng
+'Tunisia' %in% ab05$cname_eng
+'Tunisia' %in% ab06$cname_eng
+
+RaggedSideBySide(
+  ab05 %>% filter(cname_eng == 'Tunisia') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_tunisia %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab05 <- ab05 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Tunisia',
+      recode(areaname_eng_ab, 'Beja' = 'Beja', 'Ben Arous' = 'Ben Arous',
+        'Bizerte' = 'Bizerte', 'Gabes' = 'Gabes', 'Gafsa' = 'Gafsa',
+        'Jendouba' = 'Jendouba', 'Kairouan' = 'Kairouan',
+        'Kasserine' = 'Kasserine', 'Ariana' = 'L\'Ariana', 'Kebili' = 'Kebili',
+        'Le Kef' = 'Le Kef', 'Mahdia' = 'Mahdia', 'Manouba' = 'La Manouba',
+        'Mednine' = 'Medenine', 'Monastir' = 'Monastir', 'Nabeul' = 'Nabeul',
+        'Sfax' = 'Sfax', 'Sidi Bouzid' = 'Sidi Bouzid', 'Siliana' = 'Siliana',
+        'Sousse' = 'Sousse', 'Tataouine' = 'Tataouine', 'Tozeur' = 'Tozeur',
+        'Tunis' = 'Tunis', 'Zaghouan' = 'Zaghouan'),
+      areaname_eng_iso)
+)
+
+ab05 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab05 %>% filter(cname_eng == 'Tunisia') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_tunisia %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_tunisia$NAME_0)
+geo_tunisia %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab05 <- ab05 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'Tunisia', 'Tunisia', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'Tunisia',
+      recode(areaname_eng_ab, 'Ariana' = 1, 'Beja' = 2, 'Ben Arous' = 3,
+        'Bizerte' = 4, 'Gabes' = 5, 'Gafsa' = 6, 'Jendouba' = 7, 'Kairouan' = 8,
+        'Kasserine' = 9, 'Kebili' = 10, 'Le Kef' = 11, 'Mahdia' = 13,
+        'Manouba' = 14, 'Mednine' = 12, 'Monastir' = 15, 'Nabeul' = 16,
+        'Sfax' = 17, 'Sidi Bouzid' = 18, 'Siliana' = 19, 'Sousse' = 20,
+        'Tataouine' = 21, 'Tozeur' = 22, 'Tunis' = 23, 'Zaghouan' = 24,
+        .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab05 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab06 %>% filter(cname_eng == 'Tunisia') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_tunisia %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab06 <- ab06 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Tunisia',
+      recode(areaname_eng_ab, 'Ariana' = 'L\'Ariana', 'Beja' = 'Beja',
+        'Ben Arous' = 'Ben Arous', 'Bizerte' = 'Bizerte', 'Gabes' = 'Gabes',
+        'Gafsa' = 'Gafsa', 'Jendouba' = 'Jendouba', 'Kairouan' = 'Kairouan',
+        'Kasserine' = 'Kasserine', 'Kebili' = 'Kebili', 'Le Kef' = 'Le Kef',
+        'Mahdia' = 'Mahdia', 'Manouba' = 'La Manouba', 'Medenine' = 'Medenine',
+        'Monastir' = 'Monastir', 'Nabeul' = 'Nabeul', 'Sfax' = 'Sfax',
+        'Sidi Bouzid' = 'Sidi Bouzid', 'Siliana' = 'Siliana',
+        'Sousse' = 'Sousse', 'Tataouine' = 'Tataouine', 'Tozeur' = 'Tozeur',
+        'Tunis' = 'Tunis', 'Zaghouan' = 'Zaghouan'),
+      areaname_eng_iso)
+)
+
+ab06 %>% group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab06 %>% filter(cname_eng == 'Tunisia') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_tunisia %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_tunisia$NAME_0)
+geo_tunisia %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab06 <- ab06 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'Tunisia', 'Tunisia', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'Tunisia',
+      recode(areaname_eng_ab, 'Ariana' = 1, 'Beja' = 2, 'Ben Arous' = 3,
+        'Bizerte' = 4, 'Gabes' = 5, 'Gafsa' = 6, 'Jendouba' = 7, 'Kairouan' = 8,
+        'Kasserine' = 9, 'Kebili' = 10, 'Le Kef' = 11, 'Mahdia' = 13,
+        'Manouba' = 14, 'Medenine' = 12, 'Monastir' = 15, 'Nabeul' = 16,
+        'Sfax' = 17, 'Sidi Bouzid' = 18, 'Siliana' = 19, 'Sousse' = 20,
+        'Tataouine' = 21, 'Tozeur' = 22, 'Tunis' = 23, 'Zaghouan' = 24,
+        .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab06 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
 ```
 
+#### Uganda
+## iso
+iso_uganda <- bind_cols(
+  cname_eng = rep('Uganda', 4),
+  ISO1num = rep(800, 4),
+  ISO2str = c('UG-C', 'UG-E', 'UG-N', 'UG-W'),
+  ISO2numstr = rep('', 4),
+  ISO2num = rep(NA, 4),
+  areaname_conv_iso = c('Central', 'Eastern', 'Northern', 'Western'),
+  areaname_eng_iso = c('Central', 'Eastern', 'Northern', 'Western')
+)
 
+iso_uganda2 <- bind_cols(
+  cname_eng = rep('Uganda', 128),
+  ISO1num = rep(800, 128),
+  ISO2str2 = c('UG-314', 'UG-301', 'UG-322', 'UG-323', 'UG-315', 'UG-324',
+    'UG-216', 'UG-316', 'UG-302', 'UG-303', 'UG-217', 'UG-218', 'UG-201',
+    'UG-235', 'UG-420', 'UG-117', 'UG-219', 'UG-118', 'UG-220', 'UG-225',
+    'UG-416', 'UG-401', 'UG-430', 'UG-402', 'UG-202', 'UG-221', 'UG-119',
+    'UG-233', 'UG-120', 'UG-226', 'UG-317', 'UG-121', 'UG-304', 'UG-403',
+    'UG-417', 'UG-203', 'UG-418', 'UG-204', 'UG-318', 'UG-404', 'UG-405',
+    'UG-213', 'UG-427', 'UG-428', 'UG-101', 'UG-222', 'UG-122', 'UG-102',
+    'UG-205', 'UG-413', 'UG-414', 'UG-206', 'UG-236', 'UG-126', 'UG-406',
+    'UG-207', 'UG-112', 'UG-407', 'UG-103', 'UG-227', 'UG-432', 'UG-419',
+    'UG-421', 'UG-408', 'UG-305', 'UG-319', 'UG-325', 'UG-306', 'UG-208',
+    'UG-333', 'UG-228', 'UG-123', 'UG-422', 'UG-415', 'UG-125', 'UG-326',
+    'UG-307', 'UG-229', 'UG-104', 'UG-124', 'UG-114', 'UG-223', 'UG-320',
+    'UG-105', 'UG-409', 'UG-214', 'UG-209', 'UG-410', 'UG-423', 'UG-115',
+    'UG-308', 'UG-309', 'UG-106', 'UG-107', 'UG-108', 'UG-334', 'UG-311',
+    'UG-116', 'UG-109', 'UG-230', 'UG-234', 'UG-224', 'UG-327', 'UG-310',
+    'UG-231', 'UG-424', 'UG-411', 'UG-328', 'UG-331', 'UG-329', 'UG-321',
+    'UG-312', 'UG-332', 'UG-210', 'UG-110', 'UG-429', 'UG-425', 'UG-431',
+    'UG-412', 'UG-111', 'UG-232', 'UG-426', 'UG-215', 'UG-211', 'UG-212',
+    'UG-113', 'UG-313', 'UG-330'),
+  ISO2numstr = rep('', 128),
+  ISO2num = rep(NA, 128),
+  areaname_conv_iso2 = c('Abim', 'Adjumani', 'Agago', 'Alebtong', 'Amolatar',
+    'Amudat', 'Amuria', 'Amuru', 'Apac', 'Arua', 'Budaka', 'Bududa', 'Bugiri',
+    'Bugweri', 'Buhweju', 'Buikwe', 'Bukedea', 'Bukomansibi', 'Bukwa',
+    'Bulambuli', 'Buliisa', 'Bundibugyo', 'Bunyangabu', 'Bushenyi', 'Busia',
+    'Butaleja', 'Butambala', 'Butebo', 'Buvuma', 'Buyende', 'Dokolo', 'Gomba',
+    'Gulu', 'Hoima', 'Ibanda', 'Iganga', 'Isingiro', 'Jinja', 'Kaabong',
+    'Kabale', 'Kabarole', 'Kaberamaido', 'Kagadi', 'Kakumiro', 'Kalangala',
+    'Kaliro', 'Kalungu', 'Kampala', 'Kamuli', 'Kamwenge', 'Kanungu',
+    'Kapchorwa', 'Kapelebyong', 'Kasanda', 'Kasese', 'Katakwi', 'Kayunga',
+    'Kibaale', 'Kiboga', 'Kibuku', 'Kikuube', 'Kiruhura', 'Kiryandongo',
+    'Kisoro', 'Kitgum', 'Koboko', 'Kole', 'Kotido', 'Kumi', 'Kwania', 'Kween',
+    'Kyankwanzi', 'Kyegegwa', 'Kyenjojo', 'Kyotera', 'Lamwo', 'Lira', 'Luuka',
+    'Luwero', 'Lwengo', 'Lyantonde', 'Manafwa', 'Maracha', 'Masaka', 'Masindi',
+    'Mayuge', 'Mbale', 'Mbarara', 'Mitooma', 'Mityana', 'Moroto', 'Moyo',
+    'Mpigi', 'Mubende', 'Mukono', 'Nabilatuk', 'Nakapiripirit', 'Nakaseke',
+    'Nakasongola', 'Namayingo', 'Namisindwa', 'Namutumba', 'Napak', 'Nebbi',
+    'Ngora', 'Ntoroko', 'Ntungamo', 'Nwoya', 'Omoro', 'Otuke', 'Oyam', 'Pader',
+    'Pakwach', 'Pallisa', 'Rakai', 'Rubanda', 'Rubirizi', 'Rukiga', 'Rukungiri',
+    'Sembabule', 'Serere', 'Sheema', 'Sironko', 'Soroti', 'Tororo', 'Wakiso',
+    'Yumbe', 'Zombo'),
+  areaname_eng_iso2 = c('Abim', 'Adjumani', 'Agago', 'Alebtong', 'Amolatar',
+    'Amudat', 'Amuria', 'Amuru', 'Apac', 'Arua', 'Budaka', 'Bududa', 'Bugiri',
+    'Bugweri', 'Buhweju', 'Buikwe', 'Bukedea', 'Bukomansibi', 'Bukwa',
+    'Bulambuli', 'Buliisa', 'Bundibugyo', 'Bunyangabu', 'Bushenyi', 'Busia',
+    'Butaleja', 'Butambala', 'Butebo', 'Buvuma', 'Buyende', 'Dokolo', 'Gomba',
+    'Gulu', 'Hoima', 'Ibanda', 'Iganga', 'Isingiro', 'Jinja', 'Kaabong',
+    'Kabale', 'Kabarole', 'Kaberamaido', 'Kagadi', 'Kakumiro', 'Kalangala',
+    'Kaliro', 'Kalungu', 'Kampala', 'Kamuli', 'Kamwenge', 'Kanungu',
+    'Kapchorwa', 'Kapelebyong', 'Kasanda', 'Kasese', 'Katakwi', 'Kayunga',
+    'Kibaale', 'Kiboga', 'Kibuku', 'Kikuube', 'Kiruhura', 'Kiryandongo',
+    'Kisoro', 'Kitgum', 'Koboko', 'Kole', 'Kotido', 'Kumi', 'Kwania', 'Kween',
+    'Kyankwanzi', 'Kyegegwa', 'Kyenjojo', 'Kyotera', 'Lamwo', 'Lira', 'Luuka',
+    'Luwero', 'Lwengo', 'Lyantonde', 'Manafwa', 'Maracha', 'Masaka', 'Masindi',
+    'Mayuge', 'Mbale', 'Mbarara', 'Mitooma', 'Mityana', 'Moroto', 'Moyo',
+    'Mpigi', 'Mubende', 'Mukono', 'Nabilatuk', 'Nakapiripirit', 'Nakaseke',
+    'Nakasongola', 'Namayingo', 'Namisindwa', 'Namutumba', 'Napak', 'Nebbi',
+    'Ngora', 'Ntoroko', 'Ntungamo', 'Nwoya', 'Omoro', 'Otuke', 'Oyam', 'Pader',
+    'Pakwach', 'Pallisa', 'Rakai', 'Rubanda', 'Rubirizi', 'Rukiga', 'Rukungiri',
+    'Sembabule', 'Serere', 'Sheema', 'Sironko', 'Soroti', 'Tororo', 'Wakiso',
+    'Yumbe', 'Zombo')
+)
 
+## gis
+geo_uganda <-
+  read.csv('Data/GIS/Uganda/UGA_adm1.csv', stringsAsFactors = FALSE) %>%
+  as_tibble()
+
+'Uganda' %in% ab01$cname_eng
+'Uganda' %in% ab02$cname_eng
+'Uganda' %in% ab03$cname_eng
+'Uganda' %in% ab04$cname_eng
+'Uganda' %in% ab05$cname_eng
+'Uganda' %in% ab06$cname_eng
+
+RaggedSideBySide(
+  ab01 %>% filter(cname_eng == 'Uganda') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_uganda %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+RaggedSideBySide(
+  ab01 %>% filter(cname_eng == 'Uganda') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_uganda2 %>% {sort(unique(.$areaname_eng_iso2))}
+)
+
+ab01 <- ab01 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Uganda',
+      recode(areaname_eng_ab, 'Kampala' = 'Central', 'Kiboga' = 'Central',
+        'Luwero' = 'Central', 'Masaka' = 'Central', 'Mpigi' = 'Central',
+        'Mubende' = 'Central', 'Mukono' = 'Central', 'Nakasongola' = 'Central',
+        'Rakai' = 'Central', 'Bugirl' = 'Eastern', 'Busia' = 'Eastern',
+        'Iganga' = 'Eastern', 'Jinja' = 'Eastern', 'Kamuli' = 'Eastern',
+        'Katakwi' = 'Eastern', 'Kumi' = 'Eastern', 'Mbale' = 'Eastern',
+        'Pallisa' = 'Eastern', 'Soroti' = 'Eastern', 'Tororo' = 'Eastern',
+        'Apac' = 'Northern', 'Arua' = 'Northern', 'Gulu' = 'Northern',
+        'Kitgum' = 'Northern', 'Lira' = 'Northern', 'Nebbi' = 'Northern',
+        'Bushenyi' = 'Western', 'Kabale' = 'Western', 'Kabarole' = 'Western',
+        'Kasesse' = 'Western', 'Kibale' = 'Western', 'Kisoro' = 'Western',
+        'Masindi' = 'Western', 'Mbarara' = 'Western', 'Ntungamo' = 'Western',
+        'Rukungirl' = 'Western'),
+      areaname_eng_iso),
+  areaname_eng_iso2 =
+    if_else(cname_eng == 'Uganda',
+      recode(areaname_eng_ab, 'Kampala' = 'Kampala', 'Kiboga' = 'Kiboga',
+        'Luwero' = 'Luwero', 'Masaka' = 'Masaka', 'Mpigi' = 'Mpigi',
+        'Mubende' = 'Mubende', 'Mukono' = 'Mukono',
+        'Nakasongola' = 'Nakasongola', 'Rakai' = 'Rakai', 'Bugirl' = 'Bugiri',
+        'Busia' = 'Busia', 'Iganga' = 'Iganga', 'Jinja' = 'Jinja',
+        'Kamuli' = 'Kamuli', 'Katakwi' = 'Katakwi', 'Kumi' = 'Kumi',
+        'Mbale' = 'Mbale', 'Pallisa' = 'Pallisa', 'Soroti' = 'Soroti',
+        'Tororo' = 'Tororo', 'Apac' = 'Apac', 'Arua' = 'Arua', 'Gulu' = 'Gulu',
+        'Kitgum' = 'Kitgum', 'Lira' = 'Lira', 'Nebbi' = 'Nebbi',
+        'Bushenyi' = 'Bushenyi', 'Kabale' = 'Kabale', 'Kabarole' = 'Kabarole',
+        'Kasesse' = 'Kasese', 'Kibale' = 'Kibaale', 'Kisoro' = 'Kisoro',
+        'Masindi' = 'Masindi', 'Mbarara' = 'Mbarara', 'Ntungamo' = 'Ntungamo',
+        'Rukungirl' = 'Rukungiri'),
+      areaname_eng_iso2)
+)
+
+ab01 %>%
+  group_by(cname_eng, areaname_eng_ab, areaname_eng_iso, areaname_eng_iso2) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab01 %>% filter(cname_eng == 'Uganda') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_uganda %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_uganda$NAME_0)
+geo_uganda %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+ab01 <- ab01 %>% mutate(
+  NAME_0 =
+    if_else(cname_eng == 'Uganda', 'Uganda', NAME_0),
+  ID_1 =
+    if_else(cname_eng == 'Uganda',
+      recode(areaname_eng_ab, 'Apac' = 2, 'Arua' = 3, 'Bugirl' = 4,
+        'Bushenyi' = 6, 'Busia' = 7, 'Gulu' = 8, 'Iganga' = 10, 'Jinja' = 11,
+        'Kabale' = 12, 'Kabarole' = 13, 'Kampala' = 16, 'Kamuli' = 17,
+        'Kasesse' = 21, 'Katakwi' = 22, 'Kibale' = 24, 'Kiboga' = 25,
+        'Kisoro' = 26, 'Kitgum' = 27, 'Kumi' = 29, 'Lira' = 33, 'Luwero' = 34,
+        'Masaka' = 35, 'Masindi' = 36, 'Mbale' = 38, 'Mbarara' = 39,
+        'Mpigi' = 42, 'Mubende' = 43, 'Mukono' = 44, 'Nakasongola' = 46,
+        'Nebbi' = 47, 'Ntungamo' = 48, 'Pallisa' = 50, 'Rakai' = 51,
+        'Rukungirl' = 52, 'Soroti' = 55, 'Tororo' = 56, .default = NA_real_),
+      as.double(ID_1))
+)
+
+ab01 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab02 %>% filter(cname_eng == 'Uganda') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_uganda %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab02 <- ab02 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Uganda',
+      recode(areaname_eng_ab, 'Central' = 'Central', 'East' = 'Eastern',
+        'North' = 'Northern', 'West' = 'Western'),
+      areaname_eng_iso)
+)
+
+ab02 %>%
+  group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab02 %>% filter(cname_eng == 'Uganda') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_uganda %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_uganda$NAME_0)
+geo_uganda %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+# unable to geocode because Uganda Afrobarometer Round 2 geography names do not
+# match units from global administrative dataset
+
+ab02 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab03 %>% filter(cname_eng == 'Uganda') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_uganda %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab03 <- ab03 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Uganda',
+      recode(areaname_eng_ab, 'Central' = 'Central', 'East' = 'Eastern',
+        'North' = 'Northern', 'West' = 'Western'),
+      areaname_eng_iso)
+)
+
+ab03 %>%
+  group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab03 %>% filter(cname_eng == 'Uganda') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_uganda %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_uganda$NAME_0)
+geo_uganda %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+# unable to geocode because Uganda Afrobarometer Round 3 geography names do not
+# match units from global administrative dataset
+
+ab03 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab04 %>% filter(cname_eng == 'Uganda') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_uganda %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab04 <- ab04 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Uganda',
+      recode(areaname_eng_ab, 'Central' = 'Central', 'East' = 'Eastern',
+        'North' = 'Northern', 'West' = 'Western'),
+      areaname_eng_iso)
+)
+
+ab04 %>%
+  group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab04 %>% filter(cname_eng == 'Uganda') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_uganda %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_uganda$NAME_0)
+geo_uganda %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+# unable to geocode because Uganda Afrobarometer Round 2 geography names do not
+# match units from global administrative dataset
+
+ab04 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab05 %>% filter(cname_eng == 'Uganda') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_uganda %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab05 <- ab05 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Uganda',
+      recode(areaname_eng_ab, 'Central' = 'Central', 'East' = 'Eastern',
+        'North' = 'Northern', 'West' = 'Western'),
+      areaname_eng_iso)
+)
+
+ab05 %>%
+  group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab05 %>% filter(cname_eng == 'Uganda') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_uganda %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_uganda$NAME_0)
+geo_uganda %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+# unable to geocode because Uganda Afrobarometer Round 2 geography names do not
+# match units from global administrative dataset
+
+ab05 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab06 %>% filter(cname_eng == 'Uganda') %>%
+    {sort(unique(.$areaname_eng_ab))},
+  iso_uganda %>% {sort(unique(.$areaname_eng_iso))}
+)
+
+ab06 <- ab06 %>% mutate(
+  areaname_eng_iso =
+    if_else(cname_eng == 'Uganda',
+      recode(areaname_eng_ab, 'Central' = 'Central', 'East' = 'Eastern',
+        'North' = 'Northern', 'West' = 'Western'),
+      areaname_eng_iso)
+)
+
+ab06 %>%
+  group_by(cname_eng, areaname_eng_ab, areaname_eng_iso) %>%
+  summarize() %>% print(n = Inf)
+
+RaggedSideBySide(
+  ab06 %>% filter(cname_eng == 'Uganda') %>%
+    {sort(unique(.$areaname_eng_ab))}, geo_uganda %>%
+    {sort(unique(.$NAME_1))}
+)
+
+unique(geo_uganda$NAME_0)
+geo_uganda %>% group_by(NAME_1, ID_1) %>%
+  summarize() %>% print(n = Inf)
+
+# unable to geocode because Uganda Afrobarometer Round 2 geography names do not
+# match units from global administrative dataset
+
+ab06 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
+  summarize() %>% print(n = Inf)
 
 
 
@@ -7672,43 +8149,6 @@ ab06 %>% group_by(cname_eng, NAME_0, areaname_eng_ab, ID_1) %>%
 
 
 ################################################################################
-
-'Tunisia' %in% ab01$cname_eng
-'Tunisia' %in% ab02$cname_eng
-'Tunisia' %in% ab03$cname_eng
-'Tunisia' %in% ab04$cname_eng
-'Tunisia' %in% ab05$cname_eng
-'Tunisia' %in% ab06$cname_eng
-
-ab05 %>% filter(cname_eng == 'Tunisia') %>% {sort(unique(.$areaname_eng_ab))}
-ab06 %>% filter(cname_eng == 'Tunisia') %>% {sort(unique(.$areaname_eng_ab))}
-
-geo_tunisia <-
-  read.csv('Data/GIS/Tunisia/TUN_adm2.csv', stringsAsFactors = FALSE) %>%
-  as_tibble()
-
-geo_tunisia %>% group_by(NAME_1, ID_1, NAME_2, ID_2) %>% summarize() %>% print(n = Inf)
-
-
-'Uganda' %in% ab01$cname_eng
-'Uganda' %in% ab02$cname_eng
-'Uganda' %in% ab03$cname_eng
-'Uganda' %in% ab04$cname_eng
-'Uganda' %in% ab05$cname_eng
-'Uganda' %in% ab06$cname_eng
-
-ab01 %>% filter(cname_eng == 'Uganda') %>% {sort(unique(.$areaname_eng_ab))}
-ab02 %>% filter(cname_eng == 'Uganda') %>% {sort(unique(.$areaname_eng_ab))}
-ab03 %>% filter(cname_eng == 'Uganda') %>% {sort(unique(.$areaname_eng_ab))}
-ab04 %>% filter(cname_eng == 'Uganda') %>% {sort(unique(.$areaname_eng_ab))}
-ab05 %>% filter(cname_eng == 'Uganda') %>% {sort(unique(.$areaname_eng_ab))}
-ab06 %>% filter(cname_eng == 'Uganda') %>% {sort(unique(.$areaname_eng_ab))}
-
-geo_uganda <-
-  read.csv('Data/GIS/Uganda/UGA_adm4.csv', stringsAsFactors = FALSE) %>%
-  as_tibble()
-
-geo_uganda %>% group_by(NAME_1, ID_1, NAME_2, ID_2) %>% summarize() %>% print(n = Inf)
 
 
 'Zambia' %in% ab01$cname_eng
